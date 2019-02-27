@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="org.aihdint.aihd">
+    package="org.development.aihd">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -14,7 +14,7 @@
     <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-        android:name=".app.AppController"
+        android:name="org.development.aihd.app.AppController"
         android:allowBackup="true"
         android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
@@ -24,7 +24,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Resources.AttachmentActivity"></activity>
+        <activity android:name="org.development.aihd.Resources.AttachmentActivity"></activity>
 
         <meta-data
             android:name="DATABASE"
@@ -40,7 +40,7 @@
             android:value="org.aihdint.aihd" />
 
         <activity
-            android:name=".SplashActivity"
+            android:name="org.development.aihd.SplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -49,128 +49,128 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".introSlider.IntroActivity"
+            android:name="org.development.aihd.introSlider.IntroActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Login"
+            android:name="org.development.aihd.Login"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".patient.Register"
+            android:name="org.development.aihd.patient.Register"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".UploadRecord"
+            android:name="org.development.aihd.UploadRecord"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".patient.Patients"
+            android:name="org.development.aihd.patient.Patients"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".MainActivity"
+            android:name="org.development.aihd.MainActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".Resources.ResourcesActivity"
+            android:name="org.development.aihd.Resources.ResourcesActivity"
             android:label="@string/resources"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".Home"
+            android:name="org.development.aihd.Home"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".forms.DM_Initial"
+            android:name="org.development.aihd.forms.DM_Initial"
             android:label="DM HTN Initial"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".forms.DM_FollowUp"
+            android:name="org.development.aihd.forms.DM_FollowUp"
             android:label="DM HTN Follow Up "
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".patient.Patient_Reports"
+            android:name="org.development.aihd.patient.Patient_Reports"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".patient.Profile"
+            android:name="org.development.aihd.patient.Profile"
             android:label="Profile"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".View_Reports"
+            android:name="org.development.aihd.View_Reports"
             android:label="Profile"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".patient.Admission"
+            android:name="org.development.aihd.patient.Admission"
             android:label="Admission"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".patient.Transfer"
+            android:name="org.development.aihd.patient.Transfer"
             android:label="Transfer"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".patient.FootClinic"
+            android:name="org.development.aihd.patient.FootClinic"
             android:label="Foot Clinic"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".forms.DM_Initial_View"
+            android:name="org.development.aihd.forms.DM_Initial_View"
             android:label="DM Initial Form"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".forms.DM_HTN_Forms"
+            android:name="org.development.aihd.forms.DM_HTN_Forms"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" /> <!-- Intent service -->
         <service
-            android:name=".services.LoadFiles"
+            android:name="org.development.aihd.services.LoadFiles"
             android:exported="false"
             android:process=":loadFiles" />
         <service
-            android:name=".services.LoadLocations"
+            android:name="org.development.aihd.services.LoadLocations"
             android:exported="false"
             android:process=":loadLocations" />
         <service
-            android:name=".services.LoadConcepts"
+            android:name="org.development.aihd.services.LoadConcepts"
             android:exported="false"
             android:process=":loadConcepts" />
         <service
-            android:name=".services.LoadPatients"
+            android:name="org.development.aihd.services.LoadPatients"
             android:exported="false"
             android:process=":loadPatients" />
         <service
-            android:name=".services.LoadAlarm"
+            android:name="org.development.aihd.services.LoadAlarm"
             android:exported="false"
             android:process=":loadAlarm" /> <!-- Receiver -->
         <receiver
-            android:name=".app.ScheduledReceiver"
+            android:name="org.development.aihd.app.ScheduledReceiver"
             android:process=":alarmReceiver" />
 
         <activity
-            android:name=".Resources.Pdf1"
+            android:name="org.development.aihd.Resources.Pdf1"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".Resources.Pdf2"
+            android:name="org.development.aihd.Resources.Pdf2"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".Resources.Pdf3"
+            android:name="org.development.aihd.Resources.Pdf3"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
     </application>

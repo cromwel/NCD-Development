@@ -5,7 +5,7 @@ android {
     //buildToolsVersion '27.0.3'
     useLibrary 'org.apache.http.legacy'
     defaultConfig {
-        applicationId "org.aihdint.aihd"
+        applicationId "org.development.aihd"
         minSdkVersion 15
         //noinspection OldTargetApi
         targetSdkVersion 27
