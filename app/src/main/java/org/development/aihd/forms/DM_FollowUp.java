@@ -121,7 +121,7 @@ public class DM_FollowUp extends AppCompatActivity implements FragmentModelFollo
 
     public void validate(View view) {
 
-        File dir = new File(Environment.getExternalStorageDirectory() + "/org.development.aihd/followup");
+        File dir = new File(Environment.getExternalStorageDirectory() + "/aihd/followup");
         if (!dir.mkdirs()) {
             Log.e("Directory Message", "Directory not created");
         }
@@ -187,7 +187,7 @@ public class DM_FollowUp extends AppCompatActivity implements FragmentModelFollo
                 Toast.makeText(getBaseContext(), "Follow Up Form saved", Toast.LENGTH_SHORT).show();
                 boolean isConnected = File_Upload.connectivity(getApplicationContext());
                 if (isConnected) {
-                    File_Upload.upload(this, Environment.getExternalStorageDirectory() + "/org.development.aihd/followup/" + file_name, id, null);
+                    File_Upload.upload(this, Environment.getExternalStorageDirectory() + "/aihd/followup/" + file_name, id, null);
                 } else {
                     Toast.makeText(this, "No Internet Connection,Unable to upload file", Toast.LENGTH_SHORT).show();
                 }

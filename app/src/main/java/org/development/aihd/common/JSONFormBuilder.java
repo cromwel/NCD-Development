@@ -73,7 +73,7 @@ public class JSONFormBuilder {
 
         //Read File
         try {
-            File myFile = new File(Environment.getExternalStorageDirectory() + "/org.development.aihd/" + folder + "/" + file_name);
+            File myFile = new File(Environment.getExternalStorageDirectory() + "/aihd/" + folder + "/" + file_name);
             FileInputStream fIn = new FileInputStream(myFile);
             BufferedReader myReader = new BufferedReader(
                     new InputStreamReader(fIn));

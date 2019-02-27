@@ -150,7 +150,7 @@ public class Transfer extends AppCompatActivity {
         Alerts.progressDialog(this, "Uploading DM Initial Form ...");
 
 
-        File dir = new File(Environment.getExternalStorageDirectory() + "/org.development.aihd/admission");
+        File dir = new File(Environment.getExternalStorageDirectory() + "/aihd/admission");
 
         if (!dir.mkdirs()) {
             Log.e("Directory Message", "Directory not created");
@@ -205,7 +205,7 @@ public class Transfer extends AppCompatActivity {
                 boolean isConnected = File_Upload.connectivity(getApplicationContext());
 
                 if (isConnected) {
-                    File_Upload.upload(this, Environment.getExternalStorageDirectory() + "/org.development.aihd/transfer/" + fileName, id, null);
+                    File_Upload.upload(this, Environment.getExternalStorageDirectory() + "/aihd/transfer/" + fileName, id, null);
                 } else {
                     Alerts.errorMessage(view, "No Internet Connection,Unable to upload file");
                 }

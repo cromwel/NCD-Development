@@ -143,7 +143,7 @@ public class DM_Initial extends AppCompatActivity implements FragmentModelInitia
 
         Alerts.progressDialog(this, "Uploading DM Initial Form ...");
 
-        File dir = new File(Environment.getExternalStorageDirectory() + "/org.development.aihd/initial");
+        File dir = new File(Environment.getExternalStorageDirectory() + "/aihd/initial");
 
         if (!dir.mkdirs()) {
             Log.e("Directory Message", "Directory not created");
@@ -202,7 +202,7 @@ public class DM_Initial extends AppCompatActivity implements FragmentModelInitia
                 boolean isConnected = File_Upload.connectivity(getApplicationContext());
 
                 if (isConnected) {
-                    File_Upload.upload(this, Environment.getExternalStorageDirectory() + "/org.development.aihd/initial/" + file_name, id, null);
+                    File_Upload.upload(this, Environment.getExternalStorageDirectory() + "/aihd/initial/" + file_name, id, null);
                 } else {
                     Toast.makeText(this, "No Internet Connection,Unable to upload file", Toast.LENGTH_SHORT).show();
                 }

@@ -182,7 +182,7 @@ public class Admission extends AppCompatActivity {
 
         Alerts.progressDialog(this, "Uploading Admission Form ...");
 
-        File dir = new File(Environment.getExternalStorageDirectory() + "/org.development.aihd/admission");
+        File dir = new File(Environment.getExternalStorageDirectory() + "/aihd/admission");
 
         if (!dir.mkdirs()) {
             Log.e("Directory Message", "Directory not created");
@@ -237,7 +237,7 @@ public class Admission extends AppCompatActivity {
                 boolean isConnected = File_Upload.connectivity(getApplicationContext());
 
                 if (isConnected) {
-                    File_Upload.upload(this, Environment.getExternalStorageDirectory() + "/org.development.aihd/admission/" + fileName, id, null);
+                    File_Upload.upload(this, Environment.getExternalStorageDirectory() + "/aihd/admission/" + fileName, id, null);
                 } else {
                     Alerts.errorMessage(view, "No Internet Connection,Unable to upload file");
                 }

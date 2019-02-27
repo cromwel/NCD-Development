@@ -14,7 +14,6 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 
-
 import org.development.aihd.R;
 import org.development.aihd.common.DateCalendar;
 import org.development.aihd.common.JSONFormBuilder;

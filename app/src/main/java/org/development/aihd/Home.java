@@ -39,7 +39,7 @@ public class Home extends AppCompatActivity{
             for (Forms cn : forms) {
                 Log.d("Form ID", cn.getId() + "");
                 Intent intentPatient = new Intent(getApplicationContext(), LoadFiles.class);
-                intentPatient.putExtra("file_path", Environment.getExternalStorageDirectory() + "/org.development.aihd/" + cn.getForm_type() + "/" + cn.getForm_name());
+                intentPatient.putExtra("file_path", Environment.getExternalStorageDirectory() + "/aihd/" + cn.getForm_type() + "/" + cn.getForm_name());
                 intentPatient.putExtra("form_id", cn.getId());
                 getApplication().startService(intentPatient);
             }

@@ -16,5 +16,5 @@ public class Variables {
     public static final String PATIENT_URL = BASE_URL + "/api/patients";
 
     // Directory name to store captured images and videos
-    public static final String IMAGE_DIRECTORY_NAME = "org.development.aihd/images";
+    public static final String IMAGE_DIRECTORY_NAME = "aihd/images";
 }
