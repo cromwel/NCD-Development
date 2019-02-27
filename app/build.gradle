@@ -5,11 +5,11 @@ android {
     //buildToolsVersion '27.0.3'
     useLibrary 'org.apache.http.legacy'
     defaultConfig {
-        applicationId "org.development.aihd"
+        applicationId "org.development.aihd.app"
         minSdkVersion 15
         //noinspection OldTargetApi
         targetSdkVersion 27
-        versionCode 11
+        versionCode 13
         versionName "1.0.33"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
