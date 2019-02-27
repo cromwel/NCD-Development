@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText">
+
+    <customfonts.TextView_Roboto_Bold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:padding="10dp"
+        android:text="Other"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <CheckBox
+            android:id="@+id/treatment_diet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight=".5"
+            android:text="Diet" />
+
+        <customfonts.EditText_Roboto_Regular
+            android:id="@+id/treatment_diet_specify"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <CheckBox
+            android:id="@+id/treatment_physical_exercise"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight=".5"
+            android:text="Physical exercise" />
+
+        <customfonts.EditText_Roboto_Regular
+            android:id="@+id/treatment_physical_exercise_specify"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <CheckBox
+            android:id="@+id/treatment_herbal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight=".5"
+            android:text="Herbal" />
+
+        <customfonts.EditText_Roboto_Regular
+            android:id="@+id/treatment_herbal_specify"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <CheckBox
+            android:id="@+id/treatment_other"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight=".5"
+            android:text="Other" />
+
+        <customfonts.EditText_Roboto_Regular
+            android:id="@+id/treatment_other_specify"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <customfonts.TextView_Roboto_Bold
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background"
+            android:padding="10dp"
+            android:text="Comments"
+            android:textAllCaps="false" />
+
+        <customfonts.EditText_Roboto_Regular
+            android:id="@+id/treatment_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Comments"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/testLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <customfonts.TextView_Roboto_Bold
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background"
+            android:padding="10dp"
+            android:text="Tests Ordered for next visit"
+            android:textAllCaps="false" />
+
+        <CheckBox
+            android:id="@+id/treatment_urinalysis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Urinalysis" />
+
+        <CheckBox
+            android:id="@+id/treatment_hba"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HBA1c" />
+
+        <CheckBox
+            android:id="@+id/treatment_microalbumin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Microalbumin" />
+
+        <CheckBox
+            android:id="@+id/treatment_creatinine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Creatinine" />
+
+        <CheckBox
+            android:id="@+id/treatment_potassium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Potassium" />
+
+        <CheckBox
+            android:id="@+id/treatment_ecg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ECG" />
+
+        <CheckBox
+            android:id="@+id/treatment_followup_other"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Other" />
+
+    </LinearLayout>
+
+</LinearLayout>

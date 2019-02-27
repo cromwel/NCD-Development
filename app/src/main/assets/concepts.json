@@ -1,0 +1,498 @@
+[
+  {
+    "Concept ID": 1540,
+    "Concept": "Employed"
+  },
+  {
+    "Concept ID": 165170,
+    "Concept": "Unemployed"
+  },
+  {
+    "Concept ID": 161382,
+    "Concept": "Self Employed"
+  },
+  {
+    "Concept ID": 159465,
+    "Concept": "Student"
+  },
+  {
+    "Concept ID": 160290,
+    "Concept": "Incomplete Primary"
+  },
+  {
+    "Concept ID": 1713,
+    "Concept": "Primary"
+  },
+  {
+    "Concept ID": 1714,
+    "Concept": "Secondary"
+  },
+  {
+    "Concept ID": 160292,
+    "Concept": "Tertiary Education"
+  },
+  {
+    "Concept ID": 165087,
+    "Concept": "New DM Patient"
+  },
+  {
+    "Concept ID": 165088,
+    "Concept": "Known DM Patient"
+  },
+  {
+    "Concept ID": 6097,
+    "Concept": "Resolved"
+  },
+  {
+    "Concept ID": 165192,
+    "Concept": "Referral"
+  },
+  {
+    "Concept ID": 664,
+    "Concept": "Negative"
+  },
+  {
+    "Concept ID": 138571,
+    "Concept": "Positive"
+  },
+  {
+    "Concept ID": 1175,
+    "Concept": "Not Applicable"
+  },
+  {
+    "Concept ID": 1115,
+    "Concept": "Normal"
+  },
+  {
+    "Concept ID": 1116,
+    "Concept": "Abnormal"
+  },
+  {
+    "Concept ID": 1065,
+    "Concept": "Yes"
+  },
+  {
+    "Concept ID": 1066,
+    "Concept": "No"
+  },
+  {
+    "Concept ID": 1067,
+    "Concept": "Unknown"
+  },
+  {
+    "Concept ID": 158939,
+    "Concept": "Stopped"
+  },
+  {
+    "Concept ID": 5622,
+    "Concept": "Other"
+  },
+  {
+    "Concept ID": 142474,
+    "Concept": "Diabetes Type 1"
+  },
+  {
+    "Concept ID": 142473,
+    "Concept": "Diabetes Type 2"
+  },
+  {
+    "Concept ID": 1449,
+    "Concept": "Diabetes GM"
+  },
+  {
+    "Concept ID": 165199,
+    "Concept": "Secondary Diabetes"
+  },
+  {
+    "Concept ID": 165092,
+    "Concept": "New HTN Patient"
+  },
+  {
+    "Concept ID": 165093,
+    "Concept": "Known HTN Patient"
+  },
+  {
+    "Concept ID": 165194,
+    "Concept": "Hypertension Mild"
+  },
+  {
+    "Concept ID": 165195,
+    "Concept": "Hypertension Moderate"
+  },
+  {
+    "Concept ID": 165196,
+    "Concept": "Hypertension Severe"
+  },
+  {
+    "Concept ID": 165197,
+    "Concept": "Hypertension Preeclampsia"
+  },
+  {
+    "Concept ID": 0,
+    "Concept": "TB Status"
+  },
+  {
+    "Concept ID": 1659,
+    "Concept": "TB Treatment"
+  },
+  {
+    "Concept ID": 165172,
+    "Concept": "TB Treatment Start Date"
+  },
+  {
+    "Concept ID": 165173,
+    "Concept": "TB Comment"
+  },
+  {
+    "Concept ID": 1759,
+    "Concept": "CHW"
+  },
+  {
+    "Concept ID": 165107,
+    "Concept": "Dispensary"
+  },
+  {
+    "Concept ID": 163146,
+    "Concept": "Maternity"
+  },
+  {
+    "Concept ID": 160551,
+    "Concept": "Inpatient"
+  },
+  {
+    "Concept ID": 160542,
+    "Concept": "OPD"
+  },
+  {
+    "Concept ID": 160473,
+    "Concept": "Casualty"
+  },
+  {
+    "Concept ID": 162050,
+    "Concept": "CCC"
+  },
+  {
+    "Concept ID": 1659,
+    "Concept": "On Treatment"
+  },
+  {
+    "Concept ID": 110265,
+    "Concept": "Shortness of breath on activity"
+  },
+  {
+    "Concept ID": 158627,
+    "Concept": "Palpitations (Heart Racing)"
+  },
+  {
+    "Concept ID": 156046,
+    "Concept": "Recurrent Dizziness"
+  },
+  {
+    "Concept ID": 112961,
+    "Concept": "Fainting"
+  },
+  {
+    "Concept ID": 135966,
+    "Concept": "Leg Swelling"
+  },
+  {
+    "Concept ID": 134185,
+    "Concept": "Frequent urination and fatigue"
+  },
+  {
+    "Concept ID": 135592,
+    "Concept": "Lose Consciousness"
+  },
+  {
+    "Concept ID": 147104,
+    "Concept": "Blurr Vision"
+  },
+  {
+    "Concept ID": 6005,
+    "Concept": "Focal Weakness"
+  },
+  {
+    "Concept ID": 164529,
+    "Concept": "Foot Complaint"
+  },
+  {
+    "Concept ID": 115782,
+    "Concept": "Headache/Migraines"
+  },
+  {
+    "Concept ID": 1107,
+    "Concept": "None"
+  },
+  {
+    "Concept ID": 5245,
+    "Concept": "Pallor"
+  },
+  {
+    "Concept ID": 136443,
+    "Concept": "Jaundice"
+  },
+  {
+    "Concept ID": 143050,
+    "Concept": "Cyanosis"
+  },
+  {
+    "Concept ID": 135488,
+    "Concept": "Lymphadenopathy"
+  },
+  {
+    "Concept ID": 460,
+    "Concept": "Oedema"
+  },
+  {
+    "Concept ID": 161602,
+    "Concept": "Other Exam"
+  },
+  {
+    "Concept ID": 162133,
+    "Concept": "Fair General"
+  },
+  {
+    "Concept ID": 1855,
+    "Concept": "Good General"
+  },
+  {
+    "Concept ID": 163293,
+    "Concept": "Sick Looking"
+  },
+  {
+    "Concept ID": 123919,
+    "Concept": "Ulcers"
+  },
+  {
+    "Concept ID": 120943,
+    "Concept": "Callouses"
+  },
+  {
+    "Concept ID": 165113,
+    "Concept": "Hardened Nails"
+  },
+  {
+    "Concept ID": 165114,
+    "Concept": "Fungus"
+  },
+  {
+    "Concept ID": 134,
+    "Concept": "Cellulitis"
+  },
+  {
+    "Concept ID": 156113,
+    "Concept": "Edema"
+  },
+  {
+    "Concept ID": 165115,
+    "Concept": "Dry"
+  },
+  {
+    "Concept ID": 1362,
+    "Concept": "+"
+  },
+  {
+    "Concept ID": 1363,
+    "Concept": "++"
+  },
+  {
+    "Concept ID": 1364,
+    "Concept": "+++"
+  },
+  {
+    "Concept ID": 111103,
+    "Concept": "Stroke"
+  },
+  {
+    "Concept ID": 139069,
+    "Concept": "Heart Failure"
+  },
+  {
+    "Concept ID": 113338,
+    "Concept": "Kidney Failure"
+  },
+  {
+    "Concept ID": 118983,
+    "Concept": "Peripheral Neuropathy"
+  },
+  {
+    "Concept ID": 159298,
+    "Concept": "Visual Impairment"
+  },
+  {
+    "Concept ID": 163411,
+    "Concept": "Foot Ulcers/ Deformities"
+  },
+  {
+    "Concept ID": 156162,
+    "Concept": "Erectile Dysfunction"
+  },
+  {
+    "Concept ID": 1380,
+    "Concept": "Nutrition"
+  },
+  {
+    "Concept ID": 159364,
+    "Concept": "Physical Activity"
+  },
+  {
+    "Concept ID": 5490,
+    "Concept": "Psychosocial"
+  },
+  {
+    "Concept ID": 79651,
+    "Concept": "Metaformin"
+  },
+  {
+    "Concept ID": 77071,
+    "Concept": "Glibenclamide"
+  },
+  {
+    "Concept ID": 159459,
+    "Concept": "Insulin"
+  },
+  {
+    "Concept ID": 78068,
+    "Concept": "NPH"
+  },
+  {
+    "Concept ID": 282,
+    "Concept": "Soluble Insulin"
+  },
+  {
+    "Concept ID": 72806,
+    "Concept": "Captopril"
+  },
+  {
+    "Concept ID": 75633,
+    "Concept": "Enalapril"
+  },
+  {
+    "Concept ID": 77696,
+    "Concept": "HCTZ"
+  },
+  {
+    "Concept ID": 78945,
+    "Concept": "Lisinopril"
+  },
+  {
+    "Concept ID": 81822,
+    "Concept": "Perindopril"
+  },
+  {
+    "Concept ID": 83067,
+    "Concept": "Ramipril"
+  },
+  {
+    "Concept ID": 72758,
+    "Concept": "Candesartan"
+  },
+  {
+    "Concept ID": 78210,
+    "Concept": "Irbesartan"
+  },
+  {
+    "Concept ID": 79074,
+    "Concept": "Losartan"
+  },
+  {
+    "Concept ID": 84764,
+    "Concept": "Telmisartan"
+  },
+  {
+    "Concept ID": 86056,
+    "Concept": "Valsartan"
+  },
+  {
+    "Concept ID": 165229,
+    "Concept": "Olmesartan"
+  },
+  {
+    "Concept ID": 71652,
+    "Concept": "Atenolol"
+  },
+  {
+    "Concept ID": 78599,
+    "Concept": "Labetolol"
+  },
+  {
+    "Concept ID": 82732,
+    "Concept": "Propranolol"
+  },
+  {
+    "Concept ID": 72944,
+    "Concept": "Carvedilol"
+  },
+  {
+    "Concept ID": 80470,
+    "Concept": "Nebivolol"
+  },
+  {
+    "Concept ID": 79764,
+    "Concept": "Metoprolol"
+  },
+  {
+    "Concept ID": 72247,
+    "Concept": "Bisoprolol"
+  },
+  {
+    "Concept ID": 71137,
+    "Concept": "Amlodipine"
+  },
+  {
+    "Concept ID": 76211,
+    "Concept": "Felodipine"
+  },
+  {
+    "Concept ID": 80637,
+    "Concept": "Nifedipine"
+  },
+  {
+    "Concept ID": 79723,
+    "Concept": "Methyldopa"
+  },
+  {
+    "Concept ID": 77675,
+    "Concept": "Hydralazine"
+  },
+  {
+    "Concept ID": 77985,
+    "Concept": "Prazocin"
+  },
+  {
+    "Concept ID": 73338,
+    "Concept": "Chlorthalidone"
+  },
+  {
+    "Concept ID": 77696,
+    "Concept": "Hydrochlorothia"
+  },
+  {
+    "Concept ID": 77985,
+    "Concept": "Indapamide"
+  },
+  {
+    "Concept ID": 165200,
+    "Concept": "Diet"
+  },
+  {
+    "Concept ID": 159364,
+    "Concept": "Physical Exercise"
+  },
+  {
+    "Concept ID": 165203,
+    "Concept": "Herbal"
+  },
+  {
+    "Concept ID": 160862,
+    "Concept": "OD"
+  },
+  {
+    "Concept ID": 160858,
+    "Concept": "BD"
+  },
+  {
+    "Concept ID": 160866,
+    "Concept": "TDS"
+  }
+]

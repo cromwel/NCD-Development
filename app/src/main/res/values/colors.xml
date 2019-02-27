@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ADD8E6</color>
+    <color name="colorPrimaryDark">#9bc2cf</color>
+    <color name="colorAccent">#ff0000</color>
+
+    <color name="green">#006600</color>
+    <color name="light_green">#228B22</color>
+    <color name="orange">#e59400</color>
+    <color name="yellow">#cdcd00</color>
+    <color name="red">#b40000</color>
+    <color name="dark_blue">#2d00b3</color>
+
+    <color name="custom_slide_background">#006600</color>
+    <color name="custom_slide_buttons">#00421B</color>
+
+    <color name="permission_slide">#006600</color>
+    <color name="permission_buttons">#004D40</color>
+
+    <color name="background">#f5f7fa</color>
+    <color name="background_header">#ff7100</color>
+    <color name="background_inner">#00b4ef</color>
+    <color name="view_background">#e8ecfa</color>
+    <color name="btn_bg">#277bec</color>
+    <color name="white">#ffffff</color>
+    <color name="txt_font">#4e5572</color>
+    <color name="action_bar">#1f2649</color>
+    <color name="blue">#277bec</color>
+
+    <color name="black">#000</color>
+    <color name="colortext">#100b20</color>
+    <color name="border">#dddddd</color>
+    <color name="colorhint">#a9aaac</color>
+    <color name="grey">#636363</color>
+    <color name="half_black">#808080</color>
+    <color name="black_semi_transparent">#B2000000</color>
+    <color name="white_pressed">#f1f1f1</color>
+
+    <color name="bg_login">#26ae90</color>
+    <color name="bg_main">#428bca</color>
+    <color name="input_login">#222222</color>
+    <color name="input_login_hint">#999999</color>
+    <color name="btn_login">#26ae90</color>
+    <color name="btn_login_bg">#eceef1</color>
+    <color name="lbl_name">#333333</color>
+    <color name="btn_logut_bg">#ff6861</color>
+
+</resources>
