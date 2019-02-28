@@ -90,20 +90,12 @@
                                 android:layout_height="wrap_content"
                                 android:text="Amputation" />
 
-                           <!-- <CheckBox
-                                android:id="@+id/checkbox_acute_joint"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Acute joint" />-->
-
-
                             <customfonts.TextView_Roboto_Bold
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@color/background"
                                 android:padding="10dp"
                                 android:text="Foot risk assessment" />
-
 
                             <CheckBox
                                 android:id="@+id/checkbox_low_risk"

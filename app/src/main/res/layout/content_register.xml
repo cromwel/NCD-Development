@@ -279,7 +279,7 @@
                             android:layout_weight="5"
                             android:layout_height="wrap_content"
                             android:background="#00000000"
-                            android:hint="National ID Number eg* 123456789"
+                            android:hint="National ID Number* eg 123456789"
                             android:inputType="number"
                             android:padding="15dp"
                             android:textSize="12sp" />
@@ -311,7 +311,7 @@
                             android:layout_weight="4"
                             android:layout_height="wrap_content"
                             android:background="#00000000"
-                            android:hint="TelNo eg* 0720000111"
+                            android:hint="TelNo* eg 0720000111"
                             android:inputType="phone"
                             android:padding="14dp"
                             android:textSize="11sp" />
@@ -344,7 +344,7 @@
                             android:layout_weight="4"
                             android:layout_height="wrap_content"
                             android:background="#00000000"
-                            android:hint="TelNo Other eg* 0720000111"
+                            android:hint="TelNo Other eg 0720000111"
                             android:inputType="phone"
                             android:padding="14dp"
                             android:textSize="11sp" />

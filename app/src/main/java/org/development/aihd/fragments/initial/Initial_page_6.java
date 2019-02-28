@@ -317,35 +317,6 @@ public class Initial_page_6 extends Fragment {
         //Log.d("JSON Initial Page 6", jsonArry.toString() + " ");
 
         FragmentModelInitial.getInstance().initialSix(jsonArry);
-      //  greyOutEntry();
-
     }
 
-    public void greyOutEntry(){
-        //edit texts
-        editTextReturnDate.setEnabled(false);
-        editTextFacility.setEnabled(false);
-        editTextDateReffered.setEnabled(false);
-        editTextHealthFacility.setEnabled(false);
-        editTextDateOut.setEnabled(false);
-        editTextReffered.setEnabled(false);
-        editTextRefferalReason.setEnabled(false);
-        editTextSupportGroup.setEnabled(false);
-        editTextProvider.setEnabled(false);
-
-        //checkboxes
-        checkBoxContinueCare.setEnabled(false);
-        checkBoxReferFacility.setEnabled(false);
-        checkBoxTransferFacility.setEnabled(false);
-        checkBoxManagementDM.setEnabled(false);
-        checkBoxManagementHTN.setEnabled(false);
-        checkBoxEyeReview.setEnabled(false);
-        checkBoxSurgicalReview.setEnabled(false);
-        checkBoxRenalReview.setEnabled(false);
-        checkBoxCVDReview.setEnabled(false);
-        checkBoxNutrition.setEnabled(false);
-        checkBoxPhysiotherapy.setEnabled(false);
-        checkBoxFollowUpOther.setEnabled(false);
-
-    }
 }

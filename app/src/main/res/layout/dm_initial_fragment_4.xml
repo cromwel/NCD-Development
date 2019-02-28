@@ -816,14 +816,14 @@
                             android:id="@+id/checkbox_nutrition"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Nutrition *" />
+                            android:text="Nutrition" />
 
                         <CheckBox
                             android:id="@+id/checkbox_physical_activity"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
 
-                            android:text="Physical Activity *" />
+                            android:text="Physical Activity" />
 
                         <CheckBox
                             android:id="@+id/checkbox_psychosocial"

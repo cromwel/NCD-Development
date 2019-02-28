@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.development.aihd.Resources.ResourcesActivity">
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context="org.aihdint.aihd.Resources.ResourcesActivity">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -20,39 +26,56 @@
 
     </android.support.design.widget.AppBarLayout>
 
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/linearLayout"
-        android:layout_marginTop="100dp"
-        android:layout_gravity="center">
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical">
 
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@drawable/round_border"
+        app:cardCornerRadius="5dp"
+        card_view:cardElevation="9dp">
 
-        <Button
-            android:id="@+id/pdf1"
+        <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="AIHD SOPs and Job Aids"
-            android:textSize="20sp"
-            />
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:layout_marginTop="100dp"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/pdf2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="NCD QM EMS FAQs"
-            android:textSize="20sp"
-            />
 
-        <Button
-            android:id="@+id/pdf3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="NCD QM EMS TnCs"
-            android:textSize="20sp"
-            />
+            <Button
+                android:id="@+id/pdf1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AIHD SOPs and Job Aids"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/pdf2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NCD QM EMS FAQs"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/pdf3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NCD QM EMS TnCs"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    </LinearLayout>
 
     </LinearLayout>
 

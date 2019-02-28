@@ -18,7 +18,7 @@ public class SplashActivity extends AppCompatActivity {
             // User is already logged in. Take him to main activity
             Intent intent = new Intent(SplashActivity.this, Login.class);
             startActivity(intent);
-            finish();
+            //finish();
         } else {
             Intent serviceConcept = new Intent(this, LoadConcepts.class);
             startService(serviceConcept);

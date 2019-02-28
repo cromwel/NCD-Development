@@ -29,8 +29,8 @@ public class Validation {
                 validate(obs, "Page(1) Do you smoke cigarettes question", "152722");
                 validate(obs, "Page(1) Do you drink alcohol question", "159449");
 
-                validate(obs, "Page(4) Nutrition counselling/education", "1380");
-                validate(obs, "Page(4) Physical activity counselling/education", "159364");
+                //validate(obs, "Page(4) Nutrition counselling/education", "1380");
+                //validate(obs, "Page(4) Physical activity counselling/education", "159364");
 
             }
 

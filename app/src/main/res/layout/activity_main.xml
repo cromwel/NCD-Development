@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/coordinatorLayout"
-    tools:context="org.aihdint.aihd.MainActivity">
+    tools:context="org.development.aihd.MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
