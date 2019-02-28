@@ -156,14 +156,13 @@
 
                                 <customfonts.EditText_Roboto_Regular
                                     android:id="@+id/medication_metformin"
-
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:hint="Dosage"
                                     android:inputType="text"
                                     android:padding="15dp"
                                     android:textSize="13sp"
-                                    android:visibility="gone" />
+                                    android:visibility="invisible" />
 
                                 <customfonts.EditText_Roboto_Regular
                                     android:id="@+id/medication_glibenclamide"
@@ -173,7 +172,7 @@
                                     android:inputType="text"
                                     android:padding="15dp"
                                     android:textSize="13sp"
-                                    android:visibility="gone" />
+                                    android:visibility="invisible" />
 
                                 <customfonts.EditText_Roboto_Regular
                                     android:id="@+id/medication_insulin"
@@ -183,7 +182,7 @@
                                     android:inputType="text"
                                     android:padding="15dp"
                                     android:textSize="13sp"
-                                    android:visibility="gone" />
+                                    android:visibility="invisible" />
 
                                 <customfonts.EditText_Roboto_Regular
                                     android:id="@+id/medication_nph"
@@ -193,7 +192,7 @@
                                     android:inputType="text"
                                     android:padding="15dp"
                                     android:textSize="13sp"
-                                    android:visibility="gone" />
+                                    android:visibility="invisible" />
 
                                 <customfonts.EditText_Roboto_Regular
                                     android:id="@+id/medication_soluble_insulin"
@@ -203,7 +202,7 @@
                                     android:inputType="text"
                                     android:padding="15dp"
                                     android:textSize="13sp"
-                                    android:visibility="gone" />
+                                    android:visibility="invisible" />
 
                                 <customfonts.EditText_Roboto_Regular
                                     android:id="@+id/medication_enalapril"
@@ -213,7 +212,7 @@
                                     android:inputType="text"
                                     android:padding="15dp"
                                     android:textSize="13sp"
-                                    android:visibility="gone" />
+                                    android:visibility="invisible" />
 
                                 <customfonts.EditText_Roboto_Regular
                                     android:id="@+id/medication_hctz"
@@ -223,7 +222,7 @@
                                     android:inputType="text"
                                     android:padding="15dp"
                                     android:textSize="13sp"
-                                    android:visibility="gone" />
+                                    android:visibility="invisible" />
 
                                 <customfonts.EditText_Roboto_Regular
                                     android:id="@+id/medication_losartan"
@@ -233,7 +232,7 @@
                                     android:inputType="text"
                                     android:padding="15dp"
                                     android:textSize="13sp"
-                                    android:visibility="gone" />
+                                    android:visibility="invisible" />
 
                                 <customfonts.EditText_Roboto_Regular
                                     android:id="@+id/medication_nifedipine"
@@ -243,7 +242,7 @@
                                     android:inputType="text"
                                     android:padding="15dp"
                                     android:textSize="13sp"
-                                    android:visibility="gone" />
+                                    android:visibility="invisible" />
 
                                 <customfonts.EditText_Roboto_Regular
                                     android:id="@+id/medication_atenolol"
@@ -253,7 +252,7 @@
                                     android:inputType="text"
                                     android:padding="15dp"
                                     android:textSize="13sp"
-                                    android:visibility="gone" />
+                                    android:visibility="invisible" />
 
                             </LinearLayout>
 

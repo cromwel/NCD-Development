@@ -340,7 +340,7 @@ public class Initial_page_2 extends Fragment {
 
     public void metformin(String status) {
         if (!status.matches("79651")) {
-            editTextMetformin.setVisibility(View.GONE);
+            editTextMetformin.setVisibility(View.INVISIBLE);
         } else {
             editTextMetformin.setVisibility(View.VISIBLE);
             editTextMetformin.setText("");
@@ -349,7 +349,7 @@ public class Initial_page_2 extends Fragment {
 
     public void glibenclamide(String status) {
         if (!status.matches("77071")) {
-            editTextGlibenclamide.setVisibility(View.GONE);
+            editTextGlibenclamide.setVisibility(View.INVISIBLE);
         } else {
             editTextGlibenclamide.setVisibility(View.VISIBLE);
             editTextGlibenclamide.setText("");
@@ -358,7 +358,7 @@ public class Initial_page_2 extends Fragment {
 
     public void insulin(String status) {
         if (!status.matches("159459")) {
-            editTextInsulin.setVisibility(View.GONE);
+            editTextInsulin.setVisibility(View.INVISIBLE);
         } else {
             editTextInsulin.setVisibility(View.VISIBLE);
             editTextInsulin.setText("");
@@ -367,7 +367,7 @@ public class Initial_page_2 extends Fragment {
 
     public void nph(String status) {
         if (!status.matches("78068")) {
-            editTextNPH.setVisibility(View.GONE);
+            editTextNPH.setVisibility(View.INVISIBLE);
         } else {
             editTextNPH.setVisibility(View.VISIBLE);
             editTextNPH.setText("");
@@ -376,7 +376,7 @@ public class Initial_page_2 extends Fragment {
 
     public void solubleInsulin(String status) {
         if (!status.matches("282")) {
-            editTextSolubleInsulin.setVisibility(View.GONE);
+            editTextSolubleInsulin.setVisibility(View.INVISIBLE);
         } else {
             editTextSolubleInsulin.setVisibility(View.VISIBLE);
             editTextSolubleInsulin.setText("");
@@ -385,7 +385,7 @@ public class Initial_page_2 extends Fragment {
 
     public void enalapril(String status) {
         if (!status.matches("75633")) {
-            editTextEnalapril.setVisibility(View.GONE);
+            editTextEnalapril.setVisibility(View.INVISIBLE);
         } else {
             editTextEnalapril.setVisibility(View.VISIBLE);
             editTextEnalapril.setText("");
@@ -394,7 +394,7 @@ public class Initial_page_2 extends Fragment {
 
     public void hctz(String status) {
         if (!status.matches("77696")) {
-            editTextHCTZ.setVisibility(View.GONE);
+            editTextHCTZ.setVisibility(View.INVISIBLE);
         } else {
             editTextHCTZ.setVisibility(View.VISIBLE);
             editTextHCTZ.setText("");
@@ -403,7 +403,7 @@ public class Initial_page_2 extends Fragment {
 
     public void losartan(String status) {
         if (!status.matches("79074")) {
-            editTextLosartan.setVisibility(View.GONE);
+            editTextLosartan.setVisibility(View.INVISIBLE);
         } else {
             editTextLosartan.setVisibility(View.VISIBLE);
             editTextLosartan.setText("");
@@ -412,7 +412,7 @@ public class Initial_page_2 extends Fragment {
 
     public void nifedipine(String status) {
         if (!status.matches("80637")) {
-            editTextNifedipine.setVisibility(View.GONE);
+            editTextNifedipine.setVisibility(View.INVISIBLE);
         } else {
             editTextNifedipine.setVisibility(View.VISIBLE);
             editTextNifedipine.setText("");
@@ -421,7 +421,7 @@ public class Initial_page_2 extends Fragment {
 
     public void atenolol(String status) {
         if (!status.matches("71652")) {
-            editTextAtenolol.setVisibility(View.GONE);
+            editTextAtenolol.setVisibility(View.INVISIBLE);
         } else {
             editTextAtenolol.setVisibility(View.VISIBLE);
             editTextAtenolol.setText("");
