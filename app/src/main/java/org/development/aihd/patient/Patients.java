@@ -124,6 +124,8 @@ public class Patients extends AppCompatActivity implements SwipyRefreshLayout.On
             person.setFamily_name(pn.getFamily_name());
             person.setGiven_name(pn.getGiven_name());
             person.setGender(pn.getGender());
+            person.setNational_id(pn.getNational_id());
+            person.setTelephone(pn.getTelephone());
             person.set_status("0");
             person.setIsReport(IsForm);
             person.setIdentifier(pn.getIdentifier());
@@ -176,6 +178,8 @@ public class Patients extends AppCompatActivity implements SwipyRefreshLayout.On
             Intent servicePatients = new Intent(getApplicationContext(), LoadPatients.class);
             servicePatients.putExtra("uuid", AppController.getInstance().getSessionManager().getUserDetails().get("user_id"));
             servicePatients.putExtra("mfl", AppController.getInstance().getSessionManager().getUserDetails().get("mfl_code"));
+           // servicePatients.putExtra("nationalid", AppController.getInstance().getSessionManager().getUserDetails().get("national_id"));
+            //servicePatients.putExtra("telephone", AppController.getInstance().getSessionManager().getUserDetails().get("telephone"));
             startService(servicePatients);
 
             new Handler().postDelayed(new Runnable() {

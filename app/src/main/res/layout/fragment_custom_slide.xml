@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:background="@android:color/transparent"
     android:orientation="vertical"
-    android:paddingBottom="200dp">
+    android:paddingBottom="150dp"
+    android:paddingTop="5dp">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -17,9 +18,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
-            android:autoLink="web"
             android:text="@string/agreement" />
     </ScrollView>
+
+    <Button
+        android:id="@+id/privacy_policy_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:text="Privacy Policy - Read"
+        android:onClick="Submit"/>
 
     <CheckBox
         android:id="@+id/checkBox"
@@ -29,6 +38,6 @@
         android:layout_marginLeft="32dp"
         android:textColor="@color/white"
         android:text="@string/check_to_pass"
-        app:layout_parallaxFactor="0.4" />
+        app:layout_parallaxFactor="0.3" />
 
 </agency.tango.materialintroscreen.parallax.ParallaxLinearLayout>

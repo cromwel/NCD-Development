@@ -36,6 +36,12 @@ public class Person extends SugarRecord {
         this.family_name = name;
     }
 
+    public Person(String person_id, String national_id, String telephone){
+        this.person_id = person_id;
+        this.national_id = national_id;
+        this.telephone = telephone;
+
+    }
     // constructor
     public Person(String family_name, String given_name, String gender, String birthdate,
                   String national_id, String telephone, String location_id, String status) {

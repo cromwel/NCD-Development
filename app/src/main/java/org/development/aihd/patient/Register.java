@@ -204,6 +204,7 @@ public class Register extends AppCompatActivity implements DatePickerDialog.OnDa
         if (!family_name.isEmpty()
                 && !given_name.isEmpty()
                 && !gender.isEmpty()
+                && !national_id.isEmpty()
                 && !telephone.isEmpty()
                 && !birthdate.isEmpty()
                 ) {
@@ -259,6 +260,8 @@ public class Register extends AppCompatActivity implements DatePickerDialog.OnDa
                         // User successfully stored in MySQL
                         // Now store the user in sqlite
                         String patient_id = jObj.getString("person_id");
+                        String national_id = jObj.getString("national_id");
+                        String telephone = jObj.getString("telephone");
 
                         Toast.makeText(getApplicationContext(), "Patient successfully registered!", Toast.LENGTH_LONG).show();
 
@@ -272,6 +275,8 @@ public class Register extends AppCompatActivity implements DatePickerDialog.OnDa
                         intent.putExtra("gender", gender);
                         intent.putExtra("identifier", "identifier pending");
                         intent.putExtra("name", given_name + " " + family_name);
+                        intent.putExtra("national_id", national_id);
+                        intent.putExtra("telephone", telephone);
                         startActivity(intent);
                         finish();
                     }
