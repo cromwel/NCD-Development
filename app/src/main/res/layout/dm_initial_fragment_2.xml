@@ -472,7 +472,6 @@
                             </LinearLayout>
                         </LinearLayout>
 
-
                         <customfonts.TextView_Roboto_Bold
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -534,7 +533,6 @@
                             </LinearLayout>
                         </LinearLayout>
 
-
                         <customfonts.TextView_Roboto_Bold
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -595,7 +593,6 @@
                                     android:textSize="13sp" />
                             </LinearLayout>
                         </LinearLayout>
-
 
                         <customfonts.TextView_Roboto_Bold
                             android:layout_width="match_parent"
@@ -787,7 +784,6 @@
                             android:padding="10dp"
                             android:text="General Exam" />
 
-
                         <RadioGroup
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -940,6 +936,7 @@
                             </LinearLayout>
                         </LinearLayout>
 
+                        <!--CVs exam-->
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1218,6 +1215,7 @@
 
                         </LinearLayout>
 
+                        <!--Respiratory system exam-->
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1237,6 +1235,7 @@
                                     android:text="Respiratory System Exam" />
                             </LinearLayout>
 
+                            <!--RR-->
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -1300,6 +1299,7 @@
 
                             </LinearLayout>
 
+                            <!--air entry-->
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -1363,6 +1363,7 @@
 
                             </LinearLayout>
 
+                            <!--abnormal sounds-->
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -1425,9 +1426,160 @@
                                 </LinearLayout>
 
                             </LinearLayout>
+
                         </LinearLayout>
 
+                        <!--Abdominal Pelvic Exam-->
                         <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <customfonts.TextView_Roboto_Bold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:background="@color/background"
+                                    android:padding="10dp"
+                                    android:text="Abdominal Pelvic Exam" />
+                            </LinearLayout>
+
+                            <!--Organomegaly-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:baselineAligned="false"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <customfonts.TextView_Roboto_Bold
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="10dp"
+                                        android:text="Organomegaly" />
+
+                                    <RadioGroup
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <RadioButton
+                                            android:id="@+id/radio_organomegaly_normal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Normal"
+                                            tools:ignore="TooDeepLayout" />
+
+                                        <RadioButton
+                                            android:id="@+id/radio_organomegaly_abnormal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Abnormal" />
+                                    </RadioGroup>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <customfonts.TextView_Roboto_Bold
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="10dp"
+                                        android:text="Describe" />
+
+                                    <customfonts.EditText_Roboto_Regular
+                                        android:id="@+id/describe_organomegaly"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Describe"
+                                        android:padding="15dp"
+                                        android:textSize="13sp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <!--ascites-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:baselineAligned="false"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <customfonts.TextView_Roboto_Bold
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="10dp"
+                                        android:text="Ascites" />
+
+                                    <RadioGroup
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <RadioButton
+                                            android:id="@+id/radio_ascites_normal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Normal"
+                                            tools:ignore="TooDeepLayout" />
+
+                                        <RadioButton
+                                            android:id="@+id/radio_ascites_abnormal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Abnormal" />
+                                    </RadioGroup>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <customfonts.TextView_Roboto_Bold
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="10dp"
+                                        android:text="Describe" />
+
+                                    <customfonts.EditText_Roboto_Regular
+                                        android:id="@+id/describe_ascites"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Describe"
+                                        android:padding="15dp"
+                                        android:textSize="13sp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                            <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginTop="10dp"
