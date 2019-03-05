@@ -72,6 +72,20 @@
                 android:text="NCD QM EMS TnCs"
                 android:textSize="13sp" />
 
+            <Button
+                android:id="@+id/pdf4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Diabetes Clinical Guidelines 2018"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/pdf5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cardiovascular Guidelines 2018"
+                android:textSize="13sp" />
+
         </LinearLayout>
 
     </android.support.v7.widget.CardView>

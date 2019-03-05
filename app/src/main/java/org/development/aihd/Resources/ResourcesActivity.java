@@ -12,7 +12,7 @@ import org.development.aihd.common.NavigationDrawerShare;
 
 public class ResourcesActivity extends AppCompatActivity {
 
-    Button btn_pdf1, btn_pdf2, btn_pdf3;
+    Button btn_pdf1, btn_pdf2, btn_pdf3, btn_pdf4, btn_pdf5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -28,6 +28,8 @@ public class ResourcesActivity extends AppCompatActivity {
         btn_pdf1=(Button)findViewById(R.id.pdf1);
         btn_pdf2=(Button)findViewById(R.id.pdf2);
         btn_pdf3=(Button)findViewById(R.id.pdf3);
+        btn_pdf4=(Button)findViewById(R.id.pdf4);
+        btn_pdf5=(Button)findViewById(R.id.pdf5);
 
 
         btn_pdf1.setOnClickListener(new View.OnClickListener(){
@@ -56,6 +58,26 @@ public class ResourcesActivity extends AppCompatActivity {
             public void onClick(View view){
                 Intent i3 = new Intent(ResourcesActivity.this, Pdf3.class);
                 startActivity(i3);
+
+            }
+        });
+
+        btn_pdf4.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view){
+                Intent i4 = new Intent(ResourcesActivity.this, Pdf4.class);
+                startActivity(i4);
+
+            }
+        });
+
+        btn_pdf5.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view){
+                Intent i5 = new Intent(ResourcesActivity.this, Pdf5.class);
+                startActivity(i5);
 
             }
         });
