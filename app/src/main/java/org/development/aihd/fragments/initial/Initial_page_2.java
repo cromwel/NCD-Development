@@ -39,7 +39,7 @@ public class Initial_page_2 extends Fragment {
             editTextLosartan, editTextNifedipine, editTextAtenolol, editTextMedicationOther, editTextAdhereSpecify, editTextAllergySpecify;
 
     private EditText editTextTemp, editTextPulseRate, editTextSystolicOne, editTextDiastolicOne, editTextSystolicTwo, editTextDiastolicTwo, editTextWaist,
-            editTextHip, editTextHeight, editTextWeight, editTextRespiratoryRate, editTextExamOther, editTextVisual, editTextPulses, editTextJVP, editTextPallor, editTextHeartSounds, editTextRR, editTextAirEntry, editTextAbnormalSounds, editTextOrganomegaly, editTextAscites, editTextRS, editTextPA, editTextCNS,
+            editTextHip, editTextHeight, editTextWeight, editTextRespiratoryRate, editTextExamOther, editTextVisual, editTextPulses, editTextJVP, editTextPallor, editTextHeartSounds, editTextRR, editTextAirEntry, editTextAbnormalSounds, editTextOrganomegaly, editTextAscites, editTextMotor, editTextSensory, editTextAutonomic, editTextRS, editTextPA, editTextCNS,
             editTextMonofilamentRF, editTextMonofilamentLF;
 
     private TextView_Roboto_Bold bmi, waist_hip_ratio;
@@ -47,7 +47,7 @@ public class Initial_page_2 extends Fragment {
     private String medication_none, medication_metformin, medication_glibenclamide, medication_insulin, medication_nph, medication_soluble_insulin,
             medication_enalapril, medication_hctz, medication_losartan, medication_nifedipine, medication_atenolol, medication_other, adhere_medication, allergies;
 
-    private String general_exam, pallor_cb, jaundice, cyanosis, lymphadenopathy, oedema, dehydration, exam_other, visual_impairment, pulses, jvp, pallor, heart_sounds, rr, air_entry, abnormal_sounds, organomegaly, ascites, rs, pa, cns, extremities;
+    private String general_exam, pallor_cb, jaundice, cyanosis, lymphadenopathy, oedema, dehydration, exam_other, visual_impairment, pulses, jvp, pallor, heart_sounds, rr, air_entry, abnormal_sounds, organomegaly, ascites, motor, sensory, autonomic, rs, pa, cns, extremities;
     private String ulcers, callouses, hardened_nails, fungus, cellulitis, edema, dry;
 
 
@@ -151,6 +151,9 @@ public class Initial_page_2 extends Fragment {
         editTextAbnormalSounds = view.findViewById(R.id.describe_abnormal_sounds);
         editTextOrganomegaly = view.findViewById(R.id.describe_organomegaly);
         editTextAscites = view.findViewById(R.id.describe_ascites);
+        editTextMotor = view.findViewById(R.id.describe_motor);
+        editTextSensory = view.findViewById(R.id.describe_sensory);
+        editTextAutonomic = view.findViewById(R.id.describe_autonomic);
         editTextRS = view.findViewById(R.id.describe_rs);
         editTextPA = view.findViewById(R.id.describe_pa);
         editTextCNS = view.findViewById(R.id.describe_cns);
@@ -182,6 +185,9 @@ public class Initial_page_2 extends Fragment {
         textWatcher(editTextAbnormalSounds, "");
         textWatcher(editTextOrganomegaly, "");
         textWatcher(editTextAscites, "");
+        textWatcher(editTextMotor, "");
+        textWatcher(editTextSensory, "");
+        textWatcher(editTextAutonomic, "");
         textWatcher(editTextRS, "");
         textWatcher(editTextPA, "");
         textWatcher(editTextCNS, "");
@@ -211,6 +217,12 @@ public class Initial_page_2 extends Fragment {
         RadioButton radioButtonOrganomegalyAbnormal = view.findViewById(R.id.radio_organomegaly_abnormal);
         RadioButton radioButtonAscitesNormal = view.findViewById(R.id.radio_ascites_normal);
         RadioButton radioButtonAscitesAbnormal = view.findViewById(R.id.radio_ascites_abnormal);
+        RadioButton radioButtonMotorNormal = view.findViewById(R.id.radio_motor_normal);
+        RadioButton radioButtonMotorAbnormal = view.findViewById(R.id.radio_motor_abnormal);
+        RadioButton radioButtonSensoryNormal = view.findViewById(R.id.radio_sensory_normal);
+        RadioButton radioButtonSensoryAbnormal = view.findViewById(R.id.radio_sensory_abnormal);
+        RadioButton radioButtonAutonomicNormal = view.findViewById(R.id.radio_autonomic_normal);
+        RadioButton radioButtonAutonomicAbnormal = view.findViewById(R.id.radio_autonomic_abnormal);
         RadioButton radioButtonRSNormal = view.findViewById(R.id.radio_rs_normal);
         RadioButton radioButtonRSAbnormal = view.findViewById(R.id.radio_rs_abnormal);
         RadioButton radioButtonPANormal = view.findViewById(R.id.radio_pa_normal);
@@ -243,6 +255,12 @@ public class Initial_page_2 extends Fragment {
         radioButton(radioButtonOrganomegalyAbnormal);
         radioButton(radioButtonAscitesNormal);
         radioButton(radioButtonAscitesAbnormal);
+        radioButton(radioButtonMotorNormal);
+        radioButton(radioButtonMotorAbnormal);
+        radioButton(radioButtonSensoryNormal);
+        radioButton(radioButtonSensoryAbnormal);
+        radioButton(radioButtonAutonomicNormal);
+        radioButton(radioButtonAutonomicAbnormal);
         radioButton(radioButtonRSNormal);
         radioButton(radioButtonRSAbnormal);
         radioButton(radioButtonPANormal);
@@ -817,6 +835,30 @@ public class Initial_page_2 extends Fragment {
                         if (checked)
                             ascites = "1116";
                         break;
+                    case R.id.radio_motor_normal:
+                        if (checked)
+                            motor = "1115";
+                        break;
+                    case R.id.radio_motor_abnormal:
+                        if (checked)
+                            motor = "1116";
+                        break;
+                    case R.id.radio_sensory_normal:
+                        if (checked)
+                            sensory = "1115";
+                        break;
+                    case R.id.radio_sensory_abnormal:
+                        if (checked)
+                            sensory = "1116";
+                        break;
+                    case R.id.radio_autonomic_normal:
+                        if (checked)
+                            autonomic = "1115";
+                        break;
+                    case R.id.radio_autonomic_abnormal:
+                        if (checked)
+                            autonomic = "1116";
+                        break;
                     case R.id.radio_rs_normal:
                         if (checked)
                             rs = "1115";
@@ -958,6 +1000,12 @@ public class Initial_page_2 extends Fragment {
         jsonArry.put(JSONFormBuilder.observations("165158", "", "valueText", editTextOrganomegaly.getText().toString().trim(), DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("1124", "", "valueCoded", ascites, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("165158", "", "valueText", editTextAscites.getText().toString().trim(), DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("1124", "", "valueCoded", motor, DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("165158", "", "valueText", editTextMotor.getText().toString().trim(), DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("1124", "", "valueCoded", sensory, DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("165158", "", "valueText", editTextSensory.getText().toString().trim(), DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("1124", "", "valueCoded", autonomic, DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("165158", "", "valueText", editTextAutonomic.getText().toString().trim(), DateCalendar.date(), ""));
 
         jsonArry.put(JSONFormBuilder.observations("1123", "", "valueCoded", rs, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("165159", "", "valueText", editTextRS.getText().toString().trim(), DateCalendar.date(), ""));
