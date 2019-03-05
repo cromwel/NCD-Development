@@ -39,7 +39,7 @@ public class Initial_page_2 extends Fragment {
             editTextLosartan, editTextNifedipine, editTextAtenolol, editTextMedicationOther, editTextAdhereSpecify, editTextAllergySpecify;
 
     private EditText editTextTemp, editTextPulseRate, editTextSystolicOne, editTextDiastolicOne, editTextSystolicTwo, editTextDiastolicTwo, editTextWaist,
-            editTextHip, editTextHeight, editTextWeight, editTextRespiratoryRate, editTextExamOther, editTextVisual, editTextCVS, editTextRS, editTextPA, editTextCNS,
+            editTextHip, editTextHeight, editTextWeight, editTextRespiratoryRate, editTextExamOther, editTextVisual, editTextPulses, editTextJVP, editTextPallor, editTextHeartSounds, editTextRS, editTextPA, editTextCNS,
             editTextMonofilamentRF, editTextMonofilamentLF;
 
     private TextView_Roboto_Bold bmi, waist_hip_ratio;
@@ -47,7 +47,7 @@ public class Initial_page_2 extends Fragment {
     private String medication_none, medication_metformin, medication_glibenclamide, medication_insulin, medication_nph, medication_soluble_insulin,
             medication_enalapril, medication_hctz, medication_losartan, medication_nifedipine, medication_atenolol, medication_other, adhere_medication, allergies;
 
-    private String general_exam, pallor, jaundice, cyanosis, lymphadenopathy, oedema, dehydration, exam_other, visual_impairment, cvs, rs, pa, cns, extremities;
+    private String general_exam, pallor_cb, jaundice, cyanosis, lymphadenopathy, oedema, dehydration, exam_other, visual_impairment, pulses, jvp, pallor, heart_sounds, rs, pa, cns, extremities;
     private String ulcers, callouses, hardened_nails, fungus, cellulitis, edema, dry;
 
 
@@ -142,7 +142,10 @@ public class Initial_page_2 extends Fragment {
         editTextExamOther = view.findViewById(R.id.other_general_exam);
 
         editTextVisual = view.findViewById(R.id.describe_visual_impairment);
-        editTextCVS = view.findViewById(R.id.describe_cvs);
+        editTextPulses = view.findViewById(R.id.describe_pulses);
+        editTextJVP = view.findViewById(R.id.describe_jvp);
+        editTextPallor = view.findViewById(R.id.describe_pallor);
+        editTextHeartSounds = view.findViewById(R.id.describe_heart_sounds);
         editTextRS = view.findViewById(R.id.describe_rs);
         editTextPA = view.findViewById(R.id.describe_pa);
         editTextCNS = view.findViewById(R.id.describe_cns);
@@ -165,7 +168,10 @@ public class Initial_page_2 extends Fragment {
         textWatcher(editTextRespiratoryRate, "");
         textWatcher(editTextExamOther, "");
         textWatcher(editTextVisual, "");
-        textWatcher(editTextCVS, "");
+        textWatcher(editTextPulses, "");
+        textWatcher(editTextJVP, "");
+        textWatcher(editTextPallor, "");
+        textWatcher(editTextHeartSounds, "");
         textWatcher(editTextRS, "");
         textWatcher(editTextPA, "");
         textWatcher(editTextCNS, "");
@@ -177,8 +183,14 @@ public class Initial_page_2 extends Fragment {
         RadioButton radioButtonExamSick = view.findViewById(R.id.radio_exam_sick);
         RadioButton radioButtonVisualYes = view.findViewById(R.id.radio_visual_impairment_yes);
         RadioButton radioButtonVisualNo = view.findViewById(R.id.radio_visual_impairment_no);
-        RadioButton radioButtonCVSNormal = view.findViewById(R.id.radio_cvs_normal);
-        RadioButton radioButtonCVSAbnormal = view.findViewById(R.id.radio_cvs_abnormal);
+        RadioButton radioButtonPulsesNormal = view.findViewById(R.id.radio_pulses_normal);
+        RadioButton radioButtonPulsesAbnormal = view.findViewById(R.id.radio_pulses_abnormal);
+        RadioButton radioButtonJVPNormal = view.findViewById(R.id.radio_jvp_normal);
+        RadioButton radioButtonJVPAbnormal = view.findViewById(R.id.radio_jvp_abnormal);
+        RadioButton radioButtonPallorNormal = view.findViewById(R.id.radio_pallor_normal);
+        RadioButton radioButtonPallorAbnormal = view.findViewById(R.id.radio_pallor_abnormal);
+        RadioButton radioButtonHeartSoundsNormal = view.findViewById(R.id.radio_heart_sounds_normal);
+        RadioButton radioButtonHeartSoundsAbnormal = view.findViewById(R.id.radio_heart_sounds_abnormal);
         RadioButton radioButtonRSNormal = view.findViewById(R.id.radio_rs_normal);
         RadioButton radioButtonRSAbnormal = view.findViewById(R.id.radio_rs_abnormal);
         RadioButton radioButtonPANormal = view.findViewById(R.id.radio_pa_normal);
@@ -193,8 +205,14 @@ public class Initial_page_2 extends Fragment {
         radioButton(radioButtonExamSick);
         radioButton(radioButtonVisualYes);
         radioButton(radioButtonVisualNo);
-        radioButton(radioButtonCVSNormal);
-        radioButton(radioButtonCVSAbnormal);
+        radioButton(radioButtonPulsesNormal);
+        radioButton(radioButtonPulsesAbnormal);
+        radioButton(radioButtonJVPNormal);
+        radioButton(radioButtonJVPAbnormal);
+        radioButton(radioButtonPallorNormal);
+        radioButton(radioButtonPallorAbnormal);
+        radioButton(radioButtonHeartSoundsNormal);
+        radioButton(radioButtonHeartSoundsAbnormal);
         radioButton(radioButtonRSNormal);
         radioButton(radioButtonRSAbnormal);
         radioButton(radioButtonPANormal);
@@ -539,9 +557,9 @@ public class Initial_page_2 extends Fragment {
                         break;
                     case R.id.checkbox_exam_pallor:
                         if (checked) {
-                            pallor = "5245";
+                            pallor_cb = "5245";
                         } else {
-                            pallor = "";
+                            pallor_cb = "";
                         }
                         break;
                     case R.id.checkbox_exam_jaundice:
@@ -697,13 +715,37 @@ public class Initial_page_2 extends Fragment {
                         if (checked)
                             visual_impairment = "1066";
                         break;
-                    case R.id.radio_cvs_normal:
+                    case R.id.radio_pulses_normal:
                         if (checked)
-                            cvs = "1115";
+                            pulses = "1115";
                         break;
-                    case R.id.radio_cvs_abnormal:
+                    case R.id.radio_pulses_abnormal:
                         if (checked)
-                            cvs = "1116";
+                            pulses = "1116";
+                        break;
+                    case R.id.radio_jvp_normal:
+                        if (checked)
+                            jvp = "1115";
+                        break;
+                    case R.id.radio_jvp_abnormal:
+                        if (checked)
+                            jvp = "1116";
+                        break;
+                    case R.id.radio_pallor_normal:
+                        if (checked)
+                            pallor = "1115";
+                        break;
+                    case R.id.radio_pallor_abnormal:
+                        if (checked)
+                            pallor = "1116";
+                        break;
+                    case R.id.radio_heart_sounds_normal:
+                        if (checked)
+                            heart_sounds = "1115";
+                        break;
+                    case R.id.radio_heart_sounds_abnormal:
+                        if (checked)
+                            heart_sounds = "1116";
                         break;
                     case R.id.radio_rs_normal:
                         if (checked)
@@ -816,7 +858,7 @@ public class Initial_page_2 extends Fragment {
         jsonArry.put(JSONFormBuilder.observations("165190", "", "valueText", "", DateCalendar.date(), ""));
 
         jsonArry.put(JSONFormBuilder.observations("1119", "", "valueCoded", general_exam, DateCalendar.date(), ""));
-        jsonArry.put(JSONFormBuilder.observations("1119", "", "valueCoded", pallor, DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("1119", "", "valueCoded", pallor_cb, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("1119", "", "valueCoded", jaundice, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("1119", "", "valueCoded", cyanosis, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("1119", "", "valueCoded", lymphadenopathy, DateCalendar.date(), ""));
@@ -828,8 +870,14 @@ public class Initial_page_2 extends Fragment {
         jsonArry.put(JSONFormBuilder.observations("165206", "", "valueCoded", visual_impairment, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("165175", "", "valueText", editTextVisual.getText().toString().trim(), DateCalendar.date(), ""));
 
-        jsonArry.put(JSONFormBuilder.observations("1124", "", "valueCoded", cvs, DateCalendar.date(), ""));
-        jsonArry.put(JSONFormBuilder.observations("165158", "", "valueText", editTextCVS.getText().toString().trim(), DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("1124", "", "valueCoded", pulses, DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("165158", "", "valueText", editTextPulses.getText().toString().trim(), DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("1124", "", "valueCoded", jvp, DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("165158", "", "valueText", editTextJVP.getText().toString().trim(), DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("1124", "", "valueCoded", pallor, DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("165158", "", "valueText", editTextPallor.getText().toString().trim(), DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("1124", "", "valueCoded", heart_sounds, DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("165158", "", "valueText", editTextHeartSounds.getText().toString().trim(), DateCalendar.date(), ""));
 
         jsonArry.put(JSONFormBuilder.observations("1123", "", "valueCoded", rs, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("165159", "", "valueText", editTextRS.getText().toString().trim(), DateCalendar.date(), ""));

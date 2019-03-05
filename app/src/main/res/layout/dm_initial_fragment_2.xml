@@ -767,7 +767,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:padding="10dp"
-                                    android:text="Waist Hip Ratio" />
+                                    android:text="Waist-Hip Ratio" />
 
                                 <customfonts.TextView_Roboto_Bold
                                     android:id="@+id/waist_hip_ratio"
@@ -940,7 +940,27 @@
                             </LinearLayout>
                         </LinearLayout>
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        <customfonts.TextView_Roboto_Bold
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:background="@color/background"
+                            android:padding="10dp"
+                            android:text="CVs Exam" />
+
+                        </LinearLayout>
+
+                            <!--Pulses-->
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -959,25 +979,26 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:padding="10dp"
-                                    android:text="CVS" />
+                                    android:text="Pulses" />
 
                                 <RadioGroup
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content">
 
                                     <RadioButton
-                                        android:id="@+id/radio_cvs_normal"
+                                        android:id="@+id/radio_pulses_normal"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="Normal"
                                         tools:ignore="TooDeepLayout" />
 
                                     <RadioButton
-                                        android:id="@+id/radio_cvs_abnormal"
+                                        android:id="@+id/radio_pulses_abnormal"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="Abnormal" />
                                 </RadioGroup>
+
                             </LinearLayout>
 
                             <LinearLayout
@@ -993,14 +1014,229 @@
                                     android:text="Describe" />
 
                                 <customfonts.EditText_Roboto_Regular
-                                    android:id="@+id/describe_cvs"
+                                    android:id="@+id/describe_pulses"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:hint="Describe"
                                     android:padding="15dp"
                                     android:textSize="13sp" />
                             </LinearLayout>
+
                         </LinearLayout>
+
+                            <!--JVP-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:baselineAligned="false"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <customfonts.TextView_Roboto_Bold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+                                    android:text="JVP" />
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <RadioButton
+                                        android:id="@+id/radio_jvp_normal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Normal"
+                                        tools:ignore="TooDeepLayout" />
+
+                                    <RadioButton
+                                        android:id="@+id/radio_jvp_abnormal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Abnormal" />
+                                </RadioGroup>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <customfonts.TextView_Roboto_Bold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+                                    android:text="Describe" />
+
+                                <customfonts.EditText_Roboto_Regular
+                                    android:id="@+id/describe_jvp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Describe"
+                                    android:padding="15dp"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                            <!--Pallor-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:baselineAligned="false"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <customfonts.TextView_Roboto_Bold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+                                    android:text="Pallor" />
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <RadioButton
+                                        android:id="@+id/radio_pallor_normal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Normal"
+                                        tools:ignore="TooDeepLayout" />
+
+                                    <RadioButton
+                                        android:id="@+id/radio_pallor_abnormal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Abnormal" />
+                                </RadioGroup>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <customfonts.TextView_Roboto_Bold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+                                    android:text="Describe" />
+
+                                <customfonts.EditText_Roboto_Regular
+                                    android:id="@+id/describe_pallor"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Describe"
+                                    android:padding="15dp"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                            <!--Heart Sounds-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:baselineAligned="false"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <customfonts.TextView_Roboto_Bold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+                                    android:text="Heart Sounds" />
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <RadioButton
+                                        android:id="@+id/radio_heart_sounds_normal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Normal"
+                                        tools:ignore="TooDeepLayout" />
+
+                                    <RadioButton
+                                        android:id="@+id/radio_heart_sounds_abnormal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Abnormal" />
+                                </RadioGroup>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <customfonts.TextView_Roboto_Bold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+                                    android:text="Describe" />
+
+                                <customfonts.EditText_Roboto_Regular
+                                    android:id="@+id/describe_heart_sounds"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Describe"
+                                    android:padding="15dp"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <customfonts.TextView_Roboto_Bold
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:background="@color/background"
+                            android:padding="10dp"
+                            android:text="Respiratory System Exam" />
+                    </LinearLayout>
+                </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -1187,7 +1423,6 @@
                             </LinearLayout>
                         </LinearLayout>
 
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -1325,12 +1560,15 @@
                                     android:textSize="13sp" />
                             </LinearLayout>
                         </LinearLayout>
+
                     </LinearLayout>
 
-
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
 
         </LinearLayout>
+
     </ScrollView>
+
 </android.support.design.widget.CoordinatorLayout>
