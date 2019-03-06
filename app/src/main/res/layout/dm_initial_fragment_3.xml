@@ -249,7 +249,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="20dp"
+                        android:layout_margin="15dp"
                         android:baselineAligned="false"
                         android:orientation="horizontal"
                         android:weightSum="3">
@@ -257,19 +257,19 @@
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1">
+                            android:layout_weight="1.2">
 
                             <customfonts.TextView_Roboto_Bold
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Urea"
+                                android:text="Urea (mmols/L)"
                                 android:textAllCaps="false" />
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1">
+                            android:layout_weight=".8">
 
                             <customfonts.EditText_Roboto_Regular
                                 android:id="@+id/blood_work_urea"
@@ -300,8 +300,7 @@
                     <customfonts.TextView_Roboto_Bold
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/background"
-                        android:padding="10dp"
+                        android:layout_margin="15dp"
                         android:text="Electrolytes"
                         android:textAllCaps="false" />
 
@@ -316,19 +315,19 @@
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1">
+                            android:layout_weight="1.2">
 
                             <customfonts.TextView_Roboto_Bold
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Sodium"
+                                android:text="Sodium (mmols/L)"
                                 android:textAllCaps="false" />
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1">
+                            android:layout_weight=".8">
 
                             <customfonts.EditText_Roboto_Regular
                                 android:id="@+id/blood_work_sodium"
@@ -367,19 +366,19 @@
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1">
+                            android:layout_weight="1.2">
 
                             <customfonts.TextView_Roboto_Bold
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Chloride"
+                                android:text="Chloride (mmols/L)"
                                 android:textAllCaps="false" />
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1">
+                            android:layout_weight=".8">
 
                             <customfonts.EditText_Roboto_Regular
                                 android:id="@+id/blood_work_chloride"
@@ -418,19 +417,19 @@
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1">
+                            android:layout_weight="1.2">
 
                             <customfonts.TextView_Roboto_Bold
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Potassium"
+                                android:text="Potassium (mmols/L)"
                                 android:textAllCaps="false" />
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1">
+                            android:layout_weight=".8">
 
                             <customfonts.EditText_Roboto_Regular
                                 android:id="@+id/blood_work_potassium"
@@ -462,7 +461,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="20dp"
+                        android:layout_margin="15dp"
                         android:baselineAligned="false"
                         android:orientation="horizontal"
                         android:weightSum="3">
@@ -470,19 +469,19 @@
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1">
+                            android:layout_weight="1.2">
 
                             <customfonts.TextView_Roboto_Bold
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Creatinine"
+                                android:text="Creatinine (mmols/L)"
                                 android:textAllCaps="false" />
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1">
+                            android:layout_weight=".8">
 
                             <customfonts.EditText_Roboto_Regular
                                 android:id="@+id/blood_work_creatinine"
@@ -501,6 +500,57 @@
 
                             <customfonts.EditText_Roboto_Regular
                                 android:id="@+id/datetime_creatinine"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:hint="yyyy-mm-dd"
+                                android:inputType="date"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.2">
+
+                            <customfonts.TextView_Roboto_Bold
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Serum Uric Acid Test (mmols/L)"
+                                android:textAllCaps="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".8">
+
+                            <customfonts.EditText_Roboto_Regular
+                                android:id="@+id/blood_work_serum_uric_acid"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"
+                                android:padding="10dp"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <customfonts.EditText_Roboto_Regular
+                                android:id="@+id/datetime_serum_uric_acid"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:focusable="false"
@@ -535,7 +585,7 @@
                             <customfonts.TextView_Roboto_Bold
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="HDL"
+                                android:text="HDL (mmols/L)"
                                 android:textAllCaps="false" />
                         </LinearLayout>
 
@@ -587,7 +637,7 @@
                             <customfonts.TextView_Roboto_Bold
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="LDL"
+                                android:text="LDL (mmols/L)"
                                 android:textAllCaps="false" />
                         </LinearLayout>
 
@@ -639,7 +689,7 @@
                             <customfonts.TextView_Roboto_Bold
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Total Cholesterol"
+                                android:text="Total Cholesterol (mmols/L)"
                                 android:textAllCaps="false" />
                         </LinearLayout>
 
@@ -691,7 +741,7 @@
                             <customfonts.TextView_Roboto_Bold
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Triglycerides"
+                                android:text="Triglycerides (mmols/L)"
                                 android:textAllCaps="false" />
                         </LinearLayout>
 
@@ -751,7 +801,7 @@
                             <customfonts.TextView_Roboto_Bold
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="AST (SGOT)"
+                                android:text="AST (SGOT) (mmols/L)"
                                 android:textAllCaps="false" />
                         </LinearLayout>
 
@@ -803,7 +853,7 @@
                             <customfonts.TextView_Roboto_Bold
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="ALT (SGPT)"
+                                android:text="ALT (SGPT) (mmols/L)"
                                 android:textAllCaps="false" />
                         </LinearLayout>
 
@@ -856,7 +906,7 @@
                             <customfonts.TextView_Roboto_Bold
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Total Bilirubin"
+                                android:text="Total Bilirubin (mmols/L)"
                                 android:textAllCaps="false" />
                         </LinearLayout>
 
@@ -907,7 +957,7 @@
                             <customfonts.TextView_Roboto_Bold
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Direct Bilirubin"
+                                android:text="Direct Bilirubin (mmols/L)"
                                 android:textAllCaps="false" />
                         </LinearLayout>
 
@@ -959,7 +1009,7 @@
                             <customfonts.TextView_Roboto_Bold
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Gamma GT(GGT)"
+                                android:text="Gamma GT(GGT) (mmols/L)"
                                 android:textAllCaps="false" />
                         </LinearLayout>
 
@@ -1304,7 +1354,6 @@
                                 android:id="@+id/deposit_comment"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:padding="15dp"
                                 android:textSize="13sp" />
 
                         </LinearLayout>
@@ -1321,7 +1370,6 @@
                                 android:focusable="false"
                                 android:hint="yyyy-mm-dd"
                                 android:inputType="date"
-                                android:padding="15dp"
                                 android:textSize="13sp" />
 
                         </LinearLayout>
@@ -1345,7 +1393,7 @@
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1">
+                            android:layout_weight=".8">
 
                             <customfonts.TextView_Roboto_Bold
                                 android:layout_width="match_parent"
@@ -1358,7 +1406,7 @@
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
+                            android:layout_weight="1.2"
                             android:orientation="vertical">
 
                             <RadioGroup
@@ -1408,7 +1456,7 @@
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1">
+                            android:layout_weight=".8">
 
                             <customfonts.TextView_Roboto_Bold
                                 android:layout_width="match_parent"
@@ -1421,7 +1469,7 @@
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
+                            android:layout_weight="1.2"
                             android:orientation="vertical">
 
                             <RadioGroup
@@ -1494,7 +1542,6 @@
                                 android:focusable="false"
                                 android:hint="yyyy-mm-dd"
                                 android:inputType="date"
-                                android:padding="15dp"
                                 android:textSize="13sp" />
 
                         </LinearLayout>
@@ -1513,7 +1560,7 @@
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
+                            android:layout_weight=".8"
                             android:orientation="vertical">
 
                             <customfonts.TextView_Roboto_Bold
@@ -1526,7 +1573,7 @@
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
+                            android:layout_weight="1.2"
                             android:orientation="vertical">
 
                             <customfonts.EditText_Roboto_Regular
@@ -1534,7 +1581,6 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="Comment"
-                                android:padding="15dp"
                                 android:textSize="13sp" />
                         </LinearLayout>
 
