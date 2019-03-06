@@ -33,21 +33,24 @@ import customfonts.TextView_Roboto_Bold;
 public class Initial_page_2 extends Fragment {
 
     private View view;
-    private LinearLayout linearLayoutPastCurrentMedication, linearLayoutOtherPastCurrentMedication, linearLayoutExamOther, linearLayoutExtremities;
+    private LinearLayout linearLayoutPastCurrentMedication, linearLayoutOtherPastCurrentMedication, linearLayoutExamOther, linearLayoutExtremities, linearLayoutExtremitiesDescription;
 
-    private EditText editTextMetformin, editTextGlibenclamide, editTextInsulin, editTextNPH, editTextSolubleInsulin, editTextEnalapril, editTextHCTZ,
-            editTextLosartan, editTextNifedipine, editTextAtenolol, editTextMedicationOther, editTextAdhereSpecify, editTextAllergySpecify;
+    private EditText editTextMetformin, editTextGlibenclamide, editTextInsulin, editTextNPH, editTextSolubleInsulin, editTextEnalapril, editTextHCTZ, editTextLosartan, editTextNifedipine, editTextAtenolol, editTextMedicationOther,
+            editTextAdhereSpecify, editTextAllergySpecify;
 
     private EditText editTextTemp, editTextPulseRate, editTextSystolicOne, editTextDiastolicOne, editTextSystolicTwo, editTextDiastolicTwo, editTextWaist,
-            editTextHip, editTextHeight, editTextWeight, editTextRespiratoryRate, editTextExamOther, editTextVisual, editTextPulses, editTextJVP, editTextPallor, editTextHeartSounds, editTextRR, editTextAirEntry, editTextAbnormalSounds, editTextOrganomegally, editTextAscities, editTextMotor, editTextSensory, editTextAutonomic, editTextGumDisease, editTextOralFessions, editTextDepression, editTextSleepDisorders, editTextSubstanceAbuse, editTextRS, editTextPA, editTextCNS,
-            editTextMonofilamentRF, editTextMonofilamentLF;
+            editTextHip, editTextHeight, editTextWeight, editTextRespiratoryRate, editTextExamOther, editTextVisual, editTextPulses, editTextJVP, editTextPallor, editTextHeartSounds, editTextRR, editTextAirEntry, editTextAbnormalSounds,
+            editTextOrganomegally, editTextAscities, editTextMotor, editTextSensory, editTextAutonomic, editTextGumDisease, editTextOralFessions, editTextDepression, editTextSleepDisorders, editTextSubstanceAbuse, editTextRS, editTextPA,
+            editTextCNS, editTextExtremeties, editTextMonofilamentRF, editTextMonofilamentLF;
 
     private TextView_Roboto_Bold bmi, waist_hip_ratio;
 
     private String medication_none, medication_metformin, medication_glibenclamide, medication_insulin, medication_nph, medication_soluble_insulin,
             medication_enalapril, medication_hctz, medication_losartan, medication_nifedipine, medication_atenolol, medication_other, adhere_medication, allergies;
 
-    private String general_exam, pallor_cb, jaundice, cyanosis, lymphadenopathy, oedema, dehydration, exam_other, visual_impairment, pulses, jvp, pallor, heart_sounds, rr, air_entry, abnormal_sounds, organomegally, ascities, motor, sensory, autonomic, gum_disease, oral_fessions, depression, sleep_disorders, substance_abuse, rs, pa, cns, extremities;
+    private String general_exam, pallor_cb, jaundice, cyanosis, lymphadenopathy, oedema, dehydration, exam_other, visual_impairment, pulses, jvp, pallor, heart_sounds, rr, air_entry, abnormal_sounds, organomegally, ascities, motor, sensory,
+            autonomic, gum_disease, oral_fessions, depression, sleep_disorders, substance_abuse, rs, pa, cns, extremities;
+
     private String ulcers, callouses, hardened_nails, fungus, cellulitis, edema, dry;
 
 
@@ -59,6 +62,7 @@ public class Initial_page_2 extends Fragment {
         linearLayoutOtherPastCurrentMedication = view.findViewById(R.id.other_past_current_medication);
         linearLayoutExamOther = view.findViewById(R.id.linearLayoutExamOther);
         linearLayoutExtremities = view.findViewById(R.id.extremitiesLinearLayout);
+        linearLayoutExtremitiesDescription = view.findViewById(R.id.describe_extremities_layout);
 
         CheckBox checkBoxNone = view.findViewById(R.id.checkbox_medication_none);
         CheckBox checkBoxMetformin = view.findViewById(R.id.checkbox_medication_metformin);
@@ -162,6 +166,7 @@ public class Initial_page_2 extends Fragment {
         editTextRS = view.findViewById(R.id.describe_rs);
         editTextPA = view.findViewById(R.id.describe_pa);
         editTextCNS = view.findViewById(R.id.describe_cns);
+        editTextExtremeties = view.findViewById(R.id.describe_extremities);
         editTextMonofilamentRF = view.findViewById(R.id.monofilament_rf);
         editTextMonofilamentLF = view.findViewById(R.id.monofilament_lf);
 
@@ -201,6 +206,7 @@ public class Initial_page_2 extends Fragment {
         textWatcher(editTextRS, "");
         textWatcher(editTextPA, "");
         textWatcher(editTextCNS, "");
+        textWatcher(editTextExtremeties, "");
         textWatcher(editTextMonofilamentRF, "monofilament");
         textWatcher(editTextMonofilamentLF, "monofilament");
 
@@ -363,8 +369,10 @@ public class Initial_page_2 extends Fragment {
     public void extremitiesStatus(String status) {
         if (status.matches("1116")) {
             linearLayoutExtremities.setVisibility(View.VISIBLE);
+            linearLayoutExtremitiesDescription.setVisibility((View.VISIBLE));
         } else {
             linearLayoutExtremities.setVisibility(View.GONE);
+            linearLayoutExtremitiesDescription.setVisibility(view.GONE);
         }
     }
 
@@ -1097,6 +1105,8 @@ public class Initial_page_2 extends Fragment {
         jsonArry.put(JSONFormBuilder.observations("165161", "", "valueText", editTextCNS.getText().toString().trim(), DateCalendar.date(), ""));
 
         jsonArry.put(JSONFormBuilder.observations("165112", "", "valueCoded", extremities, DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("165162", "", "valueText", editTextExtremeties.getText().toString().trim(), DateCalendar.date(), ""));
+
         jsonArry.put(JSONFormBuilder.observations("165112", "", "valueCoded", ulcers, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("165112", "", "valueCoded", callouses, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("165112", "", "valueCoded", hardened_nails, DateCalendar.date(), ""));

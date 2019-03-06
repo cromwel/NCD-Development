@@ -1945,23 +1945,23 @@
 
                         <!--mental health exam-->
                         <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
 
-                                <LinearLayout
+                                <customfonts.TextView_Roboto_Bold
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:orientation="vertical">
-
-                                    <customfonts.TextView_Roboto_Bold
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="20dp"
-                                        android:background="@color/background"
-                                        android:padding="10dp"
-                                        android:text="Mental Health Exam" />
-                                </LinearLayout>
+                                    android:layout_marginTop="20dp"
+                                    android:background="@color/background"
+                                    android:padding="10dp"
+                                    android:text="Mental Health Exam" />
+                            </LinearLayout>
 
                             <!--depression-->
                             <LinearLayout
@@ -2155,29 +2155,29 @@
 
                             </LinearLayout>
 
-                            </LinearLayout>
+                        </LinearLayout>
 
                         <!--foot exam-->
                         <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <customfonts.TextView_Roboto_Bold
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:orientation="vertical">
+                                    android:layout_marginTop="20dp"
+                                    android:background="@color/background"
+                                    android:padding="10dp"
+                                    android:text="Foot Exam" />
+                            </LinearLayout>
 
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:orientation="vertical">
-
-                                        <customfonts.TextView_Roboto_Bold
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginTop="20dp"
-                                            android:background="@color/background"
-                                            android:padding="10dp"
-                                            android:text="Foot Exam" />
-                                    </LinearLayout>
-
-                                </LinearLayout>
+                        </LinearLayout>
 
                         <!--others-->
                         <LinearLayout
@@ -2196,7 +2196,7 @@
                                     android:layout_marginTop="20dp"
                                     android:background="@color/background"
                                     android:padding="10dp"
-                                    android:text=""/>
+                                    android:text="" />
                             </LinearLayout>
 
                             <!--RS-->
@@ -2237,6 +2237,7 @@
                                             android:layout_height="wrap_content"
                                             android:text="Abnormal" />
                                     </RadioGroup>
+
                                 </LinearLayout>
 
                                 <LinearLayout
@@ -2388,144 +2389,177 @@
                             </LinearLayout>
 
                             <!--extremities-->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="10dp"
-                            android:baselineAligned="false"
-                            android:orientation="horizontal"
-                            android:weightSum="2">
-
                             <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:orientation="vertical">
-
-                                <customfonts.TextView_Roboto_Bold
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:padding="10dp"
-                                    android:text="Extremities" />
-
-                                <RadioGroup
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content">
-
-                                    <RadioButton
-                                        android:id="@+id/radio_extremities_normal"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:text="Normal"
-                                        tools:ignore="TooDeepLayout" />
-
-                                    <RadioButton
-                                        android:id="@+id/radio_extremities_abnormal"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:text="Abnormal" />
-                                </RadioGroup>
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:id="@+id/extremitiesLinearLayout"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:layout_marginTop="10dp"
-                                android:layout_weight="1"
                                 android:orientation="vertical">
 
-                                <CheckBox
-                                    android:id="@+id/checkbox_extremities_ulcers"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Ulcers" />
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:baselineAligned="false"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
 
-                                <CheckBox
-                                    android:id="@+id/checkbox_extremities_callouses"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Callouses" />
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
 
-                                <CheckBox
-                                    android:id="@+id/checkbox_extremities_nails"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Hardened Nails" />
+                                        <customfonts.TextView_Roboto_Bold
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:padding="10dp"
+                                            android:text="Extremities" />
 
-                                <CheckBox
-                                    android:id="@+id/checkbox_extremities_fungus"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Fungus" />
+                                        <RadioGroup
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
 
-                                <CheckBox
-                                    android:id="@+id/checkbox_extremities_cellulitis"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Cellulitis" />
+                                            <RadioButton
+                                                android:id="@+id/radio_extremities_normal"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:text="Normal"
+                                                tools:ignore="TooDeepLayout" />
 
-                                <CheckBox
-                                    android:id="@+id/checkbox_extremities_edema"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Edema" />
+                                            <RadioButton
+                                                android:id="@+id/radio_extremities_abnormal"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:text="Abnormal" />
+                                        </RadioGroup>
 
-                                <CheckBox
-                                    android:id="@+id/checkbox_extremities_dry"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Dry" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/extremitiesLinearLayout"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="80dp"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical"
+                                        android:visibility="gone">
+
+                                        <CheckBox
+                                            android:id="@+id/checkbox_extremities_ulcers"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Ulcers" />
+
+                                        <CheckBox
+                                            android:id="@+id/checkbox_extremities_callouses"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Callouses" />
+
+                                        <CheckBox
+                                            android:id="@+id/checkbox_extremities_nails"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Hardened Nails" />
+
+                                        <CheckBox
+                                            android:id="@+id/checkbox_extremities_fungus"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Fungus" />
+
+                                        <CheckBox
+                                            android:id="@+id/checkbox_extremities_cellulitis"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Cellulitis" />
+
+                                        <CheckBox
+                                            android:id="@+id/checkbox_extremities_edema"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Edema" />
+
+                                        <CheckBox
+                                            android:id="@+id/checkbox_extremities_dry"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Dry" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/describe_extremities_layout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <customfonts.TextView_Roboto_Bold
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="10dp"
+                                        android:text="Description on extremities" />
+
+                                    <customfonts.EditText_Roboto_Regular
+                                        android:id="@+id/describe_extremities"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Other extremities / Description"
+                                        android:padding="15dp"
+                                        android:textSize="13sp" />
+                                </LinearLayout>
+
                             </LinearLayout>
-                        </LinearLayout>
 
                             <!--RF & LF-->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="10dp"
-                            android:orientation="vertical">
-
-                            <customfonts.TextView_Roboto_Bold
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:padding="10dp"
-                                android:text="Monofilament test" />
-
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
                                 android:orientation="vertical">
 
                                 <customfonts.TextView_Roboto_Bold
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:padding="10dp"
-                                    android:text="RF(/5)" />
+                                    android:text="Monofilament test" />
 
-                                <customfonts.EditText_Roboto_Regular
-                                    android:id="@+id/monofilament_rf"
+                                <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:inputType="number"
-                                    android:padding="15dp"
-                                    android:textSize="13sp" />
+                                    android:orientation="vertical">
 
-                                <customfonts.TextView_Roboto_Bold
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:padding="10dp"
-                                    android:text="LF(/5)" />
+                                    <customfonts.TextView_Roboto_Bold
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="10dp"
+                                        android:text="RF(/5)" />
 
-                                <customfonts.EditText_Roboto_Regular
-                                    android:id="@+id/monofilament_lf"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:inputType="number"
-                                    android:padding="15dp"
-                                    android:textSize="13sp" />
+                                    <customfonts.EditText_Roboto_Regular
+                                        android:id="@+id/monofilament_rf"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="number"
+                                        android:padding="15dp"
+                                        android:textSize="13sp" />
+
+                                    <customfonts.TextView_Roboto_Bold
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="10dp"
+                                        android:text="LF(/5)" />
+
+                                    <customfonts.EditText_Roboto_Regular
+                                        android:id="@+id/monofilament_lf"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="number"
+                                        android:padding="15dp"
+                                        android:textSize="13sp" />
+                                </LinearLayout>
                             </LinearLayout>
-                        </LinearLayout>
 
                         </LinearLayout>
 
