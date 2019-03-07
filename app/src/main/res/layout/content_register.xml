@@ -233,6 +233,7 @@
                             android:text="No" />
                     </RadioGroup>
 
+                    <!--DOB-->
                     <LinearLayout
                         android:id="@+id/layout_dob"
                         android:layout_width="match_parent"
@@ -275,6 +276,7 @@
 
                     </LinearLayout>
 
+                    <!--estimated age-->
                     <LinearLayout
                         android:id="@+id/layout_age"
                         android:layout_width="match_parent"

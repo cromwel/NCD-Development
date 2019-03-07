@@ -29,7 +29,7 @@ public class DrugsDose {
     public String continueCare, urinalysis, hba, microalbumin, creatinine, potassium, ecg, treatmentTest;
 
     public EditText editTextInsulin, editTextSolubleInsulin, editTextNPH1, editTextNPH2;
-    public EditText editTextDiet, editTextPhysicalExercise, editTextHerbal, editTextTreatmentOther, editTextComment;
+    public EditText editTextDiet, editTextPhysicalExercise, editTextHerbal, editTextTreatmentOther, editTextComment, editTextFollowUpOtherText;
     public EditText editTextACE, editTextARB, editTextBeta, editTextCCB, editTextThiazide, editTextThiazideLike, editTextAntiHypertensives, editTextOGLA, editTextInsulinOther;
     public EditText editTextReturnDate, editTextReferralLocation, editTextReferralDate, editTextReferralNote, editTextClinician;
 
@@ -85,8 +85,7 @@ public class DrugsDose {
         editTextHerbal = view.findViewById(R.id.treatment_herbal_specify);
         editTextTreatmentOther = view.findViewById(R.id.treatment_other_specify);
         editTextComment = view.findViewById(R.id.treatment_comment);
-
-        editTextComment = view.findViewById(R.id.treatment_comment);
+        editTextFollowUpOtherText = view.findViewById(R.id.treatment_followup_other_text);
 
         checkBoxEnalapril = view.findViewById(R.id.treatment_enalapril);
         checkBoxCaptopril = view.findViewById(R.id.treatment_captopril);

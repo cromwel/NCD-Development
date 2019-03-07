@@ -48,7 +48,7 @@ public class Register extends AppCompatActivity implements DatePickerDialog.OnDa
 
     private static final String TAG = Register.class.getSimpleName();
 
-    private String gender, birthdate, isEstimated, location_id, patient_type, language;
+    private String gender, birthdate, isEstimated, location_id, patient_type, language, national_id;
     private EditText editTextDOB, editTextAge, editTextFamilyName, editTextGivenName, editTextMiddleName, editTextTelephone, editTextTelephoneOther, editTextNationalID;
     private EditText editTextAddress1, editTextAddress2, editTextAddress3, editTextCounty, editTextVillage;
     private EditText editTextSupporter, editTextSupporterNumber, editTextSupporterNumberOther, editTextSupporterAddress;
@@ -65,7 +65,7 @@ public class Register extends AppCompatActivity implements DatePickerDialog.OnDa
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        gender = birthdate = isEstimated = location_id = patient_type = "";
+        gender = birthdate = isEstimated = location_id = patient_type = national_id = "";
         // Progress dialog
         pDialog = new ProgressDialog(this);
         pDialog.setCancelable(false);
@@ -260,8 +260,8 @@ public class Register extends AppCompatActivity implements DatePickerDialog.OnDa
                         // User successfully stored in MySQL
                         // Now store the user in sqlite
                         String patient_id = jObj.getString("person_id");
-                        String national_id = jObj.getString("national_id");
-                        String telephone = jObj.getString("telephone");
+                       // String national_id = jObj.getString("national_id");
+                       // String telephone = jObj.getString("telephone");
 
                         Toast.makeText(getApplicationContext(), "Patient successfully registered!", Toast.LENGTH_LONG).show();
 

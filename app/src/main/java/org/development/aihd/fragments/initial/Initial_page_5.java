@@ -47,8 +47,8 @@ public class Initial_page_5 extends Fragment implements CheckBoxInterface, Spinn
         drugsDose.editTextHerbal = view.findViewById(R.id.treatment_herbal_specify);
         drugsDose.editTextTreatmentOther = view.findViewById(R.id.treatment_other_specify);
         drugsDose.editTextComment = view.findViewById(R.id.treatment_comment);
+        //editTextFollowUpOtherText = view.findViewById(R.id.treatment_followup_other_text);
 
-        drugsDose.editTextComment = view.findViewById(R.id.treatment_comment);
         CheckBox checkBoxMetformin = view.findViewById(R.id.treatment_metformin);
         CheckBox checkBoxGlibenclamide = view.findViewById(R.id.treatment_glibenclamide);
 
