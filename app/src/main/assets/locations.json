@@ -7,9 +7,9 @@
     "Comments": ""
   },
   {
-    "MFL Code": 18271,
+    "MFL Code": 24587,
     "location_id": "9",
-    "Facility Name": "Bristol Park",
+    "Facility Name": "Bristol Park Fedha",
     "Sub County": "Embakasi East",
     "Comments": ""
   },
@@ -42,9 +42,9 @@
     "Comments": ""
   },
   {
-    "MFL Code": 12869,
-    "location_id": "14",
-    "Facility Name": "Alice Nursing Home",
+    "MFL Code": 17717,
+    "location_id": "86",
+    "Facility Name": "Komarock Modern Medical Centre",
     "Sub County": "Embakasi South",
     "Comments": ""
   },
@@ -77,7 +77,7 @@
     "Comments": ""
   },
   {
-    "MFL Code": 291107,
+    "MFL Code": 21107,
     "location_id": "19",
     "Facility Name": "Reliable Medical Health Centre",
     "Sub County": "",
@@ -259,13 +259,6 @@
     "Comments": ""
   },
   {
-    "MFL Code": 18888,
-    "location_id": "45",
-    "Facility Name": "Consolata Shrine Disp",
-    "Sub County": "Westlands",
-    "Comments": ""
-  },
-  {
     "MFL Code": 19507,
     "location_id": "46",
     "Facility Name": "Upendo Medical Clinic",
@@ -318,6 +311,13 @@
     "MFL Code": 13009,
     "location_id": "53",
     "Facility Name": "Karura Health Centre Kiambu Road",
+    "Sub County": "Westlands",
+    "Comments": ""
+  },
+  {
+    "MFL Code": 10506,
+    "location_id": "87",
+    "Facility Name": "Karura SDA Dispensary",
     "Sub County": "Westlands",
     "Comments": ""
   }

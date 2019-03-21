@@ -55,7 +55,6 @@ public class Common {
         }
     }
 
-
     public static void whr(final EditText editTextWaist, final EditText editTextHip, final TextView textViewWaistHipRatio) {
 
         double wst = 0;
@@ -138,7 +137,6 @@ public class Common {
             Alerts.errorMessage(view, "Abnormal Monofilament.");
         }
     }
-
 
     public static void checkAlert(View view, double value, String field) {
         switch (field) {
@@ -245,7 +243,6 @@ public class Common {
         return value;
 
     }
-
 
     public static String locationId() {
         String location_id = AppController.getInstance().getSessionManager().getUserDetails().get("location_id");
