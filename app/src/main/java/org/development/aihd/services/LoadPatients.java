@@ -35,14 +35,14 @@ public class LoadPatients extends IntentService {
         if (intent != null) {
             String uuid = intent.getStringExtra("uuid");
             String mfl = intent.getStringExtra("mfl");
-            //String nationalid = intent.getStringExtra("nationalid");
-            //String telephone = intent.getStringExtra("telephone");
+            String national_id = intent.getStringExtra("national_id");
+            String telephone = intent.getStringExtra("telephone");
 
-            DownloadPatients(uuid, mfl/*, nationalid, telephone*/);
+            DownloadPatients(uuid, mfl, national_id, telephone);
         }
     }
 
-    private void DownloadPatients(final String uuid, final String mfl/*, final String nationalid, final String telephone*/) {
+    private void DownloadPatients(final String uuid, final String mfl, final String national_id, final String telephone) {
 
         GsonBuilder gsonBuilder = new GsonBuilder();
         gsonBuilder.setDateFormat("yyyy-M-d");
@@ -88,8 +88,8 @@ public class LoadPatients extends IntentService {
                 Map<String, String> params = new HashMap<>();
                 params.put("mfl", mfl);
                 params.put("uuid", uuid);
-                //params.put("nationalid", nationalid);
-                //params.put("telephone", telephone);
+                params.put("nationalid", national_id);
+                params.put("telephone", telephone);
 
                 JSONObject JSONparams = new JSONObject(params);
                 Log.d("Params", JSONparams.toString());

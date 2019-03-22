@@ -154,7 +154,7 @@ public class Patients extends AppCompatActivity implements SwipyRefreshLayout.On
 
         Log.d("TempSize", String.valueOf(temp.size()));
         if (temp.size() > 0) {
-            buttonRegister.setVisibility(View.GONE);
+            buttonRegister.setVisibility(View.VISIBLE);
         } else {
             buttonRegister.setVisibility(View.VISIBLE);
         }
@@ -178,8 +178,8 @@ public class Patients extends AppCompatActivity implements SwipyRefreshLayout.On
             Intent servicePatients = new Intent(getApplicationContext(), LoadPatients.class);
             servicePatients.putExtra("uuid", AppController.getInstance().getSessionManager().getUserDetails().get("user_id"));
             servicePatients.putExtra("mfl", AppController.getInstance().getSessionManager().getUserDetails().get("mfl_code"));
-           // servicePatients.putExtra("nationalid", AppController.getInstance().getSessionManager().getUserDetails().get("national_id"));
-            //servicePatients.putExtra("telephone", AppController.getInstance().getSessionManager().getUserDetails().get("telephone"));
+            servicePatients.putExtra("nationalid", AppController.getInstance().getSessionManager().getUserDetails().get("national_id"));
+            servicePatients.putExtra("telephone", AppController.getInstance().getSessionManager().getUserDetails().get("telephone"));
             startService(servicePatients);
 
             new Handler().postDelayed(new Runnable() {

@@ -73,6 +73,9 @@
                             android:hint="Family Name"
                             android:inputType="text"
                             android:paddingLeft="15dp"
+                            android:paddingRight="0dp"
+                            android:paddingStart="15dp"
+                            android:paddingEnd="0dp"
                             android:paddingTop="15dp"
                             android:paddingBottom="15dp"
                             android:textSize="13sp" />
@@ -128,6 +131,9 @@
                             android:hint="First Name"
                             android:inputType="text"
                             android:paddingLeft="15dp"
+                            android:paddingStart="15dp"
+                            android:paddingEnd="0dp"
+                            android:paddingRight="0dp"
                             android:paddingTop="15dp"
                             android:paddingBottom="15dp"
                             android:textSize="13sp" />
@@ -175,6 +181,7 @@
                         <RadioButton
                             android:id="@+id/radio_male"
                             android:layout_marginRight="10dp"
+                            android:layout_marginEnd="0dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:onClick="onRadioButtonClicked"
@@ -220,6 +227,7 @@
                         <RadioButton
                             android:id="@+id/birthdate_estimated_yes"
                             android:layout_marginRight="10dp"
+                            android:layout_marginEnd="0dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:onClick="onRadioButtonClicked"
@@ -286,7 +294,6 @@
                         android:layout_marginRight="20dp"
                         android:orientation="vertical"
                         android:visibility="gone">
-
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -356,16 +363,23 @@
                         android:orientation="horizontal"
                         android:weightSum="1">
 
-
-                        <customfonts.EditText_Roboto_Regular
-                            android:id="@+id/national_id"
+                        <customfonts.TextView_Roboto_Regular
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight=".9"
+                            android:layout_weight=".25"
                             android:background="#00000000"
-                            android:hint="National ID Number"
-                            android:inputType="number"
-                            android:padding="15dp"
+                            android:hint="+254"
+                            android:padding="14dp"
+                            android:textSize="12sp" />
+
+                        <customfonts.EditText_Roboto_Regular
+                            android:id="@+id/telephone"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".65"
+                            android:background="#00000000"
+                            android:hint="Telephone"
+                            android:inputType="phone"
                             android:textSize="12sp" />
 
                         <customfonts.EditText_Roboto_Regular
@@ -392,31 +406,21 @@
                         <customfonts.TextView_Roboto_Regular
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight=".2"
+                            android:layout_weight=".25"
                             android:background="#00000000"
                             android:hint="+254"
                             android:padding="14dp"
-                            android:textSize="10sp" />
+                            android:textSize="12sp" />
 
                         <customfonts.EditText_Roboto_Regular
-                            android:id="@+id/telephone"
+                            android:id="@+id/telephone_other"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight=".7"
+                            android:layout_weight=".75"
                             android:background="#00000000"
-                            android:hint="Telephone"
+                            android:hint="Other Telephone"
                             android:inputType="phone"
-                            android:padding="14dp"
-                            android:textSize="11sp" />
-
-                        <customfonts.EditText_Roboto_Regular
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight=".1"
-                            android:background="#00000000"
-                            android:hint="*"
-                            android:textColorHint="@color/red"
-                            android:textSize="13sp" />
+                            android:textSize="12sp" />
 
                     </LinearLayout>
 
@@ -427,29 +431,17 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="18dp"
                         android:layout_marginBottom="10dp"
-                        android:background="@drawable/round_border"
-                        android:orientation="horizontal"
-                        android:weightSum="1">
-
-                        <customfonts.TextView_Roboto_Regular
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight=".2"
-                            android:background="#00000000"
-                            android:hint="+254"
-                            android:padding="14dp"
-                            android:textSize="10sp" />
+                        android:background="@drawable/round_border">
 
                         <customfonts.EditText_Roboto_Regular
-                            android:id="@+id/telephone_other"
-                            android:layout_width="0dp"
+                            android:id="@+id/national_id"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight=".8"
                             android:background="#00000000"
-                            android:hint="Other Telephone"
-                            android:inputType="phone"
+                            android:hint="National ID Number"
+                            android:inputType="number"
                             android:padding="14dp"
-                            android:textSize="11sp" />
+                            android:textSize="12sp" />
 
                     </LinearLayout>
 
@@ -711,7 +703,8 @@
                             android:hint="Treatment Supporter Telephone"
                             android:inputType="phone"
                             android:padding="15dp"
-                            android:textSize="13sp" />
+                            android:textSize="13sp"
+                            tools:ignore="TooManyViews" />
 
                     </LinearLayout>
 

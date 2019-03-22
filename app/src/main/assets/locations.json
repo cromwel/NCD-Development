@@ -84,13 +84,6 @@
     "Comments": ""
   },
   {
-    "MFL Code": 22012,
-    "location_id": "20",
-    "Facility Name": "Mowlem Health Centre",
-    "Sub County": "",
-    "Comments": ""
-  },
-  {
     "MFL Code": 13016,
     "location_id": "21",
     "Facility Name": "Kayole II Sub-district Hospital",
@@ -319,6 +312,13 @@
     "location_id": "87",
     "Facility Name": "Karura SDA Dispensary",
     "Sub County": "Westlands",
+    "Comments": ""
+  },
+  {
+    "MFL Code": 13189,
+    "location_id": "88",
+    "Facility Name": "SOS Dispensary",
+    "Sub County": "",
     "Comments": ""
   }
 ]
