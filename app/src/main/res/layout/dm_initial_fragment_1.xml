@@ -665,13 +665,13 @@
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
+                            android:layout_weight="1.1"
                             android:orientation="vertical">
 
                             <customfonts.TextView_Roboto_Bold
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Active NHIF" />
+                                android:text="Active NHIF *" />
 
                             <RadioGroup
                                 android:layout_width="match_parent"
@@ -702,7 +702,7 @@
                             android:id="@+id/nhif_other_details"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="2"
+                            android:layout_weight="1.9"
                             android:orientation="vertical">
 
                             <customfonts.TextView_Roboto_Bold
@@ -733,13 +733,13 @@
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
+                            android:layout_weight="1.1"
                             android:orientation="vertical">
 
                             <customfonts.TextView_Roboto_Bold
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Is patient a referral" />
+                                android:text="Is patient a referral*" />
 
                             <RadioGroup
                                 android:layout_width="match_parent"
@@ -763,7 +763,7 @@
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
+                            android:layout_weight=".9"
                             android:orientation="vertical">
 
                             <customfonts.TextView_Roboto_Bold
@@ -1087,7 +1087,7 @@
                             <customfonts.TextView_Roboto_Bold
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Do you follow a balanced diet?*" />
+                                android:text="Do you follow a balanced diet?" />
 
                             <RadioGroup
                                 android:layout_width="match_parent"
