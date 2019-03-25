@@ -154,7 +154,7 @@ public class Patients extends AppCompatActivity implements SwipyRefreshLayout.On
 
         Log.d("TempSize", String.valueOf(temp.size()));
         if (temp.size() > 0) {
-            buttonRegister.setVisibility(View.VISIBLE);
+            buttonRegister.setVisibility(View.GONE);
         } else {
             buttonRegister.setVisibility(View.VISIBLE);
         }
