@@ -36,14 +36,14 @@ import java.util.List;
 
 public class Patients extends AppCompatActivity implements SwipyRefreshLayout.OnRefreshListener {
 
-    //private String TAG = MainActivity.class.getSimpleName();
-
     private List<Person> contactList;
     private List<Person> personList;
     private PatientAdapter adapter;
     private String IsForm;
     private SwipyRefreshLayout swipeRefreshLayout;
     private Button buttonRegister;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,6 +88,7 @@ public class Patients extends AppCompatActivity implements SwipyRefreshLayout.On
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
                 // TODO Auto-generated method stub
+
             }
 
             @Override
@@ -109,7 +110,6 @@ public class Patients extends AppCompatActivity implements SwipyRefreshLayout.On
         );
 
     }
-
 
     public void getPatients() {
         contactList.clear();
@@ -134,11 +134,9 @@ public class Patients extends AppCompatActivity implements SwipyRefreshLayout.On
             contactList.add(person);
             adapter.notifyDataSetChanged();
         }
-
         swipeRefreshLayout.setRefreshing(false);
 
     }
-
 
     void filter(String text) {
         @SuppressWarnings("unchecked") List<Person> temp = new ArrayList();
@@ -147,7 +145,10 @@ public class Patients extends AppCompatActivity implements SwipyRefreshLayout.On
             //or use .equal(text) with you want equal match
             //use .toLowerCase() for better matches
             String name = d.getFamily_name() + " " + d.getGiven_name();
+            String telephone = d.getTelephone();
             if (name.toLowerCase().contains(text.toLowerCase())) {
+                temp.add(d);
+            }else if(telephone.contains(text)){
                 temp.add(d);
             }
         }
@@ -166,8 +167,7 @@ public class Patients extends AppCompatActivity implements SwipyRefreshLayout.On
     public void onRefresh(SwipyRefreshLayoutDirection direction) {
         Log.d("Patients", "Refresh triggered at " + (direction == SwipyRefreshLayoutDirection.TOP ? "top" : "bottom"));
 
-        ConnectivityManager cm =
-                (ConnectivityManager) this.getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager cm = (ConnectivityManager) this.getSystemService(Context.CONNECTIVITY_SERVICE);
 
         assert cm != null;
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
