@@ -145,7 +145,7 @@ public class Patients extends AppCompatActivity implements SwipyRefreshLayout.On
             //or use .equal(text) with you want equal match
             //use .toLowerCase() for better matches
             String name = d.getFamily_name() + " " + d.getGiven_name();
-            String telephone = d.getTelephone();
+            String telephone = "0" + d.getTelephone();
             if (name.toLowerCase().contains(text.toLowerCase())) {
                 temp.add(d);
             }else if(telephone.contains(text)){

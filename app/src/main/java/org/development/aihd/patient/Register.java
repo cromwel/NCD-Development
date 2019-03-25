@@ -256,9 +256,6 @@ public class Register extends AppCompatActivity implements DatePickerDialog.OnDa
                         // User successfully stored in MySQL
                         // Now store the user in sqlite
                         String patient_id = jObj.getString("person_id");
-                       String national_id = jObj.getString("national_id");
-                       // String telephone = jObj.getString("telephone");
-
                         Toast.makeText(getApplicationContext(), "Patient successfully registered!", Toast.LENGTH_LONG).show();
 
                         Intent servicePatients = new Intent(getApplicationContext(), LoadPatients.class);
