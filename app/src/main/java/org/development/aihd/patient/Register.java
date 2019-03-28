@@ -65,7 +65,7 @@ public class Register extends AppCompatActivity implements DatePickerDialog.OnDa
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        gender = birthdate = isEstimated = location_id = patient_type = "";
+        gender = birthdate = isEstimated = location_id = patient_type = language = "";
         // Progress dialog
         pDialog = new ProgressDialog(this);
         pDialog.setCancelable(false);
@@ -268,8 +268,8 @@ public class Register extends AppCompatActivity implements DatePickerDialog.OnDa
                         intent.putExtra("gender", gender);
                         intent.putExtra("identifier", "identifier pending");
                         intent.putExtra("name", given_name + " " + family_name);
-                        intent.putExtra("national_id", national_id);
-                        intent.putExtra("telephone", telephone);
+                       /* intent.putExtra("national_id", national_id);
+                        intent.putExtra("telephone", telephone);*/
                         startActivity(intent);
                         finish();
                     }
