@@ -243,28 +243,11 @@ public class Profile extends AppCompatActivity implements CompoundButton.OnCheck
         finish();
     }
 
-    /*
-    public void forms(View view) {
-        Intent forms = new Intent(getApplicationContext(), DM_HTN_Forms.class);
-        forms.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        forms.putExtra("patient_id", patient_id);
-        startActivity(forms);
-        finish();
-    }
-    */
 
     public void admission(View view) {
         Intent admission = new Intent(getApplicationContext(), Admission.class);
         admission.putExtra("patient_id", patient_id);
         startActivity(admission);
-        finish();
-    }
-
-    public void footClinic(View view) {
-
-        Intent foot_clinic = new Intent(getApplicationContext(), FootClinic.class);
-        foot_clinic.putExtra("patient_id", patient_id);
-        startActivity(foot_clinic);
         finish();
     }
 
