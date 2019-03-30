@@ -43,9 +43,30 @@ public class Initial_page_6 extends Fragment {
 
     private String supportGroup, designation;
 
+    private String reason;
+    private EditText editTextAdmissionDate, editTextDischargeDate, editTextDischargeBy;
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.dm_initial_fragment_6, container, false);
+
+        //admission
+        editTextAdmissionDate = view.findViewById(R.id.admission_date);
+        editTextDischargeDate = view.findViewById(R.id.discharge_date);
+        editTextDischargeBy = view.findViewById(R.id.discharge_by);
+        editTextDischargeBy.setText(AppController.getInstance().getSessionManager().getUserDetails().get("name"));
+
+        textWatcher(editTextDischargeDate);
+        textWatcher(editTextDischargeBy);
+
+        EditText editTextAdmissionDate = view.findViewById(R.id.admission_date);
+        editTextAdmissionDate.setText(DateCalendar.date());
+        DateCalendar.date(getActivity(), editTextAdmissionDate);
+        EditText editTextDischargeDate = view.findViewById(R.id.discharge_date);
+        DateCalendar.date(getActivity(), editTextDischargeDate);
+
+        Spinner spinnerReason = view.findViewById(R.id.spinnerReason);
+        spinnerData(getContext(), spinnerReason, "reason");
 
         //Follow Up Plan
         checkBoxContinueCare = view.findViewById(R.id.followup_continue);
@@ -111,7 +132,12 @@ public class Initial_page_6 extends Fragment {
     public void spinnerData(Context context, final Spinner spinner, final String data) {
         ArrayList<KeyValue> keyvalue = new ArrayList<>();
 
-        if (data.matches("support_group")) {
+        if (data.matches("reason")) {
+            keyvalue.add(new KeyValue("", "Select Reason"));
+            keyvalue.add(new KeyValue("165314", "Admitted with DKA"));
+            keyvalue.add(new KeyValue("138061", "Admitted with Hypoglycemia"));
+            keyvalue.add(new KeyValue("5622", "Other"));
+        }else if (data.matches("support_group")) {
             // adding each child node to HashMap key => value
             keyvalue.add(new KeyValue("", "Select Support Group"));
             keyvalue.add(new KeyValue("1065", "Yes"));
@@ -137,6 +163,11 @@ public class Initial_page_6 extends Fragment {
 
                 KeyValue value = (KeyValue) parent.getSelectedItem();
                 switch (spinner.getId()) {
+                    case R.id.spinnerReason:
+                        if (data.matches("reason")) {
+                            reason = value.getId();
+                        }
+                        break;
                     case R.id.spinnerSupportGroup:
                         if (data.matches("support_group")) {
                             supportGroup = value.getId();
@@ -278,6 +309,10 @@ public class Initial_page_6 extends Fragment {
     public void updateValues() {
 
         JSONArray jsonArry = new JSONArray();
+
+        jsonArry.put(JSONFormBuilder.observations("1655", "", "valueCoded", reason, DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("1641", "", "valueDate", editTextDischargeDate.getText().toString().trim(), DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("1473", "", "valueText", editTextDischargeBy.getText().toString().trim(), DateCalendar.date(), ""));
 
         jsonArry.put(JSONFormBuilder.observations("165122", "", "valueCoded", continueCare, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("5096", "", "valueDate", editTextReturnDate.getText().toString(), DateCalendar.date(), ""));

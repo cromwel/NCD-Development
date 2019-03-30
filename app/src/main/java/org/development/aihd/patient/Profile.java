@@ -243,14 +243,6 @@ public class Profile extends AppCompatActivity implements CompoundButton.OnCheck
         finish();
     }
 
-
-    public void admission(View view) {
-        Intent admission = new Intent(getApplicationContext(), Admission.class);
-        admission.putExtra("patient_id", patient_id);
-        startActivity(admission);
-        finish();
-    }
-
     public void transfer(View view) {
 
         Intent transfer = new Intent(getApplicationContext(), Transfer.class);

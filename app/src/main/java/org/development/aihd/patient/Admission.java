@@ -39,7 +39,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class Admission extends AppCompatActivity {
-
+/*
     private String fileName, formId, patientId;
     private String reason, designation;
     private EditText editTextAdmissionDate, editTextDischargeDate, editTextDischargeBy;
@@ -261,5 +261,5 @@ public class Admission extends AppCompatActivity {
 
         Alerts.hideDialog();
 
-    }
+    }*/
 }

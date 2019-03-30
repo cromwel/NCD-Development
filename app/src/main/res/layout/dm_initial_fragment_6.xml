@@ -40,6 +40,85 @@
                         android:textAllCaps="false" />
 
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <customfonts.TextView_Roboto_Bold
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/background_inner"
+                                android:padding="15dp"
+                                android:text="Admission to Facility"
+                                android:textAllCaps="false" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:orientation="vertical">
+
+                                <customfonts.TextView_Roboto_Bold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Reason for Admission" />
+
+                                <Spinner
+                                    android:id="@+id/spinnerReason"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp" />
+
+                                <customfonts.TextView_Roboto_Bold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Admission Date" />
+
+                                <customfonts.EditText_Roboto_Regular
+                                    android:id="@+id/admission_date"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:focusable="false"
+                                    android:hint="yyyy-mm-dd"
+                                    android:inputType="date"
+                                    android:padding="15dp"
+                                    android:textSize="13sp" />
+
+                                <customfonts.TextView_Roboto_Bold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Discharge Date" />
+
+                                <customfonts.EditText_Roboto_Regular
+                                    android:id="@+id/discharge_date"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:focusable="false"
+                                    android:hint="yyyy-mm-dd"
+                                    android:inputType="date"
+                                    android:padding="15dp"
+                                    android:textSize="13sp" />
+
+                                <customfonts.TextView_Roboto_Bold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Discharged by" />
+
+                                <customfonts.EditText_Roboto_Regular
+                                    android:id="@+id/discharge_by"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:focusable="false"
+                                    android:inputType="textPersonName"
+                                    android:padding="15dp"
+                                    android:textSize="13sp" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
