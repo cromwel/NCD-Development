@@ -164,9 +164,9 @@ public class Initial_page_1 extends Fragment {
         RadioButton radioButtonExerciseYes = view.findViewById(R.id.radio_exercise_yes);
         RadioButton radioButtonExerciseNo = view.findViewById(R.id.radio_exercise_no);
         RadioButton radioButtonExerciseStopped = view.findViewById(R.id.radio_exercise_stopped);
-        RadioButton radioButtonDietYes = view.findViewById(R.id.radio_diet_yes);
+        /*RadioButton radioButtonDietYes = view.findViewById(R.id.radio_diet_yes);
         RadioButton radioButtonDietNo = view.findViewById(R.id.radio_diet_no);
-        RadioButton radioButtonDietStopped = view.findViewById(R.id.radio_diet_stopped);
+        RadioButton radioButtonDietStopped = view.findViewById(R.id.radio_diet_stopped);*/
         RadioButton radioButtonCigarettesYes = view.findViewById(R.id.radio_smoke_yes);
         RadioButton radioButtonCigarettesNo = view.findViewById(R.id.radio_smoke_no);
         RadioButton radioButtonCigarettesStopped = view.findViewById(R.id.radio_smoke_stopped);
@@ -219,9 +219,9 @@ public class Initial_page_1 extends Fragment {
         radioCheck(radioButtonExerciseYes);
         radioCheck(radioButtonExerciseNo);
         radioCheck(radioButtonExerciseStopped);
-        radioCheck(radioButtonDietYes);
+       /* radioCheck(radioButtonDietYes);
         radioCheck(radioButtonDietNo);
-        radioCheck(radioButtonDietStopped);
+        radioCheck(radioButtonDietStopped);*/
         radioCheck(radioButtonCigarettesYes);
         radioCheck(radioButtonCigarettesNo);
         radioCheck(radioButtonCigarettesStopped);
@@ -617,7 +617,7 @@ public class Initial_page_1 extends Fragment {
                         if (checked)
                             exercise = "158939";
                         break;
-                    case R.id.radio_diet_yes:
+                    /*case R.id.radio_diet_yes:
                         if (checked)
                             diet = "1065";
                         break;
@@ -628,7 +628,7 @@ public class Initial_page_1 extends Fragment {
                     case R.id.radio_diet_stopped:
                         if (checked)
                             diet = "158939";
-                        break;
+                        break;*/
                     case R.id.radio_smoke_yes:
                         if (checked)
                             smoking = "1065";
@@ -839,7 +839,7 @@ public class Initial_page_1 extends Fragment {
         jsonArry.put(JSONFormBuilder.observations("1427", "", "valueDate", editTextLMP.getText().toString().trim(), DateCalendar.date(), ""));
 
         jsonArry.put(JSONFormBuilder.observations("165208", "", "valueCoded", exercise, DateCalendar.date(), ""));
-        jsonArry.put(JSONFormBuilder.observations("165207", "", "valueCoded", diet, DateCalendar.date(), ""));
+       // jsonArry.put(JSONFormBuilder.observations("165207", "", "valueCoded", diet, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("152722", "", "valueCoded", smoking, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("159449", "", "valueCoded", drinking, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("165165", "", "valueText", editTextRiskOther.getText().toString().trim(), DateCalendar.date(), ""));

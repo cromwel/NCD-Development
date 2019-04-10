@@ -292,12 +292,12 @@ public class Profile extends AppCompatActivity implements CompoundButton.OnCheck
 
     }
 
-    public void attachment(View view) {
+/*    public void attachment(View view) {
         Intent attachment = new Intent(getApplicationContext(), AttachmentActivity.class);
         attachment.putExtra("patient_id", patient_id);
         startActivity(attachment);
         finish();
-    }
+    }*/
 
     @Override
     public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
