@@ -18,7 +18,7 @@
             android:background="@color/background"
             android:orientation="vertical">
 
-           <android.support.v7.widget.CardView
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -153,8 +153,8 @@
                         android:id="@+id/diagnosis_date_heart_failure"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
                         android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
                         android:focusable="false"
                         android:hint="Date diagnosed"
                         android:inputType="date"
@@ -165,8 +165,8 @@
                         android:id="@+id/diagnosis_comment_heart_failure"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
                         android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
                         android:hint="Details"
                         android:inputType="text"
                         android:padding="15dp"
@@ -222,8 +222,8 @@
                         android:id="@+id/diagnosis_date_kidney_failure"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
                         android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
                         android:focusable="false"
                         android:hint="Date diagnosed"
                         android:inputType="date"
@@ -234,8 +234,8 @@
                         android:id="@+id/diagnosis_comment_kidney_failure"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
                         android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
                         android:hint="Details"
                         android:inputType="text"
                         android:padding="15dp"
@@ -289,8 +289,8 @@
                         android:id="@+id/diagnosis_date_neuropathy"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
                         android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
                         android:focusable="false"
                         android:hint="Date diagnosed"
                         android:inputType="date"
@@ -301,8 +301,8 @@
                         android:id="@+id/diagnosis_comment_neuropathy"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
                         android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
                         android:hint="Details"
                         android:padding="15dp"
                         android:textSize="13sp" />
@@ -354,8 +354,8 @@
                         android:id="@+id/diagnosis_date_visual"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
                         android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
                         android:focusable="false"
                         android:hint="Date diagnosed"
                         android:inputType="date"
@@ -366,8 +366,8 @@
                         android:id="@+id/diagnosis_comment_visual"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
                         android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
                         android:hint="Details"
                         android:padding="15dp"
                         android:textSize="13sp" />
@@ -420,8 +420,8 @@
                         android:id="@+id/diagnosis_date_foot_ulcer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
                         android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
                         android:focusable="false"
                         android:hint="Date diagnosed"
                         android:inputType="date"
@@ -432,8 +432,8 @@
                         android:id="@+id/diagnosis_comment_foot_ulcer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
                         android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
                         android:hint="Details"
                         android:inputType="text"
                         android:padding="15dp"
@@ -488,8 +488,8 @@
                         android:id="@+id/diagnosis_date_erectile"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
                         android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
                         android:focusable="false"
                         android:hint="Date diagnosed"
                         android:inputType="date"
@@ -500,8 +500,8 @@
                         android:id="@+id/diagnosis_comment_erectile"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
                         android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
                         android:hint="Details"
                         android:inputType="text"
                         android:padding="15dp"
@@ -556,8 +556,8 @@
                         android:id="@+id/diagnosis_date_gastropathy"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
                         android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
                         android:focusable="false"
                         android:hint="Date diagnosed"
                         android:inputType="date"
@@ -568,8 +568,8 @@
                         android:id="@+id/diagnosis_comment_gastropathy"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
                         android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
                         android:hint="Details"
                         android:inputType="text"
                         android:padding="15dp"
@@ -624,8 +624,8 @@
                         android:id="@+id/diagnosis_date_cataracts"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
                         android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
                         android:focusable="false"
                         android:hint="Date diagnosed"
                         android:inputType="date"
@@ -636,8 +636,8 @@
                         android:id="@+id/diagnosis_comment_cataracts"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
                         android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
                         android:hint="Details"
                         android:inputType="text"
                         android:padding="15dp"
@@ -692,8 +692,8 @@
                         android:id="@+id/diagnosis_date_dental"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
                         android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
                         android:focusable="false"
                         android:hint="Date diagnosed"
                         android:inputType="date"
@@ -704,8 +704,8 @@
                         android:id="@+id/diagnosis_comment_dental"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
                         android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
                         android:hint="Details"
                         android:inputType="text"
                         android:padding="15dp"
@@ -729,8 +729,8 @@
                             android:id="@+id/checkbox_complication_other"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:layout_margin="20dp"
+                            android:layout_weight="1"
                             android:text="Other" />
 
                         <RadioGroup
@@ -760,8 +760,8 @@
                         android:id="@+id/diagnosis_date_other"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
                         android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
                         android:focusable="false"
                         android:hint="Date diagnosed"
                         android:inputType="date"
@@ -772,8 +772,8 @@
                         android:id="@+id/diagnosis_comment_other"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
                         android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
                         android:hint="Details"
                         android:inputType="text"
                         android:padding="15dp"
@@ -801,7 +801,7 @@
                         android:layout_height="wrap_content"
                         android:background="@color/background_header"
                         android:padding="10dp"
-                        android:text="Counselling/education provision"
+                        android:text="Counselling/ education provision"
                         android:textAllCaps="false" />
 
                     <LinearLayout
@@ -811,43 +811,152 @@
                         android:orientation="vertical">
 
                         <CheckBox
-                            android:id="@+id/checkbox_nutrition"
+                            android:id="@+id/checkbox_diabetes_and_hypertension_education"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Nutrition" />
+                            android:text="Diabetes and Hypertension Education" />
 
                         <CheckBox
                             android:id="@+id/checkbox_physical_activity"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-
-                            android:text="Physical Activity" />
-
-                        <CheckBox
-                            android:id="@+id/checkbox_psychosocial"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Psychosocial" />
+                            android:text="Physical Activities" />
 
                         <CheckBox
-                            android:id="@+id/checkbox_other"
+                            android:id="@+id/checkbox_self_care_management"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Other" />
+                            android:text="Self-Care Management" />
 
-                        <customfonts.EditText_Roboto_Light
-                            android:id="@+id/provision_other"
+                        <CheckBox
+                            android:id="@+id/checkbox_stress_management"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Stress Management" />
+
+                        <CheckBox
+                            android:id="@+id/checkbox_nutrition"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nutrition Counselling and Education" />
+
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:hint="Other Specify"
-                            android:inputType="text"
-                            android:textSize="13sp" />
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/checkbox_nutrition_assessmenent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Nutrition Assessment" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:orientation="vertical">
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_nutrition_anthroprometric"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Anthroprometric" />
+
+                                <customfonts.EditText_Roboto_Light
+                                    android:id="@+id/nutrition_comment_anthroprometric"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:hint="Comments"
+                                    android:inputType="text"
+                                    android:textSize="13sp" />
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_nutrition_biochemical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Biochemical" />
+
+                                <customfonts.EditText_Roboto_Light
+                                    android:id="@+id/nutrition_comment_biochemical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:hint="Comments"
+                                    android:inputType="text"
+                                    android:textSize="13sp" />
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_nutrition_diet_history"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Diet History" />
+
+                                <customfonts.EditText_Roboto_Light
+                                    android:id="@+id/nutrition_comment_diet_history"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:hint="Comments"
+                                    android:inputType="text"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/checkbox_nutrition_meal_planning"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Meal Planning" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20dp"
+                                android:orientation="vertical">
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_nutrition_caloric_intake"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Calculation of caloric intake for patient done based on nutrition assessment" />
+
+                                <customfonts.EditText_Roboto_Light
+                                    android:id="@+id/nutrition_comment_caloric_intake"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:hint="Comments"
+                                    android:inputType="text"
+                                    android:textSize="13sp" />
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_nutrition_nutrient_distribution"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Distribution of nutrients done as per recommendations" />
+
+                                <customfonts.EditText_Roboto_Light
+                                    android:id="@+id/nutrition_comment_nutrient_distribution"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:hint="Comments"
+                                    android:inputType="text"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+                        </LinearLayout>
                     </LinearLayout>
+
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
-
         </LinearLayout>
+
     </ScrollView>
+
 </android.support.design.widget.CoordinatorLayout>
