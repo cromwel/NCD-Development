@@ -55,7 +55,7 @@ public class Initial_page_4 extends Fragment {
         CheckBox checkBoxNutrition = view.findViewById(R.id.checkbox_nutrition);
         CheckBox checkBoxActivity = view.findViewById(R.id.checkbox_physical_activity);
        // CheckBox checkBoxPsychosocial = view.findViewById(R.id.checkbox_psychosocial);
-        CheckBox checkBoxCounsellingOther = view.findViewById(R.id.checkbox_other);
+        //CheckBox checkBoxCounsellingOther = view.findViewById(R.id.checkbox_other);
 
         checkBox(checkBoxStroke);
         checkBox(checkBoxHeart);
@@ -71,7 +71,7 @@ public class Initial_page_4 extends Fragment {
         checkBox(checkBoxNutrition);
         checkBox(checkBoxActivity);
         //checkBox(checkBoxPsychosocial);
-        checkBox(checkBoxCounsellingOther);
+        //checkBox(checkBoxCounsellingOther);
 
         RadioButton radioButtonStrokeResolved = view.findViewById(R.id.radio_diagnosis_stroke_resolved);
         RadioButton radioButtonHeartResolved = view.findViewById(R.id.radio_diagnosis_heart_failure_resolved);
@@ -132,7 +132,7 @@ public class Initial_page_4 extends Fragment {
         editTextCataracts = view.findViewById(R.id.diagnosis_comment_cataracts);
         editTextDental = view.findViewById(R.id.diagnosis_comment_dental);
         editTextOtherComplication = view.findViewById(R.id.diagnosis_comment_other);
-        editTextOtherProvision = view.findViewById(R.id.provision_other);
+       // editTextOtherProvision = view.findViewById(R.id.provision_other);
 
         editTextStrokeDate = view.findViewById(R.id.diagnosis_date_stroke);
         editTextHeartDate = view.findViewById(R.id.diagnosis_date_heart_failure);
@@ -168,7 +168,7 @@ public class Initial_page_4 extends Fragment {
         textWatcher(editTextGatrology);
         textWatcher(editTextCataracts);
         textWatcher(editTextDental);
-        textWatcher(editTextOtherComplication);
+       // textWatcher(editTextOtherComplication);
 
         textWatcher(editTextStrokeDate);
         textWatcher(editTextHeartDate);
@@ -180,7 +180,7 @@ public class Initial_page_4 extends Fragment {
         textWatcher(editTextGatrologyDate);
         textWatcher(editTextCataractsDate);
         textWatcher(editTextDentalDate);
-        textWatcher(editTextOtherProvision);
+       // textWatcher(editTextOtherProvision);
 
         return view;
     }
@@ -319,13 +319,13 @@ public class Initial_page_4 extends Fragment {
                             psychosocial = "";
                         }
                         break;*/
-                    case R.id.checkbox_other:
+                   /* case R.id.checkbox_other:
                         if (checked) {
                             other_counselling = "5622";
                         } else {
                             other_counselling = "";
                         }
-                        break;
+                        break;*/
 
                 }
 
@@ -505,7 +505,7 @@ public class Initial_page_4 extends Fragment {
         jsonArry.put(JSONFormBuilder.observations("1379", "", "valueCoded", psychosocial, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("1379", "", "valueCoded", other_counselling, DateCalendar.date(), ""));
 
-        jsonArry.put(JSONFormBuilder.observations("165176", "", "valueText", editTextOtherProvision.getText().toString().trim(), DateCalendar.date(), ""));
+        //jsonArry.put(JSONFormBuilder.observations("165176", "", "valueText", editTextOtherProvision.getText().toString().trim(), DateCalendar.date(), ""));
 
 
         try {

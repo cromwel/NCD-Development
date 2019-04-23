@@ -101,6 +101,7 @@ public class Initial_page_5 extends Fragment implements CheckBoxInterface, Spinn
         CheckBox checkBoxCreatinine = view.findViewById(R.id.treatment_creatinine);
         CheckBox checkBoxPotassium = view.findViewById(R.id.treatment_potassium);
         CheckBox checkBoxECG = view.findViewById(R.id.treatment_ecg);
+        CheckBox checkBoxFastingLipidProfile = view.findViewById(R.id.treatment_fasting_lipid_profile);
         CheckBox checkBoxTestOther = view.findViewById(R.id.treatment_followup_other);
 
         checkBoxTreatment(drugsDose, checkBoxMetformin, this);
@@ -155,6 +156,7 @@ public class Initial_page_5 extends Fragment implements CheckBoxInterface, Spinn
         checkBoxTreatment(drugsDose, checkBoxCreatinine, this);
         checkBoxTreatment(drugsDose, checkBoxPotassium, this);
         checkBoxTreatment(drugsDose, checkBoxECG, this);
+        checkBoxTreatment(drugsDose, checkBoxFastingLipidProfile, this);
         checkBoxTreatment(drugsDose, checkBoxTestOther, this);
 
         //SpinnerDosage
@@ -335,6 +337,7 @@ public class Initial_page_5 extends Fragment implements CheckBoxInterface, Spinn
             jsonArry.put(JSONFormBuilder.observations("1271", "", "valueCoded", drugsDose.creatinine, DateCalendar.date(), ""));
             jsonArry.put(JSONFormBuilder.observations("1271", "", "valueCoded", drugsDose.potassium, DateCalendar.date(), ""));
             jsonArry.put(JSONFormBuilder.observations("1271", "", "valueCoded", drugsDose.ecg, DateCalendar.date(), ""));
+            jsonArry.put(JSONFormBuilder.observations("1271", "", "valueCoded", drugsDose.fasting_lipid_profile, DateCalendar.date(), ""));
             jsonArry.put(JSONFormBuilder.observations("1271", "", "valueCoded", drugsDose.treatmentTest, DateCalendar.date(), ""));
 
 

@@ -51,7 +51,7 @@ public class Initial_page_6 extends Fragment {
         View view = inflater.inflate(R.layout.dm_initial_fragment_6, container, false);
 
         //admission
-        editTextAdmissionDate = view.findViewById(R.id.admission_date);
+        /*editTextAdmissionDate = view.findViewById(R.id.admission_date);
         editTextDischargeDate = view.findViewById(R.id.discharge_date);
         editTextDischargeBy = view.findViewById(R.id.discharge_by);
         editTextDischargeBy.setText(AppController.getInstance().getSessionManager().getUserDetails().get("name"));
@@ -63,7 +63,7 @@ public class Initial_page_6 extends Fragment {
         editTextAdmissionDate.setText(DateCalendar.date());
         DateCalendar.date(getActivity(), editTextAdmissionDate);
         EditText editTextDischargeDate = view.findViewById(R.id.discharge_date);
-        DateCalendar.date(getActivity(), editTextDischargeDate);
+        DateCalendar.date(getActivity(), editTextDischargeDate);*/
 
         Spinner spinnerReason = view.findViewById(R.id.spinnerReason);
         spinnerData(getContext(), spinnerReason, "reason");
@@ -311,8 +311,8 @@ public class Initial_page_6 extends Fragment {
         JSONArray jsonArry = new JSONArray();
 
         jsonArry.put(JSONFormBuilder.observations("1655", "", "valueCoded", reason, DateCalendar.date(), ""));
-        jsonArry.put(JSONFormBuilder.observations("1641", "", "valueDate", editTextDischargeDate.getText().toString().trim(), DateCalendar.date(), ""));
-        jsonArry.put(JSONFormBuilder.observations("1473", "", "valueText", editTextDischargeBy.getText().toString().trim(), DateCalendar.date(), ""));
+        //jsonArry.put(JSONFormBuilder.observations("1641", "", "valueDate", editTextDischargeDate.getText().toString().trim(), DateCalendar.date(), ""));
+       // jsonArry.put(JSONFormBuilder.observations("1473", "", "valueText", editTextDischargeBy.getText().toString().trim(), DateCalendar.date(), ""));
 
         jsonArry.put(JSONFormBuilder.observations("165122", "", "valueCoded", continueCare, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("5096", "", "valueDate", editTextReturnDate.getText().toString(), DateCalendar.date(), ""));

@@ -26,7 +26,7 @@ public class DrugsDose {
             frequencyNifedipine, frequencyChlorthalidone, frequencyHydrochlorothia, frequencyIndapamide, frequencyMethyldopa, frequencyHydralazine, frequencyPrazocin,
             frequencyInsulin, frequencySolubleInsulin, frequencyNPH1, frequencyNPH2;
 
-    public String continueCare, urinalysis, hba, microalbumin, creatinine, potassium, ecg, treatmentTest;
+    public String continueCare, urinalysis, hba, microalbumin, creatinine, potassium, ecg, fasting_lipid_profile, treatmentTest;
 
     public EditText editTextInsulin, editTextSolubleInsulin, editTextNPH1, editTextNPH2;
     public EditText editTextDiet, editTextPhysicalExercise, editTextHerbal, editTextTreatmentOther, editTextComment, editTextFollowUpOtherText;

@@ -40,126 +40,129 @@
                         android:textAllCaps="false" />
 
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <customfonts.TextView_Roboto_Bold
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@color/background_inner"
-                                android:padding="15dp"
-                                android:text="Admission to Facility"
-                                android:textAllCaps="false" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
-                                android:orientation="vertical">
-
-                                <customfonts.TextView_Roboto_Bold
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Reason for Admission" />
-
-                                <Spinner
-                                    android:id="@+id/spinnerReason"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="50dp" />
-
-                                <customfonts.TextView_Roboto_Bold
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Admission Date" />
-
-                                <customfonts.EditText_Roboto_Regular
-                                    android:id="@+id/admission_date"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:focusable="false"
-                                    android:hint="yyyy-mm-dd"
-                                    android:inputType="date"
-                                    android:padding="15dp"
-                                    android:textSize="13sp" />
-
-                                <customfonts.TextView_Roboto_Bold
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Discharge Date" />
-
-                                <customfonts.EditText_Roboto_Regular
-                                    android:id="@+id/discharge_date"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:focusable="false"
-                                    android:hint="yyyy-mm-dd"
-                                    android:inputType="date"
-                                    android:padding="15dp"
-                                    android:textSize="13sp" />
-
-                                <customfonts.TextView_Roboto_Bold
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Discharged by" />
-
-                                <customfonts.EditText_Roboto_Regular
-                                    android:id="@+id/discharge_by"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:focusable="false"
-                                    android:inputType="textPersonName"
-                                    android:padding="15dp"
-                                    android:textSize="13sp" />
-
-
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="vertical">
 
                         <customfonts.TextView_Roboto_Bold
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@color/background_inner"
                             android:padding="10dp"
-                            android:text="Option"
+                            android:text="Continue Care In Clinic"
                             android:textAllCaps="false" />
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/followup_continue"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Continue Care in facility" />
+
+                            <customfonts.EditText_Roboto_Regular
+                                android:id="@+id/followup_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:hint="Return date"
+                                android:inputType="date"
+                                android:padding="10dp"
+                                android:textSize="13sp" />
+
+                            <CheckBox
+                                android:id="@+id/followup_admit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Admit Patient" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="15dp"
+                                android:orientation="vertical">
+                            <customfonts.TextView_Roboto_Bold
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Reason for Admission" />
+
+                            <Spinner
+                                android:id="@+id/spinnerReason"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp" />
+
+                            </LinearLayout>
+
+                           <!-- <customfonts.TextView_Roboto_Bold
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Admission Date" />
+
+                            <customfonts.EditText_Roboto_Regular
+                                android:id="@+id/admission_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:hint="yyyy-mm-dd"
+                                android:inputType="date"
+                                android:padding="15dp"
+                                android:textSize="13sp" />
+
+                            <customfonts.TextView_Roboto_Bold
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Discharge Date" />
+
+                            <customfonts.EditText_Roboto_Regular
+                                android:id="@+id/discharge_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:hint="yyyy-mm-dd"
+                                android:inputType="date"
+                                android:padding="15dp"
+                                android:textSize="13sp" />
+
+                            <customfonts.TextView_Roboto_Bold
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Discharged by" />
+
+                            <customfonts.EditText_Roboto_Regular
+                                android:id="@+id/discharge_by"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:inputType="textPersonName"
+                                android:padding="15dp"
+                                android:textSize="13sp" />-->
+
+
+                        </LinearLayout>
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
                         android:orientation="vertical">
 
-                        <CheckBox
-                            android:id="@+id/followup_continue"
+                        <customfonts.TextView_Roboto_Bold
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Continue Care in facility" />
-
-                        <customfonts.EditText_Roboto_Regular
-                            android:id="@+id/followup_date"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:focusable="false"
-                            android:hint="Return date"
-                            android:inputType="date"
+                            android:background="@color/background_inner"
                             android:padding="10dp"
-                            android:textSize="13sp" />
+                            android:text="Referral"
+                            android:textAllCaps="false" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
                             android:orientation="vertical">
 
                             <CheckBox
@@ -172,7 +175,7 @@
                                 android:id="@+id/facility"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="Facility"
+                                android:hint="Specify Facility"
                                 android:padding="10dp"
                                 android:textSize="13sp" />
 
@@ -186,24 +189,127 @@
                                 android:padding="10dp"
                                 android:textSize="13sp" />
 
+                            <customfonts.TextView_Roboto_Bold
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/background"
+                                android:padding="10dp"
+                                android:text="Referred For?"
+                                android:textAllCaps="false" />
+
+                            <customfonts.EditText_Roboto_Regular
+                                android:id="@+id/reason_reffered"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Referred For?"
+                                android:inputType="text"
+                                android:padding="10dp"
+                                android:textSize="13sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:orientation="vertical">
+
+                                <CheckBox
+                                    android:id="@+id/followup_further_management_dm"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Further management of DM" />
+
+                                <CheckBox
+                                    android:id="@+id/followup_further_management_htn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Further management of HTN" />
+
+                                <CheckBox
+                                    android:id="@+id/followup_eye_review"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Eye review" />
+
+                                <CheckBox
+                                    android:id="@+id/followup_surgical_review"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Surgical review" />
+
+                                <CheckBox
+                                    android:id="@+id/followup_renal_review"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Renal review" />
+
+                                <CheckBox
+                                    android:id="@+id/followup_cvd_review"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="CVD review" />
+
+                                <CheckBox
+                                    android:id="@+id/followup_nutrition"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Nutrition" />
+
+                                <CheckBox
+                                    android:id="@+id/followup_physiotherapy"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Physiotherapy" />
+
+                                <CheckBox
+                                    android:id="@+id/followup_other"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Other" />
+
+                                <customfonts.EditText_Roboto_Regular
+                                    android:id="@+id/followup_other_reason"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Other Referral Reasons"
+                                    android:inputType="text"
+                                    android:padding="15dp"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+
                         </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <customfonts.TextView_Roboto_Bold
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/background_inner"
+                            android:padding="10dp"
+                            android:text="Transfer Care"
+                            android:textAllCaps="false" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
                             android:orientation="vertical">
 
                             <CheckBox
                                 android:id="@+id/followup_transfer"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Transfer care to Health facility, specify" />
+                                android:text="Transfer care to Health facility" />
 
                             <customfonts.EditText_Roboto_Regular
                                 android:id="@+id/health_center"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="Health Facility"
+                                android:hint="Specify Facility"
                                 android:padding="10dp"
                                 android:textSize="13sp" />
 
@@ -218,132 +324,53 @@
                                 android:textSize="13sp" />
 
                         </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:orientation="vertical">
 
                         <customfonts.TextView_Roboto_Bold
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@color/background"
                             android:padding="10dp"
-                            android:text="Referred For?"
+                            android:text="Member of Support Group"
                             android:textAllCaps="false" />
 
-                        <customfonts.EditText_Roboto_Regular
-                            android:id="@+id/reason_reffered"
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Referred For?"
-                            android:inputType="text"
-                            android:padding="10dp"
+                            android:background="@drawable/round_border">
+
+                            <Spinner
+                                android:id="@+id/spinnerSupportGroup"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp" />
+                        </LinearLayout>
+
+
+                        <customfonts.EditText_Roboto_Regular
+                            android:id="@+id/support_group"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Support Group"
+                            android:padding="15dp"
                             android:textSize="13sp" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="20dp"
-                            android:orientation="vertical">
+                    </LinearLayout>
 
-                            <CheckBox
-                                android:id="@+id/followup_further_management_dm"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Further management of DM" />
-
-                            <CheckBox
-                                android:id="@+id/followup_further_management_htn"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Further management of HTN" />
-
-                            <CheckBox
-                                android:id="@+id/followup_eye_review"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Eye review" />
-
-                            <CheckBox
-                                android:id="@+id/followup_surgical_review"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Surgical review" />
-
-                            <CheckBox
-                                android:id="@+id/followup_renal_review"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Renal review" />
-
-                            <CheckBox
-                                android:id="@+id/followup_cvd_review"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="CVD review" />
-
-                            <CheckBox
-                                android:id="@+id/followup_nutrition"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Nutrition" />
-
-                            <CheckBox
-                                android:id="@+id/followup_physiotherapy"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Physiotherapy" />
-
-                            <CheckBox
-                                android:id="@+id/followup_other"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Other" />
-
-                            <customfonts.EditText_Roboto_Regular
-                                android:id="@+id/followup_other_reason"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="Other Referral Reasons"
-                                android:inputType="text"
-                                android:padding="15dp"
-                                android:textSize="13sp" />
-
-                        </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <customfonts.TextView_Roboto_Bold
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:padding="10dp"
-                                android:text="Member of Support Group"
-                                android:textAllCaps="false" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/round_border">
-
-                                <Spinner
-                                    android:id="@+id/spinnerSupportGroup"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="50dp" />
-                            </LinearLayout>
-
-                            <customfonts.EditText_Roboto_Regular
-                                android:id="@+id/support_group"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="Support Group"
-                                android:padding="15dp"
-                                android:textSize="13sp" />
-
-                        </LinearLayout>
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
                             android:orientation="vertical">
 
                             <customfonts.TextView_Roboto_Bold
@@ -365,7 +392,8 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="55dp"
+                            android:layout_margin="15dp"
+                            android:layout_marginBottom="40dp"
                             android:orientation="vertical">
 
                             <customfonts.TextView_Roboto_Bold
@@ -390,10 +418,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:layout_marginBottom="20dp"
                                 android:layout_marginLeft="20dp"
-                                android:layout_marginRight="20dp"
                                 android:layout_marginTop="30dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginBottom="20dp"
                                 android:background="@drawable/rounded_button"
                                 android:gravity="center"
                                 android:onClick="validate"
@@ -404,6 +432,7 @@
 
                         </LinearLayout>
                     </LinearLayout>
+
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
