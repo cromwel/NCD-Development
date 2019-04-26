@@ -146,9 +146,10 @@ public class Patients extends AppCompatActivity implements SwipyRefreshLayout.On
             //use .toLowerCase() for better matches
             String name = d.getFamily_name() + " " + d.getGiven_name();
             String telephone = "0" + d.getTelephone();
+            String aihd = d.getIdentifier();
             if (name.toLowerCase().contains(text.toLowerCase())) {
                 temp.add(d);
-            }else if(telephone.contains(text)){
+            }else if(telephone.contains(text) || aihd.contains(text)){
                 temp.add(d);
             }
         }
@@ -178,8 +179,8 @@ public class Patients extends AppCompatActivity implements SwipyRefreshLayout.On
             Intent servicePatients = new Intent(getApplicationContext(), LoadPatients.class);
             servicePatients.putExtra("uuid", AppController.getInstance().getSessionManager().getUserDetails().get("user_id"));
             servicePatients.putExtra("mfl", AppController.getInstance().getSessionManager().getUserDetails().get("mfl_code"));
-            servicePatients.putExtra("nationalid", AppController.getInstance().getSessionManager().getUserDetails().get("national_id"));
-            servicePatients.putExtra("telephone", AppController.getInstance().getSessionManager().getUserDetails().get("telephone"));
+            //servicePatients.putExtra("nationalid", AppController.getInstance().getSessionManager().getUserDetails().get("national_id"));
+            //servicePatients.putExtra("telephone", AppController.getInstance().getSessionManager().getUserDetails().get("telephone"));
             startService(servicePatients);
 
             new Handler().postDelayed(new Runnable() {
