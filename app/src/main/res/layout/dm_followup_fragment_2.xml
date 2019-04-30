@@ -18,6 +18,124 @@
             android:background="@color/background"
             android:orientation="vertical">
 
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/round_border"
+            app:cardCornerRadius="5dp"
+            card_view:cardElevation="9dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <customfonts.TextView_Roboto_Bold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_header"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="Admission"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <customfonts.TextView_Roboto_Bold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Have you been admitted since the last visit?"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RadioButton
+                        android:id="@+id/radio_admitted_yes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Yes"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/radio_admitted_no"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="No"
+                        android:textSize="13sp" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <customfonts.TextView_Roboto_Bold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date of admission:"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <customfonts.EditText_Roboto_Regular
+                    android:id="@+id/admitted_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="yyyy-mm-dd"
+                    android:inputType="date"
+                    android:textSize="15sp" />
+
+                <customfonts.TextView_Roboto_Bold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date of discharge:"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <customfonts.EditText_Roboto_Regular
+                    android:id="@+id/discharged_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="yyyy-mm-dd"
+                    android:inputType="date"
+                    android:textSize="15sp" />
+
+                <customfonts.TextView_Roboto_Bold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Reason for admission:"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <customfonts.EditText_Roboto_Regular
+                    android:id="@+id/reason_admitted"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:hint="Reason"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+        </android.support.v7.widget.CardView>
+
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -29,6 +147,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
                     android:orientation="vertical">
 
                     <customfonts.TextView_Roboto_Bold
@@ -38,7 +157,7 @@
                         android:gravity="center"
                         android:paddingBottom="5dp"
                         android:paddingTop="5dp"
-                        android:text="Assessments"
+                        android:text="Chief / Presenting Complaints"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
 
@@ -275,6 +394,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
                     android:background="@color/background"
                     android:orientation="vertical">
 
@@ -469,6 +589,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
                     android:background="@color/background"
                     android:orientation="vertical">
 

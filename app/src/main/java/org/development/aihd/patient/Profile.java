@@ -56,6 +56,7 @@ public class Profile extends AppCompatActivity implements CompoundButton.OnCheck
         Intent intent = getIntent();
         String name = intent.getStringExtra("name");
         String identifier = intent.getStringExtra("identifier");
+        String telephone = intent.getStringExtra("telephone");
         patient_id = intent.getStringExtra("patient_id");
         gender = intent.getStringExtra("gender");
 
@@ -73,6 +74,11 @@ public class Profile extends AppCompatActivity implements CompoundButton.OnCheck
         if (!identifier.isEmpty()) {
             textViewIdentifier.setText(identifier);
         }
+
+       /* TextView textViewTelephone = findViewById(R.id.patient_telephone);
+        if (!telephone.isEmpty()) {
+            textViewTelephone.setText(telephone);
+        }*/
 
     }
 

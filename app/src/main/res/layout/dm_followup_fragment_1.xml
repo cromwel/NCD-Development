@@ -161,10 +161,58 @@
                 app:cardCornerRadius="5dp"
                 card_view:cardElevation="9dp">
 
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:orientation="vertical">
+
+                        <customfonts.TextView_Roboto_Bold
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Visit Type"
+                            android:textColor="@color/black"
+                            android:textSize="13sp" />
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RadioButton
+                                android:id="@+id/radio_visit_type_sick"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sick" />
+
+                            <RadioButton
+                                android:id="@+id/radio_visit_type_referred"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Referred" />
+
+                            <RadioButton
+                                android:id="@+id/radio_visit_type_scheduled"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Scheduled" />
+
+                            <RadioButton
+                                android:id="@+id/radio_visit_type_unscheduled"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="UnScheduled" />
+
+                        </RadioGroup>
+
+
+                    </LinearLayout>
 
                     <customfonts.TextView_Roboto_Bold
                         android:layout_width="match_parent"
