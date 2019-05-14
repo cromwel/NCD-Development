@@ -59,15 +59,18 @@ public class LoadPatients extends IntentService {
                     JSONArray patients = jsonObj.getJSONArray("data");
 
                     //List<Person> persons = Arrays.asList(patientsGson.fromJson(response, Person[].class));
-                    Log.d("Response", response);
+                    Log.d("Response tested", response);
                     if (patients.length() > 0) {
                         Person.deleteAll(Person.class);
+                        //Log.d("Response tests delete", String.valueOf(Person));
 
                         List<Person> persons = Arrays.asList(patientsGson.fromJson(patients.toString(), Person[].class));
 
                         for (Person person : persons) {
                             // GOT THE OBJECT of PEOPLE
                             person.save();
+                            Log.d("Response saves", String.valueOf(person));
+                            //Log.d("Response saves 2", String.valueOf(persons));
                         }
 
                     }
