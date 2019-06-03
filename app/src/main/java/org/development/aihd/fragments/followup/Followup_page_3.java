@@ -62,7 +62,7 @@ public class Followup_page_3 extends Fragment {
         editTextWeight = view.findViewById(R.id.followup_weight);
         editTextNutrition = view.findViewById(R.id.followup_nutrition);
 
-        editTextCardiovascularDisease = view.findViewById(R.id.details_cardiovascular_disease);
+        //editTextCardiovascularDisease = view.findViewById(R.id.details_cardiovascular_disease);
         editTextHBP = view.findViewById(R.id.details_high_bp);
         editTextHighCholestrol = view.findViewById(R.id.details_high_cholestrol);
         editTextVascularDisease = view.findViewById(R.id.details_peripheral_vascular_disease);
@@ -72,8 +72,8 @@ public class Followup_page_3 extends Fragment {
         editTextKidneyDisease = view.findViewById(R.id.details_kidney_disease);
         editTextAsthma = view.findViewById(R.id.details_asthma_COPD);
         editTextArthritis = view.findViewById(R.id.details_arthritis);
-        editTextFoot = view.findViewById(R.id.details_foot);
-        editTextOther = view.findViewById(R.id.details_assesment_other);
+       // editTextFoot = view.findViewById(R.id.details_foot);
+        editTextOther = view.findViewById(R.id.details_assessment_other);
 
         editTextFBS = view.findViewById(R.id.followup_fbs);
         editTextRBS = view.findViewById(R.id.followup_rbs);
@@ -86,7 +86,7 @@ public class Followup_page_3 extends Fragment {
         editTextUECChloride = view.findViewById(R.id.followup_uec_chloride);
         editTextUECPotassium = view.findViewById(R.id.followup_uec_potassium);
         editTextUECCreatinine = view.findViewById(R.id.followup_uec_creatinine);
-        editTextUrinalysis = view.findViewById(R.id.followup_urinalysis);
+       // editTextUrinalysis = view.findViewById(R.id.followup_urinalysis);
 
         editTextDateFBS = view.findViewById(R.id.date_fbs);
         editTextDateRBS = view.findViewById(R.id.date_rbs);
@@ -99,7 +99,7 @@ public class Followup_page_3 extends Fragment {
         editTextDateUECChloride = view.findViewById(R.id.date_uec_chloride);
         editTextDateUECPotassium = view.findViewById(R.id.date_uec_potassium);
         editTextDateUECCreatinine = view.findViewById(R.id.date_uec_creatinine);
-        editTextDateUrinalysis = view.findViewById(R.id.date_urinalysis);
+      //  editTextDateUrinalysis = view.findViewById(R.id.date_urinalysis);
 
         DateCalendar.date(getActivity(), editTextDateFBS);
         DateCalendar.date(getActivity(), editTextDateRBS);
@@ -112,7 +112,7 @@ public class Followup_page_3 extends Fragment {
         DateCalendar.date(getActivity(), editTextDateUECChloride);
         DateCalendar.date(getActivity(), editTextDateUECPotassium);
         DateCalendar.date(getActivity(), editTextDateUECCreatinine);
-        DateCalendar.date(getActivity(), editTextDateUrinalysis);
+      //  DateCalendar.date(getActivity(), editTextDateUrinalysis);
 
         textWatcher(editTextSystolic, "blood_pressure");
         textWatcher(editTextDiastolic, "blood_pressure");
@@ -128,7 +128,7 @@ public class Followup_page_3 extends Fragment {
         textWatcher(editTextWaist, "whr");
         textWatcher(editTextHip, "whr");
 
-        textWatcher(editTextCardiovascularDisease, "");
+        //textWatcher(editTextCardiovascularDisease, "");
         textWatcher(editTextHBP, "");
         textWatcher(editTextHighCholestrol, "");
         textWatcher(editTextVascularDisease, "");
@@ -138,7 +138,7 @@ public class Followup_page_3 extends Fragment {
         textWatcher(editTextKidneyDisease, "");
         textWatcher(editTextAsthma, "");
         textWatcher(editTextArthritis, "");
-        textWatcher(editTextFoot, "");
+        //textWatcher(editTextFoot, "");
         textWatcher(editTextOther, "");
 
         textWatcher(editTextFBS, "");
@@ -152,7 +152,7 @@ public class Followup_page_3 extends Fragment {
         textWatcher(editTextUECChloride, "");
         textWatcher(editTextUECPotassium, "");
         textWatcher(editTextUECCreatinine, "");
-        textWatcher(editTextUrinalysis, "");
+       // textWatcher(editTextUrinalysis, "");
 
         textWatcher(editTextDateFBS, "");
         textWatcher(editTextDateRBS, "");
@@ -165,7 +165,7 @@ public class Followup_page_3 extends Fragment {
         textWatcher(editTextDateUECChloride, "");
         textWatcher(editTextDateUECPotassium, "");
         textWatcher(editTextDateUECCreatinine, "");
-        textWatcher(editTextDateUrinalysis, "");
+       // textWatcher(editTextDateUrinalysis, "");
 
         DateCalendar.date(getActivity(), editTextDateFBS);
         DateCalendar.date(getActivity(), editTextDateRBS);
@@ -178,7 +178,7 @@ public class Followup_page_3 extends Fragment {
         DateCalendar.date(getActivity(), editTextDateUECChloride);
         DateCalendar.date(getActivity(), editTextDateUECPotassium);
         DateCalendar.date(getActivity(), editTextDateUECCreatinine);
-        DateCalendar.date(getActivity(), editTextDateUrinalysis);
+       // DateCalendar.date(getActivity(), editTextDateUrinalysis);
 
         editTextDateFBS.setText(DateCalendar.date());
         editTextDateRBS.setText(DateCalendar.date());
@@ -191,12 +191,12 @@ public class Followup_page_3 extends Fragment {
         editTextDateUECChloride.setText(DateCalendar.date());
         editTextDateUECPotassium.setText(DateCalendar.date());
         editTextDateUECCreatinine.setText(DateCalendar.date());
-        editTextDateUrinalysis.setText(DateCalendar.date());
+        //editTextDateUrinalysis.setText(DateCalendar.date());
 
         textViewBMI = view.findViewById(R.id.followup_bmi);
         textViewWaistHipRatio = view.findViewById(R.id.followup_hip_waist_ratio);
 
-        CheckBox checkBoxCardiovascularDisease = view.findViewById(R.id.checkbox_cardiovascular_disease);
+       // CheckBox checkBoxCardiovascularDisease = view.findViewById(R.id.checkbox_cardiovascular_disease);
         CheckBox checkBoxHBP = view.findViewById(R.id.checkbox_high_BP);
         CheckBox checkBoxHighCholestrol = view.findViewById(R.id.checkbox_high_cholestrol);
         CheckBox checkBoxVascularDisease = view.findViewById(R.id.checkbox_peripheral_vascular_disease);
@@ -206,10 +206,10 @@ public class Followup_page_3 extends Fragment {
         CheckBox checkBoxKidneyDisease = view.findViewById(R.id.checkbox_kidney_disease);
         CheckBox checkBoxAsthma = view.findViewById(R.id.checkbox_asthma_COPD);
         CheckBox checkBoxArthritis = view.findViewById(R.id.checkbox_arthritis);
-        CheckBox checkBoxFoot = view.findViewById(R.id.checkbox_foot);
-        CheckBox checkBoxOther = view.findViewById(R.id.checkbox_assesment_other);
+       // CheckBox checkBoxFoot = view.findViewById(R.id.checkbox_foot);
+        CheckBox checkBoxOther = view.findViewById(R.id.checkbox_assessment_other);
 
-        checkBox(checkBoxCardiovascularDisease);
+        //checkBox(checkBoxCardiovascularDisease);
         checkBox(checkBoxHBP);
         checkBox(checkBoxHighCholestrol);
         checkBox(checkBoxVascularDisease);
@@ -219,7 +219,7 @@ public class Followup_page_3 extends Fragment {
         checkBox(checkBoxKidneyDisease);
         checkBox(checkBoxAsthma);
         checkBox(checkBoxArthritis);
-        checkBox(checkBoxFoot);
+        //checkBox(checkBoxFoot);
         checkBox(checkBoxOther);
 
         RadioButton radioButtonFootAmputationYes = view.findViewById(R.id.radio_foot_amputations_yes);
@@ -346,13 +346,13 @@ public class Followup_page_3 extends Fragment {
                             eye_checkup = "";
                         }
                         break;*/
-                    case R.id.checkbox_cardiovascular_disease:
+                    /*case R.id.checkbox_cardiovascular_disease:
                         if (checked) {
                             cardiovascular_disease = "119270";
                         } else {
                             cardiovascular_disease = "";
                         }
-                        break;
+                        break;*/
                     case R.id.checkbox_high_BP:
                         if (checked) {
                             high_blood_pressure = "117399";
@@ -416,14 +416,14 @@ public class Followup_page_3 extends Fragment {
                             arthritis = "";
                         }
                         break;
-                    case R.id.checkbox_foot:
+                    /*case R.id.checkbox_foot:
                         if (checked) {
                             foot = "165104";
                         } else {
                             foot = "";
                         }
-                        break;
-                    case R.id.checkbox_assesment_other:
+                        break;*/
+                    case R.id.checkbox_assessment_other:
                         if (checked) {
                             assesment_other = "5622";
                         } else {
@@ -459,7 +459,7 @@ public class Followup_page_3 extends Fragment {
         jsonArry.put(JSONFormBuilder.observations("1391", "", "valueCoded", dental_exam, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("1391", "", "valueCoded", eye_checkup, DateCalendar.date(), ""));
 
-        jsonArry.put(JSONFormBuilder.observations("165106", "", "valueCoded", cardiovascular_disease, DateCalendar.date(), editTextCardiovascularDisease.getText().toString().trim()));
+        //jsonArry.put(JSONFormBuilder.observations("165106", "", "valueCoded", cardiovascular_disease, DateCalendar.date(), editTextCardiovascularDisease.getText().toString().trim()));
         jsonArry.put(JSONFormBuilder.observations("165106", "", "valueCoded", high_blood_pressure, DateCalendar.date(), editTextHBP.getText().toString().trim()));
         jsonArry.put(JSONFormBuilder.observations("165106", "", "valueCoded", high_cholestrol, DateCalendar.date(), editTextHighCholestrol.getText().toString().trim()));
         jsonArry.put(JSONFormBuilder.observations("165106", "", "valueCoded", peripheral_vascular_disease, DateCalendar.date(), editTextVascularDisease.getText().toString().trim()));
@@ -469,7 +469,7 @@ public class Followup_page_3 extends Fragment {
         jsonArry.put(JSONFormBuilder.observations("165106", "", "valueCoded", kidney_disease, DateCalendar.date(), editTextKidneyDisease.getText().toString().trim()));
         jsonArry.put(JSONFormBuilder.observations("165106", "", "valueCoded", asthma_COPD, DateCalendar.date(), editTextAsthma.getText().toString().trim()));
         jsonArry.put(JSONFormBuilder.observations("165106", "", "valueCoded", arthritis, DateCalendar.date(), editTextArthritis.getText().toString().trim()));
-        jsonArry.put(JSONFormBuilder.observations("165106", "", "valueCoded", foot, DateCalendar.date(), editTextFoot.getText().toString().trim()));
+       // jsonArry.put(JSONFormBuilder.observations("165106", "", "valueCoded", foot, DateCalendar.date(), editTextFoot.getText().toString().trim()));
         jsonArry.put(JSONFormBuilder.observations("165106", "", "valueCoded", assesment_other, DateCalendar.date(), editTextOther.getText().toString().trim()));
 
         jsonArry.put(JSONFormBuilder.observations("165104", "", "valueCoded", foot_amputation, DateCalendar.date(), ""));
@@ -485,7 +485,7 @@ public class Followup_page_3 extends Fragment {
         jsonArry.put(JSONFormBuilder.observations("164364", "", "valueNumeric", editTextUECChloride.getText().toString().trim(), editTextDateUECChloride.getText().toString().trim(), ""));
         jsonArry.put(JSONFormBuilder.observations("164364", "", "valueNumeric", editTextUECPotassium.getText().toString().trim(), editTextDateUECPotassium.getText().toString().trim(), ""));
         jsonArry.put(JSONFormBuilder.observations("164364", "", "valueNumeric", editTextUECCreatinine.getText().toString().trim(), editTextDateUECCreatinine.getText().toString().trim(), ""));
-        jsonArry.put(JSONFormBuilder.observations("160987", "", "valueText", editTextUrinalysis.getText().toString().trim(), editTextDateUrinalysis.getText().toString().trim(), ""));
+      //  jsonArry.put(JSONFormBuilder.observations("160987", "", "valueText", editTextUrinalysis.getText().toString().trim(), editTextDateUrinalysis.getText().toString().trim(), ""));
 
         try {
             jsonArry = JSONFormBuilder.concatArray(jsonArry);
