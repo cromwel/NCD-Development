@@ -318,13 +318,13 @@ public class Followup_page_3 extends Fragment {
 
                 //Check which checkbox was clicked
                 switch (checkBox.getId()) {
-                    case R.id.checkbox_foot_exam:
+                   /* case R.id.checkbox_foot_exam:
                         if (checked) {
                             foot_exam = "165099";
                         } else {
                             foot_exam = "";
                         }
-                        break;
+                        break;*/
                     case R.id.checkbox_eye_exam:
                         if (checked) {
                             eye_exam = "165100";
@@ -339,13 +339,13 @@ public class Followup_page_3 extends Fragment {
                             dental_exam = "";
                         }
                         break;
-                    case R.id.checkbox_eye_check_up:
+                    /*case R.id.checkbox_eye_check_up:
                         if (checked) {
                             eye_checkup = "165102";
                         } else {
                             eye_checkup = "";
                         }
-                        break;
+                        break;*/
                     case R.id.checkbox_cardiovascular_disease:
                         if (checked) {
                             cardiovascular_disease = "119270";

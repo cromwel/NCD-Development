@@ -112,18 +112,4 @@ public class File_Upload {
         mRequestQueue.add(smr);
     }
 
-
-    /*
-    public static void testString(ArrayList<KeyValue> keyValues) {
-        for (KeyValue keyValue : keyValues) {
-            Log.d("KeyValue Pair ", keyValue.getId() + " : " + keyValue.getName());
-        }
-    }
-    ArrayList<KeyValue> keyvalueParams = new ArrayList<>();
-
-    keyvalueParams.add(new KeyValue("1540", "Employed"));
-    keyvalueParams.add(new KeyValue("165170", "Unemployed"));
-
-    File_Upload.testString(keyvalueParams);
-    */
 }

@@ -200,6 +200,7 @@ public class DM_Initial extends AppCompatActivity implements FragmentModelInitia
                 Toast.makeText(getBaseContext(), "Initial Encounter file saved", Toast.LENGTH_SHORT).show();
 
                 boolean isConnected = File_Upload.connectivity(getApplicationContext());
+                Log.d("file to upload", String.valueOf(isConnected));
 
                 if (isConnected) {
                     File_Upload.upload(this, Environment.getExternalStorageDirectory() + "/aihd/initial/" + file_name, id, null);

@@ -74,7 +74,7 @@
 
 
                     <RadioGroup
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
@@ -82,14 +82,14 @@
                             android:id="@+id/radio_tobacco_use_yes"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight=".5"
+                            android:layout_weight=".3"
                             android:text="Yes" />
 
                         <RadioButton
                             android:id="@+id/radio_tobacco_use_no"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight=".5"
+                            android:layout_weight=".7"
                             android:text="No" />
                     </RadioGroup>
                 </LinearLayout>
@@ -108,7 +108,7 @@
 
 
                     <RadioGroup
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
@@ -116,14 +116,14 @@
                             android:id="@+id/radio_drink_alcohol_yes"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight=".5"
+                            android:layout_weight=".3"
                             android:text="Yes" />
 
                         <RadioButton
                             android:id="@+id/radio_drink_alcohol_no"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight=".5"
+                            android:layout_weight=".7"
                             android:text="No" />
                     </RadioGroup>
                 </LinearLayout>
@@ -142,7 +142,7 @@
 
 
                     <RadioGroup
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
@@ -150,14 +150,14 @@
                             android:id="@+id/radio_physical_yes"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight=".5"
+                            android:layout_weight=".3"
                             android:text="Yes" />
 
                         <RadioButton
                             android:id="@+id/radio_physical_no"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight=".5"
+                            android:layout_weight=".7"
                             android:text="No" />
                     </RadioGroup>
                 </LinearLayout>
@@ -176,7 +176,7 @@
 
 
                     <RadioGroup
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
@@ -184,14 +184,14 @@
                             android:id="@+id/radio_health_diet_yes"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight=".5"
+                            android:layout_weight=".3"
                             android:text="Yes" />
 
                         <RadioButton
                             android:id="@+id/radio_health_diet_no"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight=".5"
+                            android:layout_weight=".7"
                             android:text="No" />
                     </RadioGroup>
                 </LinearLayout>
@@ -206,25 +206,35 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
                     android:background="@color/background_inner"
                     android:gravity="center"
                     android:paddingTop="5dp"
-                    android:paddingBottom="5dp"
                     android:textSize="14sp"
                     android:text="Nutrition Counselling and Education"
                     android:textColor="@color/black"/>
+
+                <customfonts.TextView_Roboto_Bold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/background_inner"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:textSize="12sp"
+                    android:text="Has the following been done?"
+                    android:textColor="@color/white"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <CheckBox
-                        android:id="@+id/checkbox_nutrition_assessment"
+                    <customfonts.TextView_Roboto_Bold
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Nutrition Assessment" />
+                        android:text="Nutrition Assessment"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
 
                 </LinearLayout>
                     <LinearLayout
@@ -295,11 +305,12 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <CheckBox
-                        android:id="@+id/checkbox_nutrition_meal_planning"
+                    <customfonts.TextView_Roboto_Bold
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Nutrition Assessment" />
+                        android:text="Meal Planning"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
 
                 </LinearLayout>
                     <LinearLayout
@@ -696,13 +707,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/background"
+                    android:layout_margin="10dp"
                     android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:orientation="vertical">
 
                         <customfonts.TextView_Roboto_Bold
                             android:layout_width="match_parent"
@@ -730,8 +736,7 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
-                                android:orientation="horizontal">
+                                android:layout_margin="10dp">
 
                             <RadioGroup
                                 android:layout_width="match_parent"
@@ -742,20 +747,24 @@
                                     android:id="@+id/radio_pregnancy_yes"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
+                                    android:layout_weight=".3"
                                     android:text="Yes" />
 
                                 <RadioButton
                                     android:id="@+id/radio_pregnancy_no"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
+                                    android:layout_weight=".3"
                                     android:text="No" />
 
                                 <RadioButton
                                     android:id="@+id/radio_pregnancy_none"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
+                                    android:layout_weight=".4"
                                     android:text="N/A" />
                             </RadioGroup>
+
                             </LinearLayout>
 
                             <customfonts.EditText_Roboto_Regular
@@ -800,7 +809,7 @@
                                 android:textSize="14sp" />
                         </LinearLayout>
 
-                        <LinearLayout
+                        <!--  <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
@@ -822,7 +831,7 @@
                                 android:ems="10"
                                 android:inputType="text"
                                 android:textSize="12sp" />
-                        </LinearLayout>
+                        </LinearLayout>-->
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -835,13 +844,14 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight=".5"
-                                android:text="Eye Exam" />
+                                android:text="Eye Exam (fundoscopy)" />
 
                             <customfonts.EditText_Roboto_Regular
                                 android:id="@+id/eye_exam"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight=".5"
+                                android:layout_margin="5dp"
                                 android:ems="10"
                                 android:inputType="text"
                                 android:textSize="12sp" />
@@ -858,7 +868,6 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight=".5"
-
                                 android:text="Dental Exam" />
 
                             <customfonts.EditText_Roboto_Regular
@@ -871,7 +880,7 @@
                                 android:textSize="12sp" />
                         </LinearLayout>
 
-                        <LinearLayout
+                        <!-- <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
@@ -893,10 +902,26 @@
                                 android:ems="10"
                                 android:inputType="text"
                                 android:textSize="12sp" />
-                        </LinearLayout>
+                        </LinearLayout>-->
 
+                        <!--<LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                    </LinearLayout>
+                            <customfonts.TextView_Roboto_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:background="@color/background_inner"
+                                android:gravity="center"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:text="General Examination"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>-->
+
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -946,7 +971,7 @@
                                 android:gravity="center"
                                 android:paddingTop="5dp"
                                 android:paddingBottom="5dp"
-                                android:text="Assessment"
+                                android:text="Cardiovascular"
                                 android:textColor="@color/black"
                                 android:textSize="14sp" />
 
