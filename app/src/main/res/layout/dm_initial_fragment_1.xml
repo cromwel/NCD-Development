@@ -1051,7 +1051,7 @@
                             <customfonts.TextView_Roboto_Bold
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Do you Exercise?*" />
+                                android:text="Do you Exercise?" />
 
                             <RadioGroup
                                 android:layout_width="match_parent"
@@ -1086,7 +1086,7 @@
                             <customfonts.TextView_Roboto_Bold
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Do you smoke cigarettes*" />
+                                android:text="Do you smoke cigarettes?" />
 
                             <RadioGroup
                                 android:layout_width="match_parent"
@@ -1121,7 +1121,7 @@
                             <customfonts.TextView_Roboto_Bold
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Do you drink alcohol*" />
+                                android:text="Do you drink alcohol?" />
 
                             <RadioGroup
                                 android:layout_width="match_parent"

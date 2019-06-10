@@ -52,8 +52,8 @@ public class Initial_page_4 extends Fragment {
         CheckBox checkBoxCataracts = view.findViewById(R.id.checkbox_complication_cataracts);
         CheckBox checkBoxDental = view.findViewById(R.id.checkbox_complication_dental);
         CheckBox checkBoxOther = view.findViewById(R.id.checkbox_complication_other);
-        CheckBox checkBoxNutrition = view.findViewById(R.id.checkbox_nutrition);
-        CheckBox checkBoxActivity = view.findViewById(R.id.checkbox_physical_activity);
+       // CheckBox checkBoxNutrition = view.findViewById(R.id.checkbox_nutrition);
+       // CheckBox checkBoxActivity = view.findViewById(R.id.checkbox_physical_activity);
        // CheckBox checkBoxPsychosocial = view.findViewById(R.id.checkbox_psychosocial);
         //CheckBox checkBoxCounsellingOther = view.findViewById(R.id.checkbox_other);
 
@@ -68,8 +68,8 @@ public class Initial_page_4 extends Fragment {
         checkBox(checkBoxCataracts);
         checkBox(checkBoxDental);
         checkBox(checkBoxOther);
-        checkBox(checkBoxNutrition);
-        checkBox(checkBoxActivity);
+       // checkBox(checkBoxNutrition);
+       // checkBox(checkBoxActivity);
         //checkBox(checkBoxPsychosocial);
         //checkBox(checkBoxCounsellingOther);
 
@@ -298,20 +298,20 @@ public class Initial_page_4 extends Fragment {
                             other = "";
                         }
                         break;
-                    case R.id.checkbox_nutrition:
+                   /* case R.id.checkbox_nutrition:
                         if (checked) {
                             nutrition = "1380";
                         } else {
                             nutrition = "";
                         }
-                        break;
-                    case R.id.checkbox_physical_activity:
+                        break;*/
+                   /* case R.id.checkbox_physical_activity:
                         if (checked) {
                             activity = "159364";
                         } else {
                             activity = "";
                         }
-                        break;
+                        break;*/
                     /*case R.id.checkbox_psychosocial:
                         if (checked) {
                             psychosocial = "5490";

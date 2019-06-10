@@ -61,8 +61,8 @@ public class Initial_page_2 extends Fragment {
         linearLayoutPastCurrentMedication = view.findViewById(R.id.past_current_medication);
         linearLayoutOtherPastCurrentMedication = view.findViewById(R.id.other_past_current_medication);
         linearLayoutExamOther = view.findViewById(R.id.linearLayoutExamOther);
-        linearLayoutExtremities = view.findViewById(R.id.extremitiesLinearLayout);
-        linearLayoutExtremitiesDescription = view.findViewById(R.id.describe_extremities_layout);
+        //linearLayoutExtremities = view.findViewById(R.id.extremitiesLinearLayout);
+        //linearLayoutExtremitiesDescription = view.findViewById(R.id.describe_extremities_layout);
 
         CheckBox checkBoxNone = view.findViewById(R.id.checkbox_medication_none);
         CheckBox checkBoxMetformin = view.findViewById(R.id.checkbox_medication_metformin);
@@ -95,10 +95,10 @@ public class Initial_page_2 extends Fragment {
         checkBox(checkBoxNifedipine);
         checkBox(checkBoxAtenolol);
         checkBox(checkBoxMedicationOther);
-        checkBox(checkBoxGumDisease);
-        checkBox(checkBoxOralFesions);
-        checkBox(checkBoxDepression);
-        checkBox(checkBoxSleepDisorder);
+       // checkBox(checkBoxGumDisease);
+      //  checkBox(checkBoxOralFesions);
+       // checkBox(checkBoxDepression);
+       // checkBox(checkBoxSleepDisorder);
 
         editTextMetformin = view.findViewById(R.id.medication_metformin);
         editTextGlibenclamide = view.findViewById(R.id.medication_glibenclamide);
@@ -174,7 +174,7 @@ public class Initial_page_2 extends Fragment {
         editTextDepression = view.findViewById(R.id.describe_depression);
         editTextSleepDisorders = view.findViewById(R.id.describe_sleep_disorders);
         editTextSubstanceAbuse = view.findViewById(R.id.describe_substance_abuse);
-        editTextExtremeties = view.findViewById(R.id.describe_extremities);
+       // editTextExtremeties = view.findViewById(R.id.describe_extremities);
         editTextMonofilamentRF = view.findViewById(R.id.monofilament_rf);
         editTextMonofilamentLF = view.findViewById(R.id.monofilament_lf);
 
@@ -195,7 +195,7 @@ public class Initial_page_2 extends Fragment {
         textWatcher(editTextRespiratoryRate, "");
         textWatcher(editTextExamOther, "");
         textWatcher(editTextVisual, "");
-        textWatcher(editTextPulses, "");
+       /* textWatcher(editTextPulses, "");
         textWatcher(editTextJVP, "");
         textWatcher(editTextPallor, "");
         textWatcher(editTextHeartSounds, "");
@@ -211,8 +211,8 @@ public class Initial_page_2 extends Fragment {
         textWatcher(editTextOralFessions, "");
         textWatcher(editTextDepression, "");
         textWatcher(editTextSleepDisorders, "");
-       textWatcher(editTextSubstanceAbuse, "");
-        textWatcher(editTextExtremeties, "");
+       textWatcher(editTextSubstanceAbuse, "");*/
+       // textWatcher(editTextExtremeties, "");
         textWatcher(editTextMonofilamentRF, "monofilament");
         textWatcher(editTextMonofilamentLF, "monofilament");
 
@@ -221,17 +221,17 @@ public class Initial_page_2 extends Fragment {
         RadioButton radioButtonExamSick = view.findViewById(R.id.radio_exam_sick);
         RadioButton radioButtonVisualYes = view.findViewById(R.id.radio_visual_impairment_yes);
         RadioButton radioButtonVisualNo = view.findViewById(R.id.radio_visual_impairment_no);
-        RadioButton radioButtonPulsesNormal = view.findViewById(R.id.radio_pulses_normal);
+       /* RadioButton radioButtonPulsesNormal = view.findViewById(R.id.radio_pulses_normal);
         RadioButton radioButtonPulsesAbnormal = view.findViewById(R.id.radio_pulses_abnormal);
         RadioButton radioButtonJVPNormal = view.findViewById(R.id.radio_jvp_normal);
         RadioButton radioButtonJVPAbnormal = view.findViewById(R.id.radio_jvp_abnormal);
         RadioButton radioButtonPallorNormal = view.findViewById(R.id.radio_pallor_normal);
         RadioButton radioButtonPallorAbnormal = view.findViewById(R.id.radio_pallor_abnormal);
         RadioButton radioButtonHeartSoundsNormal = view.findViewById(R.id.radio_heart_sounds_normal);
-        RadioButton radioButtonHeartSoundsAbnormal = view.findViewById(R.id.radio_heart_sounds_abnormal);
-        RadioButton radioButtonPRNormal = view.findViewById(R.id.radio_pr_normal);
-        RadioButton radioButtonPRAbnormal = view.findViewById(R.id.radio_pr_abnormal);
-        RadioButton radioButtonAirEntryNormal = view.findViewById(R.id.radio_air_entry_normal);
+        RadioButton radioButtonHeartSoundsAbnormal = view.findViewById(R.id.radio_heart_sounds_abnormal);*/
+       // RadioButton radioButtonPRNormal = view.findViewById(R.id.radio_pr_normal);
+       // RadioButton radioButtonPRAbnormal = view.findViewById(R.id.radio_pr_abnormal);
+      /*  RadioButton radioButtonAirEntryNormal = view.findViewById(R.id.radio_air_entry_normal);
         RadioButton radioButtonAirEntryAbnormal = view.findViewById(R.id.radio_air_entry_abnormal);
         RadioButton radioButtonAbnormalSoundsNormal = view.findViewById(R.id.radio_abnormal_sounds_normal);
         RadioButton radioButtonAbnormalSoundsAbnormal = view.findViewById(R.id.radio_abnormal_sounds_abnormal);
@@ -244,26 +244,26 @@ public class Initial_page_2 extends Fragment {
         RadioButton radioButtonSensoryNormal = view.findViewById(R.id.radio_sensory_normal);
         RadioButton radioButtonSensoryAbnormal = view.findViewById(R.id.radio_sensory_abnormal);
         RadioButton radioButtonAutonomicNormal = view.findViewById(R.id.radio_autonomic_normal);
-        RadioButton radioButtonAutonomicAbnormal = view.findViewById(R.id.radio_autonomic_abnormal);
-        RadioButton radioButtonExtremitiesNormal = view.findViewById(R.id.radio_extremities_normal);
-        RadioButton radioButtonExtremitiesAbnormal = view.findViewById(R.id.radio_extremities_abnormal);
+        RadioButton radioButtonAutonomicAbnormal = view.findViewById(R.id.radio_autonomic_abnormal);*/
+       // RadioButton radioButtonExtremitiesNormal = view.findViewById(R.id.radio_extremities_normal);
+      //  RadioButton radioButtonExtremitiesAbnormal = view.findViewById(R.id.radio_extremities_abnormal);
 
         radioButton(radioButtonExamFair);
         radioButton(radioButtonExamGood);
         radioButton(radioButtonExamSick);
         radioButton(radioButtonVisualYes);
         radioButton(radioButtonVisualNo);
-        radioButton(radioButtonPulsesNormal);
+       /* radioButton(radioButtonPulsesNormal);
         radioButton(radioButtonPulsesAbnormal);
         radioButton(radioButtonJVPNormal);
         radioButton(radioButtonJVPAbnormal);
         radioButton(radioButtonPallorNormal);
         radioButton(radioButtonPallorAbnormal);
         radioButton(radioButtonHeartSoundsNormal);
-        radioButton(radioButtonHeartSoundsAbnormal);
-        radioButton(radioButtonPRNormal);
-        radioButton(radioButtonPRAbnormal);
-        radioButton(radioButtonAirEntryNormal);
+        radioButton(radioButtonHeartSoundsAbnormal);*/
+       // radioButton(radioButtonPRNormal);
+      //  radioButton(radioButtonPRAbnormal);
+       /* radioButton(radioButtonAirEntryNormal);
         radioButton(radioButtonAirEntryAbnormal);
         radioButton(radioButtonAbnormalSoundsNormal);
         radioButton(radioButtonAbnormalSoundsAbnormal);
@@ -276,9 +276,9 @@ public class Initial_page_2 extends Fragment {
         radioButton(radioButtonSensoryNormal);
         radioButton(radioButtonSensoryAbnormal);
         radioButton(radioButtonAutonomicNormal);
-        radioButton(radioButtonAutonomicAbnormal);
-        radioButton(radioButtonExtremitiesNormal);
-        radioButton(radioButtonExtremitiesAbnormal);
+        radioButton(radioButtonAutonomicAbnormal);*/
+       // radioButton(radioButtonExtremitiesNormal);
+      //  radioButton(radioButtonExtremitiesAbnormal);
 
         CheckBox checkBoxPallor = view.findViewById(R.id.checkbox_exam_pallor);
         CheckBox checkBoxJaundice = view.findViewById(R.id.checkbox_exam_jaundice);
@@ -288,13 +288,13 @@ public class Initial_page_2 extends Fragment {
         CheckBox checkBoxDehydration = view.findViewById(R.id.checkbox_exam_dehydration);
         CheckBox checkBoxExamOther = view.findViewById(R.id.checkbox_exam_other);
 
-        CheckBox checkBoxUlcers = view.findViewById(R.id.checkbox_extremities_ulcers);
-        CheckBox checkBoxCallouses = view.findViewById(R.id.checkbox_extremities_callouses);
-        CheckBox checkBoxHardenedNails = view.findViewById(R.id.checkbox_extremities_nails);
-        CheckBox checkBoxFungus = view.findViewById(R.id.checkbox_extremities_fungus);
-        CheckBox checkBoxCellutis = view.findViewById(R.id.checkbox_extremities_cellulitis);
-        CheckBox checkBoxEdema = view.findViewById(R.id.checkbox_extremities_edema);
-        CheckBox checkBoxDry = view.findViewById(R.id.checkbox_extremities_dry);
+      //  CheckBox checkBoxUlcers = view.findViewById(R.id.checkbox_extremities_ulcers);
+       // CheckBox checkBoxCallouses = view.findViewById(R.id.checkbox_extremities_callouses);
+        //CheckBox checkBoxHardenedNails = view.findViewById(R.id.checkbox_extremities_nails);
+       // CheckBox checkBoxFungus = view.findViewById(R.id.checkbox_extremities_fungus);
+       // CheckBox checkBoxCellutis = view.findViewById(R.id.checkbox_extremities_cellulitis);
+       // CheckBox checkBoxEdema = view.findViewById(R.id.checkbox_extremities_edema);
+       // CheckBox checkBoxDry = view.findViewById(R.id.checkbox_extremities_dry);
 
         checkBox(checkBoxPallor);
         checkBox(checkBoxJaundice);
@@ -304,13 +304,13 @@ public class Initial_page_2 extends Fragment {
         checkBox(checkBoxDehydration);
         checkBox(checkBoxExamOther);
 
-        checkBox(checkBoxUlcers);
+        /*checkBox(checkBoxUlcers);
         checkBox(checkBoxCallouses);
         checkBox(checkBoxHardenedNails);
         checkBox(checkBoxFungus);
         checkBox(checkBoxCellutis);
         checkBox(checkBoxEdema);
-        checkBox(checkBoxDry);
+        checkBox(checkBoxDry);*/
 
         return view;
     }
@@ -666,55 +666,55 @@ public class Initial_page_2 extends Fragment {
                             examOther(exam_other);
                         }
                         break;
-                    case R.id.checkbox_extremities_ulcers:
+                    /*case R.id.checkbox_extremities_ulcers:
                         if (checked) {
                             ulcers = "123919";
                         } else {
                             ulcers = "";
                         }
-                        break;
-                    case R.id.checkbox_extremities_callouses:
+                        break;*/
+                    /*case R.id.checkbox_extremities_callouses:
                         if (checked) {
                             callouses = "120943";
                         } else {
                             callouses = "";
                         }
-                        break;
-                    case R.id.checkbox_extremities_nails:
+                        break;*/
+                  /*  case R.id.checkbox_extremities_nails:
                         if (checked) {
                             hardened_nails = "165113";
                         } else {
                             hardened_nails = "";
                         }
-                        break;
-                    case R.id.checkbox_extremities_fungus:
+                        break;*/
+                   /* case R.id.checkbox_extremities_fungus:
                         if (checked) {
                             fungus = "165114";
                         } else {
                             fungus = "";
                         }
-                        break;
-                    case R.id.checkbox_extremities_cellulitis:
+                        break;*/
+                    /*case R.id.checkbox_extremities_cellulitis:
                         if (checked) {
                             cellulitis = "134";
                         } else {
                             cellulitis = "";
                         }
-                        break;
-                    case R.id.checkbox_extremities_edema:
+                        break;*/
+                   /* case R.id.checkbox_extremities_edema:
                         if (checked) {
                             edema = "156113";
                         } else {
                             edema = "";
                         }
-                        break;
-                    case R.id.checkbox_extremities_dry:
+                        break;*/
+                  /*  case R.id.checkbox_extremities_dry:
                         if (checked) {
                             dry = "165115";
                         } else {
                             dry = "";
                         }
-                        break;
+                        break;*/
                 }
 
                 updateValues();
@@ -807,14 +807,14 @@ public class Initial_page_2 extends Fragment {
                         if (checked)
                             heart_sounds = "1116";
                         break;
-                    case R.id.radio_pr_normal:
+                   /* case R.id.radio_pr_normal:
                         if (checked)
                             pr = "1115";
-                        break;
-                    case R.id.radio_pr_abnormal:
+                        break;*/
+                   /* case R.id.radio_pr_abnormal:
                         if (checked)
                             pr = "1116";
-                        break;
+                        break;*/
                     case R.id.radio_air_entry_normal:
                         if (checked)
                             air_entry = "1115";
@@ -871,16 +871,16 @@ public class Initial_page_2 extends Fragment {
                         if (checked)
                             autonomic = "1116";
                         break;
-                    case R.id.radio_extremities_normal:
+                  /*  case R.id.radio_extremities_normal:
                         if (checked)
                             extremities = "1115";
                         extremitiesStatus(extremities);
-                        break;
-                    case R.id.radio_extremities_abnormal:
+                        break;*/
+                  /*  case R.id.radio_extremities_abnormal:
                         if (checked)
                             extremities = "1116";
                         extremitiesStatus(extremities);
-                        break;
+                        break;*/
 
                 }
 
@@ -971,7 +971,7 @@ public class Initial_page_2 extends Fragment {
         jsonArry.put(JSONFormBuilder.observations("165206", "", "valueCoded", visual_impairment, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("165175", "", "valueText", editTextVisual.getText().toString().trim(), DateCalendar.date(), ""));
 
-        jsonArry.put(JSONFormBuilder.observations("1124", "", "valueCoded", pulses, DateCalendar.date(), ""));
+    /*    jsonArry.put(JSONFormBuilder.observations("1124", "", "valueCoded", pulses, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("165158", "", "valueText", editTextPulses.getText().toString().trim(), DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("1124", "", "valueCoded", jvp, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("165158", "", "valueText", editTextJVP.getText().toString().trim(), DateCalendar.date(), ""));
@@ -1004,10 +1004,10 @@ public class Initial_page_2 extends Fragment {
         jsonArry.put(JSONFormBuilder.observations("1124", "", "valueCoded", sleep_disorders, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("165158", "", "valueText", editTextSleepDisorders.getText().toString().trim(), DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("1124", "", "valueCoded", substance_abuse, DateCalendar.date(), ""));
-        jsonArry.put(JSONFormBuilder.observations("165158", "", "valueText", editTextSubstanceAbuse.getText().toString().trim(), DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("165158", "", "valueText", editTextSubstanceAbuse.getText().toString().trim(), DateCalendar.date(), ""));*/
 
-        jsonArry.put(JSONFormBuilder.observations("165112", "", "valueCoded", extremities, DateCalendar.date(), ""));
-        jsonArry.put(JSONFormBuilder.observations("165161", "", "valueText", editTextExtremeties.getText().toString().trim(), DateCalendar.date(), ""));
+       // jsonArry.put(JSONFormBuilder.observations("165112", "", "valueCoded", extremities, DateCalendar.date(), ""));
+       // jsonArry.put(JSONFormBuilder.observations("165161", "", "valueText", editTextExtremeties.getText().toString().trim(), DateCalendar.date(), ""));
 
         jsonArry.put(JSONFormBuilder.observations("165112", "", "valueCoded", ulcers, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("165112", "", "valueCoded", callouses, DateCalendar.date(), ""));

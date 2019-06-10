@@ -981,7 +981,7 @@
                             </LinearLayout>
                         </LinearLayout>
 
-                        <!--CVs exam-->
+                        <!--CVs exam
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1002,7 +1002,7 @@
 
                             </LinearLayout>
 
-                            <!--Pulses-->
+                            &lt;!&ndash;Pulses&ndash;&gt;
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -1066,7 +1066,7 @@
 
                             </LinearLayout>
 
-                            <!--JVP-->
+                            &lt;!&ndash;JVP&ndash;&gt;
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -1130,7 +1130,7 @@
 
                             </LinearLayout>
 
-                            <!--Pallor-->
+                            &lt;!&ndash;Pallor&ndash;&gt;
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -1194,7 +1194,7 @@
 
                             </LinearLayout>
 
-                            <!--Heart Sounds-->
+                            &lt;!&ndash;Heart Sounds&ndash;&gt;
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -1260,7 +1260,7 @@
 
                         </LinearLayout>
 
-                        <!--Respiratory system exam-->
+                        &lt;!&ndash;Respiratory system exam&ndash;&gt;
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1280,7 +1280,7 @@
                                     android:text="Respiratory System Exam" />
                             </LinearLayout>
 
-                            <!--PR-->
+                            &lt;!&ndash;PR&ndash;&gt;
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -1344,7 +1344,7 @@
 
                             </LinearLayout>
 
-                            <!--air entry-->
+                            &lt;!&ndash;air entry&ndash;&gt;
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -1408,7 +1408,7 @@
 
                             </LinearLayout>
 
-                            <!--abnormal sounds-->
+                            &lt;!&ndash;abnormal sounds&ndash;&gt;
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -1474,7 +1474,7 @@
 
                         </LinearLayout>
 
-                        <!--Abdominal Pelvic Exam-->
+                        &lt;!&ndash;Abdominal Pelvic Exam&ndash;&gt;
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1494,7 +1494,7 @@
                                     android:text="Abdominal Pelvic Exam" />
                             </LinearLayout>
 
-                            <!--organomegally-->
+                            &lt;!&ndash;organomegally&ndash;&gt;
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -1558,7 +1558,7 @@
 
                             </LinearLayout>
 
-                            <!--ascities-->
+                            &lt;!&ndash;ascities&ndash;&gt;
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -1624,7 +1624,7 @@
 
                         </LinearLayout>
 
-                        <!--neurological exam-->
+                        &lt;!&ndash;neurological exam&ndash;&gt;
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1644,7 +1644,7 @@
                                     android:text="Neurological Exam" />
                             </LinearLayout>
 
-                            <!--motor-->
+                            &lt;!&ndash;motor&ndash;&gt;
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -1708,7 +1708,7 @@
 
                             </LinearLayout>
 
-                            <!--sensory-->
+                            &lt;!&ndash;sensory&ndash;&gt;
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -1772,7 +1772,7 @@
 
                             </LinearLayout>
 
-                            <!--autonomic-->
+                            &lt;!&ndash;autonomic&ndash;&gt;
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -1838,7 +1838,7 @@
 
                         </LinearLayout>
 
-                        <!--dental exam-->
+                        &lt;!&ndash;dental exam&ndash;&gt;
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1858,7 +1858,7 @@
                                     android:text="Dental Exam" />
                             </LinearLayout>
 
-                            <!--gum disease-->
+                            &lt;!&ndash;gum disease&ndash;&gt;
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -1899,7 +1899,7 @@
 
                             </LinearLayout>
 
-                            <!--oral fessions-->
+                            &lt;!&ndash;oral fessions&ndash;&gt;
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -1942,7 +1942,7 @@
 
                         </LinearLayout>
 
-                        <!--mental health exam-->
+                        &lt;!&ndash;mental health exam&ndash;&gt;
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1962,7 +1962,7 @@
                                     android:text="Mental Health Exam" />
                             </LinearLayout>
 
-                            <!--depression-->
+                            &lt;!&ndash;depression&ndash;&gt;
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -2004,7 +2004,7 @@
 
                             </LinearLayout>
 
-                            <!--sleep disorders-->
+                            &lt;!&ndash;sleep disorders&ndash;&gt;
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -2047,7 +2047,7 @@
 
                             </LinearLayout>
 
-                            <!--substance abuse-->
+                            &lt;!&ndash;substance abuse&ndash;&gt;
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -2091,7 +2091,7 @@
 
                         </LinearLayout>
 
-                        <!--extremities-->
+                        &lt;!&ndash;extremities&ndash;&gt;
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -2214,7 +2214,7 @@
                                     android:textSize="13sp" />
                             </LinearLayout>
 
-                        </LinearLayout>
+                        </LinearLayout>-->
 
                         <!--foot exam-->
                         <LinearLayout
