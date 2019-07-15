@@ -41,7 +41,7 @@ public class Initial_page_2 extends Fragment {
     private EditText editTextTemp, editTextPulseRate, editTextSystolicOne, editTextDiastolicOne, editTextSystolicTwo, editTextDiastolicTwo, editTextWaist,
             editTextHip, editTextHeight, editTextWeight, editTextMUAC, editTextRespiratoryRate, editTextExamOther, editTextVisual, editTextPulses, editTextJVP, editTextPallor, editTextHeartSounds, editTextPR, editTextAirEntry, editTextAbnormalSounds,
             editTextOrganomegally, editTextAscities, editTextMotor, editTextSensory, editTextAutonomic, editTextGumDisease, editTextOralFessions, editTextDepression, editTextSleepDisorders, editTextSubstanceAbuse, editTextRS, editTextPA,
-            editTextCNS, editTextExtremeties, editTextMonofilamentRF, editTextMonofilamentLF;
+            editTextCNS, editTextExtremeties, editTextFootExamAB, editTextMonofilamentRF, editTextMonofilamentLF;
 
     private TextView_Roboto_Bold bmi, waist_hip_ratio;
 
@@ -175,6 +175,7 @@ public class Initial_page_2 extends Fragment {
         editTextSleepDisorders = view.findViewById(R.id.describe_sleep_disorders);
         editTextSubstanceAbuse = view.findViewById(R.id.describe_substance_abuse);
        // editTextExtremeties = view.findViewById(R.id.describe_extremities);
+        editTextFootExamAB = view.findViewById(R.id.foot_exam_ab);
         editTextMonofilamentRF = view.findViewById(R.id.monofilament_rf);
         editTextMonofilamentLF = view.findViewById(R.id.monofilament_lf);
 
@@ -213,6 +214,7 @@ public class Initial_page_2 extends Fragment {
         textWatcher(editTextSleepDisorders, "");
        textWatcher(editTextSubstanceAbuse, "");*/
        // textWatcher(editTextExtremeties, "");
+        textWatcher(editTextFootExamAB, "");
         textWatcher(editTextMonofilamentRF, "monofilament");
         textWatcher(editTextMonofilamentLF, "monofilament");
 
@@ -970,6 +972,7 @@ public class Initial_page_2 extends Fragment {
         jsonArry.put(JSONFormBuilder.observations("163042", "", "valueText", editTextExamOther.getText().toString().trim(), DateCalendar.date(), ""));
 
         jsonArry.put(JSONFormBuilder.observations("165206", "", "valueCoded", visual_impairment, DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("165206", "", "valueCoded", visual_impairment, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("165175", "", "valueText", editTextVisual.getText().toString().trim(), DateCalendar.date(), ""));
 
     /*    jsonArry.put(JSONFormBuilder.observations("1124", "", "valueCoded", pulses, DateCalendar.date(), ""));
@@ -1009,6 +1012,11 @@ public class Initial_page_2 extends Fragment {
 
        // jsonArry.put(JSONFormBuilder.observations("165112", "", "valueCoded", extremities, DateCalendar.date(), ""));
        // jsonArry.put(JSONFormBuilder.observations("165161", "", "valueText", editTextExtremeties.getText().toString().trim(), DateCalendar.date(), ""));
+
+        jsonArry.put(JSONFormBuilder.observations("165335", "", "valueText", editTextFootExamAB.getText().toString().trim(), DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("165117", "", "valueText", editTextMonofilamentLF.getText().toString().trim(), DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("165116", "", "valueText", editTextMonofilamentRF.getText().toString().trim(), DateCalendar.date(), ""));
+
 
         jsonArry.put(JSONFormBuilder.observations("165112", "", "valueCoded", ulcers, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("165112", "", "valueCoded", callouses, DateCalendar.date(), ""));

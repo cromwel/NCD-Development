@@ -63,12 +63,12 @@ public class DrugsDose {
     public static final String[] arraySpinnerHydrochlorothia = new String[]{"Select", "12.5mg ", "25mg"};
     public static final String[] arraySpinnerIndapamide = new String[]{"Select", "1.5mg", "2.5mg", "5mg"};
 
-    public static final String[] arraySpinnerMethyldopa = new String[]{"Select", "250mg", "500mg"};
+    public static final String[] arraySpinnerMethyldopa = new String[]{"Select", "250mg", "500mg", "1000mg"};
     public static final String[] arraySpinnerHydralazine = new String[]{"Select", "25mg",};
     public static final String[] arraySpinnerPrazocin = new String[]{"Select", "0.5mg", "1mg"};
 
     public static final String[] arraySpinnerMetformin = new String[]{"Select", "500mg", "850mg", "1000mg"};
-    public static final String[] arraySpinnerGlibenclamide = new String[]{"Select", "5mg"};
+    public static final String[] arraySpinnerGlibenclamide = new String[]{"Select", "5mg", "10mg"};
 
     public DrugsDose(Context mContext) {
     }

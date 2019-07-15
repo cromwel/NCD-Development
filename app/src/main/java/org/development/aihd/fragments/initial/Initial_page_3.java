@@ -32,12 +32,12 @@ import static org.development.aihd.forms.DM_Initial.gender;
 public class Initial_page_3 extends Fragment {
 
     private View view;
-    private EditText editTextRBS, editTextFBC, editTextHBA, editTextUrea, editTextSodium, editTextChloride, editTextPotassium, editTextCreatinine, editTextHDL, editTextLDL, editTextCholesterol,
+    private EditText editTextRBS, editTextFBC, editTextHBA, editTextUrea, editTextSodium, editTextChloride, editTextPotassium, editTextCreatinine, editTextSerumUricAcid, editTextHDL, editTextLDL, editTextCholesterol,
             editTextTriglcerides, editTextAST, editTextALT, editTextTotalBilirubin, editTextDirectBilirubin, editTextGamma;
 
-    private EditText editTextRBSDate, editTextFBCDate, editTextHBADate, editTextUreaDate, editTextSodiumDate, editTextChlorideDate, editTextPotassiumDate, editTextCreatinineDate,
+    private EditText editTextRBSDate, editTextFBCDate, editTextHBADate, editTextUreaDate, editTextSodiumDate, editTextChlorideDate, editTextPotassiumDate, editTextCreatinineDate, editTextSerumUricAcidDate,
             editTextHDLDate, editTextLDLDate, editTextCholesterolDate, editTextTriglceridesDate, editTextASTDate, editTextALTDate, editTextTotalBilirubinDate,
-            editTextDirectBilirubinDate, editTextGammaDate, editTextGlucoseDate, editTextProteinDate, editTextKetoneDate, editTextDeposits, editTextDepositsDate,
+            editTextDirectBilirubinDate, editTextGammaDate, editTextUrinalysisDate, editTextProteinDate,  editTextGlucoseDate, editTextKetoneDate, editTextDeposits, editTextDepositsDate,
             editTextECGDate, editTextCXRDate, editTextUltraSound, editTextPDT, editTextPDTDate;
 
     private RadioGroup radioGroupGlucose, radioGroupProtein, radioGroupKetone;
@@ -66,6 +66,7 @@ public class Initial_page_3 extends Fragment {
         editTextChloride = view.findViewById(R.id.blood_work_chloride);
         editTextPotassium = view.findViewById(R.id.blood_work_potassium);
         editTextCreatinine = view.findViewById(R.id.blood_work_creatinine);
+        editTextSerumUricAcid = view.findViewById(R.id.blood_work_serum_uric_acid);
         editTextHDL = view.findViewById(R.id.blood_work_hdl);
         editTextLDL = view.findViewById(R.id.blood_work_ldl);
         editTextCholesterol = view.findViewById(R.id.blood_work_cholesterol);
@@ -87,6 +88,7 @@ public class Initial_page_3 extends Fragment {
         editTextChlorideDate = view.findViewById(R.id.datetime_chloride);
         editTextPotassiumDate = view.findViewById(R.id.datetime_potassium);
         editTextCreatinineDate = view.findViewById(R.id.datetime_creatinine);
+        editTextSerumUricAcidDate = view.findViewById(R.id.datetime_serum_uric_acid);
         editTextHDLDate = view.findViewById(R.id.datetime_hdl);
         editTextLDLDate = view.findViewById(R.id.datetime_ldl);
         editTextCholesterolDate = view.findViewById(R.id.datetime_cholesterol);
@@ -98,10 +100,11 @@ public class Initial_page_3 extends Fragment {
         editTextGammaDate = view.findViewById(R.id.datetime_gamma);
         editTextUltraSound = view.findViewById(R.id.datetime_ultrasound);
         editTextPDTDate = view.findViewById(R.id.datetime_pdt);
-        editTextGlucoseDate = view.findViewById(R.id.datetime_urinalysis_glucose);
+        editTextUrinalysisDate = view.findViewById(R.id.datetime_urinalysis);
+       /* editTextGlucoseDate = view.findViewById(R.id.datetime_urinalysis_glucose);
         editTextProteinDate = view.findViewById(R.id.datetime_urinalysis_protein);
-        editTextKetoneDate = view.findViewById(R.id.datetime_urinalysis_ketone);
-        editTextDepositsDate = view.findViewById(R.id.datetime_urinalysis_deposit);
+       editTextKetoneDate = view.findViewById(R.id.datetime_urinalysis_ketone);
+       editTextDepositsDate = view.findViewById(R.id.datetime_urinalysis_deposit);*/
         editTextECGDate = view.findViewById(R.id.datetime_ecg);
         editTextCXRDate = view.findViewById(R.id.datetime_cxr);
 
@@ -113,6 +116,7 @@ public class Initial_page_3 extends Fragment {
         editTextChlorideDate.setText(DateCalendar.date());
         editTextPotassiumDate.setText(DateCalendar.date());
         editTextCreatinineDate.setText(DateCalendar.date());
+        editTextSerumUricAcidDate.setText(DateCalendar.date());
         editTextHDLDate.setText(DateCalendar.date());
         editTextLDLDate.setText(DateCalendar.date());
         editTextCholesterolDate.setText(DateCalendar.date());
@@ -122,10 +126,11 @@ public class Initial_page_3 extends Fragment {
         editTextTotalBilirubinDate.setText(DateCalendar.date());
         editTextDirectBilirubinDate.setText(DateCalendar.date());
         editTextGammaDate.setText(DateCalendar.date());
-        editTextGlucoseDate.setText(DateCalendar.date());
+        editTextUrinalysisDate.setText(DateCalendar.date());
+        /*editTextGlucoseDate.setText(DateCalendar.date());
         editTextProteinDate.setText(DateCalendar.date());
         editTextKetoneDate.setText(DateCalendar.date());
-        editTextDepositsDate.setText(DateCalendar.date());
+        editTextDepositsDate.setText(DateCalendar.date());*/
         editTextECGDate.setText(DateCalendar.date());
         editTextCXRDate.setText(DateCalendar.date());
 
@@ -137,6 +142,7 @@ public class Initial_page_3 extends Fragment {
         DateCalendar.fulldate(getActivity(), editTextChlorideDate);
         DateCalendar.fulldate(getActivity(), editTextPotassiumDate);
         DateCalendar.fulldate(getActivity(), editTextCreatinineDate);
+        DateCalendar.fulldate(getActivity(), editTextSerumUricAcidDate);
         DateCalendar.fulldate(getActivity(), editTextHDLDate);
         DateCalendar.fulldate(getActivity(), editTextLDLDate);
         DateCalendar.fulldate(getActivity(), editTextCholesterolDate);
@@ -148,10 +154,11 @@ public class Initial_page_3 extends Fragment {
         DateCalendar.fulldate(getActivity(), editTextGammaDate);
         DateCalendar.fulldate(getActivity(), editTextUltraSound);
         DateCalendar.fulldate(getActivity(), editTextPDTDate);
-        DateCalendar.fulldate(getActivity(), editTextGlucoseDate);
-        DateCalendar.fulldate(getActivity(), editTextProteinDate);
+        DateCalendar.fulldate(getActivity(), editTextUrinalysisDate);
+       /* DateCalendar.fulldate(getActivity(), editTextGlucoseDate);
+       DateCalendar.fulldate(getActivity(), editTextProteinDate);
         DateCalendar.fulldate(getActivity(), editTextKetoneDate);
-        DateCalendar.fulldate(getActivity(), editTextDepositsDate);
+        DateCalendar.fulldate(getActivity(), editTextDepositsDate);*/
         DateCalendar.fulldate(getActivity(), editTextECGDate);
         DateCalendar.fulldate(getActivity(), editTextCXRDate);
 
@@ -163,6 +170,7 @@ public class Initial_page_3 extends Fragment {
         textWatcher(editTextChloride, "chloride");
         textWatcher(editTextPotassium, "potassium");
         textWatcher(editTextCreatinine, "creatinine");
+        textWatcher(editTextSerumUricAcid, "serum uric acid");
         textWatcher(editTextHDL, "hdl");
         textWatcher(editTextLDL, "ldl");
         textWatcher(editTextCholesterol, "cholesterol");
@@ -183,6 +191,7 @@ public class Initial_page_3 extends Fragment {
         textWatcher(editTextChlorideDate, "");
         textWatcher(editTextPotassiumDate, "");
         textWatcher(editTextCreatinineDate, "");
+        textWatcher(editTextSerumUricAcidDate, "");
         textWatcher(editTextHDLDate, "");
         textWatcher(editTextLDLDate, "");
         textWatcher(editTextCholesterolDate, "");
@@ -194,10 +203,11 @@ public class Initial_page_3 extends Fragment {
         textWatcher(editTextGammaDate, "");
         textWatcher(editTextUltraSound, "");
         textWatcher(editTextPDTDate, "");
-        textWatcher(editTextGlucoseDate, "");
+        textWatcher(editTextUrinalysisDate, "");
+        /*textWatcher(editTextGlucoseDate, "");
         textWatcher(editTextProteinDate, "");
         textWatcher(editTextKetoneDate, "");
-        textWatcher(editTextDepositsDate, "");
+        textWatcher(editTextDepositsDate, "");*/
         textWatcher(editTextECGDate, "");
         textWatcher(editTextCXRDate, "");
 
@@ -419,11 +429,11 @@ public class Initial_page_3 extends Fragment {
         jsonArry.put(JSONFormBuilder.observations("159644", "", "valueNumeric", editTextHBA.getText().toString().trim(), editTextHBADate.getText().toString().trim(), ""));
 
         jsonArry.put(JSONFormBuilder.observations("165297", "", "valueNumeric", editTextUrea.getText().toString().trim(), editTextUreaDate.getText().toString().trim(), ""));
-
         jsonArry.put(JSONFormBuilder.observations("165298", "", "valueNumeric", editTextSodium.getText().toString().trim(), editTextSodiumDate.getText().toString().trim(), ""));
         jsonArry.put(JSONFormBuilder.observations("165299", "", "valueNumeric", editTextChloride.getText().toString().trim(), editTextChlorideDate.getText().toString().trim(), ""));
         jsonArry.put(JSONFormBuilder.observations("165300", "", "valueNumeric", editTextPotassium.getText().toString().trim(), editTextPotassiumDate.getText().toString().trim(), ""));
         jsonArry.put(JSONFormBuilder.observations("164364", "", "valueNumeric", editTextCreatinine.getText().toString().trim(), editTextCreatinineDate.getText().toString().trim(), ""));
+        jsonArry.put(JSONFormBuilder.observations("164364", "", "valueNumeric", editTextSerumUricAcid.getText().toString().trim(), editTextSerumUricAcidDate.getText().toString().trim(), ""));
 
         jsonArry.put(JSONFormBuilder.observations("1007", "", "valueNumeric", editTextHDL.getText().toString().trim(), editTextHDLDate.getText().toString().trim(), ""));
         jsonArry.put(JSONFormBuilder.observations("1008", "", "valueNumeric", editTextLDL.getText().toString().trim(), editTextLDLDate.getText().toString().trim(), ""));
@@ -436,15 +446,13 @@ public class Initial_page_3 extends Fragment {
         jsonArry.put(JSONFormBuilder.observations("1297", "", "valueNumeric", editTextDirectBilirubin.getText().toString().trim(), editTextDirectBilirubinDate.getText().toString().trim(), ""));
         jsonArry.put(JSONFormBuilder.observations("159829", "", "valueNumeric", editTextGamma.getText().toString().trim(), editTextGammaDate.getText().toString().trim(), ""));
 
+        jsonArry.put(JSONFormBuilder.observations("165144", "", "valueDate", editTextUrinalysisDate.getText().toString().trim(), DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("159733", "", "valueCoded", glucose, editTextGlucoseDate.getText().toString().trim(), ""));
         jsonArry.put(JSONFormBuilder.observations("159733", "", "valueCoded", glucose_plus, editTextGlucoseDate.getText().toString().trim(), ""));
-
         jsonArry.put(JSONFormBuilder.observations("128340", "", "valueCoded", protein, editTextGlucoseDate.getText().toString().trim(), ""));
         jsonArry.put(JSONFormBuilder.observations("128340", "", "valueCoded", protein_plus, editTextGlucoseDate.getText().toString().trim(), ""));
-
         jsonArry.put(JSONFormBuilder.observations("161442", "", "valueCoded", ketone, editTextKetoneDate.getText().toString().trim(), ""));
         jsonArry.put(JSONFormBuilder.observations("161442", "", "valueCoded", ketone_plus, editTextKetoneDate.getText().toString().trim(), ""));
-
         jsonArry.put(JSONFormBuilder.observations("165121", "", "valueText", editTextDeposits.getText().toString().trim(), editTextDepositsDate.getText().toString().trim(), ""));
 
         jsonArry.put(JSONFormBuilder.observations("159565", "", "valueCoded", ecg, editTextECGDate.getText().toString().trim(), ""));

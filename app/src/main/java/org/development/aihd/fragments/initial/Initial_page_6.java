@@ -44,7 +44,7 @@ public class Initial_page_6 extends Fragment {
     private String supportGroup, designation;
 
     private String reason;
-    private EditText editTextAdmissionDate, editTextDischargeDate, editTextDischargeBy;
+    private EditText editTextAdmissionReason, editTextAdmissionDate, editTextDischargeDate, editTextDischargeBy;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -65,8 +65,8 @@ public class Initial_page_6 extends Fragment {
         EditText editTextDischargeDate = view.findViewById(R.id.discharge_date);
         DateCalendar.date(getActivity(), editTextDischargeDate);*/
 
-        Spinner spinnerReason = view.findViewById(R.id.spinnerReason);
-        spinnerData(getContext(), spinnerReason, "reason");
+        /*Spinner spinnerReason = view.findViewById(R.id.spinnerReason);
+        spinnerData(getContext(), spinnerReason, "reason");*/
 
         //Follow Up Plan
         checkBoxContinueCare = view.findViewById(R.id.followup_continue);
@@ -95,6 +95,7 @@ public class Initial_page_6 extends Fragment {
         checkBoxTreatment(checkBoxPhysiotherapy);
         checkBoxTreatment(checkBoxFollowUpOther);
 
+        editTextAdmissionReason = view.findViewById(R.id.initial_reason_for_admission);
         editTextReturnDate = view.findViewById(R.id.followup_date);
         editTextFacility = view.findViewById(R.id.facility);
         editTextDateReffered = view.findViewById(R.id.date_referred);
@@ -110,6 +111,7 @@ public class Initial_page_6 extends Fragment {
         DateCalendar.date(getActivity(), editTextDateReffered);
         DateCalendar.date(getActivity(), editTextDateOut);
 
+        textWatcher(editTextAdmissionReason);
         textWatcher(editTextReturnDate);
         textWatcher(editTextFacility);
         textWatcher(editTextDateReffered);
@@ -132,12 +134,7 @@ public class Initial_page_6 extends Fragment {
     public void spinnerData(Context context, final Spinner spinner, final String data) {
         ArrayList<KeyValue> keyvalue = new ArrayList<>();
 
-        if (data.matches("reason")) {
-            keyvalue.add(new KeyValue("", "Select Reason"));
-            keyvalue.add(new KeyValue("165314", "Admitted with DKA"));
-            keyvalue.add(new KeyValue("138061", "Admitted with Hypoglycemia"));
-            keyvalue.add(new KeyValue("5622", "Other"));
-        }else if (data.matches("support_group")) {
+     if (data.matches("support_group")) {
             // adding each child node to HashMap key => value
             keyvalue.add(new KeyValue("", "Select Support Group"));
             keyvalue.add(new KeyValue("1065", "Yes"));
@@ -320,6 +317,7 @@ public class Initial_page_6 extends Fragment {
         jsonArry.put(JSONFormBuilder.observations("165122", "", "valueCoded", referFacility, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("", "", "valueText", editTextDateReffered.getText().toString(), DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("165167", "", "valueText", editTextFacility.getText().toString(), DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("162879", "", "valueText", editTextAdmissionReason.getText().toString(), DateCalendar.date(), ""));
 
         jsonArry.put(JSONFormBuilder.observations("165122", "", "valueCoded", transferFacility, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("159495", "", "valueText", editTextHealthFacility.getText().toString(), DateCalendar.date(), ""));

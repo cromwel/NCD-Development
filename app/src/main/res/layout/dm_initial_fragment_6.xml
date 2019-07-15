@@ -86,15 +86,19 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="15dp"
                                 android:orientation="vertical">
+
                             <customfonts.TextView_Roboto_Bold
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Reason for Admission" />
 
-                            <Spinner
-                                android:id="@+id/spinnerReason"
-                                android:layout_width="match_parent"
-                                android:layout_height="50dp" />
+                                <customfonts.EditText_Roboto_Regular
+                                    android:id="@+id/initial_reason_for_admission"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Specify reason to admit"
+                                    android:padding="10dp"
+                                    android:textSize="13sp" />
 
                             </LinearLayout>
 
