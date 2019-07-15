@@ -152,8 +152,8 @@ public class Initial_page_2 extends Fragment {
         editTextHip = view.findViewById(R.id.hip_circ);
         editTextHeight = view.findViewById(R.id.height);
         editTextWeight = view.findViewById(R.id.weight);
-        editTextMUAC = view.findViewById(R.id.muac);
-        editTextRespiratoryRate = view.findViewById(R.id.respiratory_rate);
+        /*editTextMUAC = view.findViewById(R.id.muac);
+        editTextRespiratoryRate = view.findViewById(R.id.respiratory_rate);*/
         editTextExamOther = view.findViewById(R.id.other_general_exam);
 
         editTextVisual = view.findViewById(R.id.describe_visual_impairment);
@@ -191,8 +191,8 @@ public class Initial_page_2 extends Fragment {
         textWatcher(editTextWeight, "bmi");
         textWatcher(editTextWaist, "whr");
         textWatcher(editTextHip, "whr");
-        textWatcher(editTextMUAC, "");
-        textWatcher(editTextRespiratoryRate, "");
+        /*textWatcher(editTextMUAC, "");
+        textWatcher(editTextRespiratoryRate, "");*/
         textWatcher(editTextExamOther, "");
         textWatcher(editTextVisual, "");
        /* textWatcher(editTextPulses, "");
@@ -599,6 +599,7 @@ public class Initial_page_2 extends Fragment {
                             medication_nifedipine = "";
                         }
                         nifedipine(medication_nifedipine);
+                        break;
                     case R.id.checkbox_medication_atenolol:
                         if (checked) {
                             medication_atenolol = "71652";
@@ -953,8 +954,8 @@ public class Initial_page_2 extends Fragment {
         jsonArry.put(JSONFormBuilder.observations("163080", "", "valueNumeric", editTextWaist.getText().toString().trim(), DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("5090", "", "valueNumeric", editTextHeight.getText().toString().trim(), DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("5089", "", "valueNumeric", editTextWeight.getText().toString().trim(), DateCalendar.date(), ""));
-        jsonArry.put(JSONFormBuilder.observations("5242", "", "valueNumeric", editTextMUAC.getText().toString().trim(), DateCalendar.date(), ""));
-        jsonArry.put(JSONFormBuilder.observations("5242", "", "valueNumeric", editTextRespiratoryRate.getText().toString().trim(), DateCalendar.date(), ""));
+       // jsonArry.put(JSONFormBuilder.observations("5242", "", "valueNumeric", editTextMUAC.getText().toString().trim(), DateCalendar.date(), ""));
+       // jsonArry.put(JSONFormBuilder.observations("5242", "", "valueNumeric", editTextRespiratoryRate.getText().toString().trim(), DateCalendar.date(), ""));
 
         jsonArry.put(JSONFormBuilder.observations("165190", "", "valueText", "", DateCalendar.date(), ""));
 

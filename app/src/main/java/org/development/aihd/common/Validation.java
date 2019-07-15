@@ -23,11 +23,13 @@ public class Validation {
                 //validate(obs, "Page(1) Hypertension runs in the family", "165191");
                 validate(obs, "Page(1) HIV Status", "138405");
                 validate(obs, "Page(1) NHIF status", "1917");
+                validate(obs, "Page(1) Screened for TB", "164800");
+                validate(obs, "Page(1) TB status", "165330");
                 validate(obs, "Page(1) Patient referral status", "1648");
-                validate(obs, "Page(1) Do you exercise question", "165208");
+                //validate(obs, "Page(1) Do you exercise question", "165208");
                 //validate(obs, "Page(1) Do you follow a balanced diet question", "165207");
-                validate(obs, "Page(1) Do you smoke cigarettes question", "152722");
-                validate(obs, "Page(1) Do you drink alcohol question", "159449");
+                //validate(obs, "Page(1) Do you smoke cigarettes question", "152722");
+                //validate(obs, "Page(1) Do you drink alcohol question", "159449");
 
                 //validate(obs, "Page(4) Nutrition counselling/education", "1380");
                 //validate(obs, "Page(4) Physical activity counselling/education", "159364");

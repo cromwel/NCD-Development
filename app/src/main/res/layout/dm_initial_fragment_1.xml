@@ -523,7 +523,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:padding="10dp"
-                                android:text="Screened for TB" />
+                                android:text="Screened for TB*" />
 
                             <RadioGroup
                                 android:layout_width="match_parent"
@@ -561,7 +561,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:padding="10dp"
-                                android:text="Status" />
+                                android:text="Status* " />
 
                             <RadioGroup
                                 android:id="@+id/radioGroupTB"
