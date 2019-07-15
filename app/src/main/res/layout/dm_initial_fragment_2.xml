@@ -2734,7 +2734,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:padding="15dp"
-                                        android:text="Comments" />
+                                        android:text="Foot Exam Comments" />
 
                                     <customfonts.EditText_Roboto_Regular
                                         android:id="@+id/foot_exam_comments"

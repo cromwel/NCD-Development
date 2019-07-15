@@ -447,13 +447,13 @@ public class Initial_page_3 extends Fragment {
         jsonArry.put(JSONFormBuilder.observations("159829", "", "valueNumeric", editTextGamma.getText().toString().trim(), editTextGammaDate.getText().toString().trim(), ""));
 
         jsonArry.put(JSONFormBuilder.observations("165144", "", "valueDate", editTextUrinalysisDate.getText().toString().trim(), DateCalendar.date(), ""));
-        jsonArry.put(JSONFormBuilder.observations("159733", "", "valueCoded", glucose, editTextGlucoseDate.getText().toString().trim(), ""));
-        jsonArry.put(JSONFormBuilder.observations("159733", "", "valueCoded", glucose_plus, editTextGlucoseDate.getText().toString().trim(), ""));
-        jsonArry.put(JSONFormBuilder.observations("128340", "", "valueCoded", protein, editTextGlucoseDate.getText().toString().trim(), ""));
-        jsonArry.put(JSONFormBuilder.observations("128340", "", "valueCoded", protein_plus, editTextGlucoseDate.getText().toString().trim(), ""));
-        jsonArry.put(JSONFormBuilder.observations("161442", "", "valueCoded", ketone, editTextKetoneDate.getText().toString().trim(), ""));
-        jsonArry.put(JSONFormBuilder.observations("161442", "", "valueCoded", ketone_plus, editTextKetoneDate.getText().toString().trim(), ""));
-        jsonArry.put(JSONFormBuilder.observations("165121", "", "valueText", editTextDeposits.getText().toString().trim(), editTextDepositsDate.getText().toString().trim(), ""));
+        jsonArry.put(JSONFormBuilder.observations("159733", "", "valueCoded", glucose, DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("159733", "", "valueCoded", glucose_plus, DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("128340", "", "valueCoded", protein, DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("128340", "", "valueCoded", protein_plus, DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("161442", "", "valueCoded", ketone,DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("161442", "", "valueCoded", ketone_plus, DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("165121", "", "valueText", editTextDeposits.getText().toString().trim(), DateCalendar.date(), ""));
 
         jsonArry.put(JSONFormBuilder.observations("159565", "", "valueCoded", ecg, editTextECGDate.getText().toString().trim(), ""));
         jsonArry.put(JSONFormBuilder.observations("12", "", "valueCoded", cxr, editTextCXRDate.getText().toString().trim(), ""));

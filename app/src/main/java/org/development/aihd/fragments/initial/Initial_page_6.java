@@ -35,10 +35,10 @@ public class Initial_page_6 extends Fragment {
     private EditText editTextReturnDate, editTextFacility, editTextDateReffered, editTextHealthFacility, editTextDateOut, editTextReffered, editTextRefferalReason, editTextSupportGroup,
             editTextProvider;
 
-    private CheckBox checkBoxContinueCare, checkBoxReferFacility, checkBoxTransferFacility, checkBoxManagementDM, checkBoxManagementHTN, checkBoxEyeReview, checkBoxSurgicalReview, checkBoxRenalReview,
+    private CheckBox checkBoxAdmitPatient, checkBoxContinueCare, checkBoxReferFacility, checkBoxTransferFacility, checkBoxManagementDM, checkBoxManagementHTN, checkBoxEyeReview, checkBoxSurgicalReview, checkBoxRenalReview,
             checkBoxCVDReview, checkBoxNutrition, checkBoxPhysiotherapy, checkBoxFollowUpOther;
 
-    private String continueCare, referFacility, transferFacility, managementDM, managementHTN, eyeReview, surgicalReview, renalReview,
+    private String admitPatient, continueCare, referFacility, transferFacility, managementDM, managementHTN, eyeReview, surgicalReview, renalReview,
             cvdReview, nutrition, physiotherapy, followUpOther;
 
     private String supportGroup, designation;
@@ -69,6 +69,7 @@ public class Initial_page_6 extends Fragment {
         spinnerData(getContext(), spinnerReason, "reason");*/
 
         //Follow Up Plan
+        checkBoxAdmitPatient = view.findViewById(R.id.initial_checkbox_admit_patient);
         checkBoxContinueCare = view.findViewById(R.id.followup_continue);
         checkBoxReferFacility = view.findViewById(R.id.followup_refer);
         checkBoxTransferFacility = view.findViewById(R.id.followup_transfer);
@@ -82,6 +83,7 @@ public class Initial_page_6 extends Fragment {
         checkBoxPhysiotherapy = view.findViewById(R.id.followup_physiotherapy);
         checkBoxFollowUpOther = view.findViewById(R.id.followup_other);
 
+        checkBoxTreatment(checkBoxAdmitPatient);
         checkBoxTreatment(checkBoxContinueCare);
         checkBoxTreatment(checkBoxReferFacility);
         checkBoxTreatment(checkBoxTransferFacility);
@@ -220,6 +222,12 @@ public class Initial_page_6 extends Fragment {
 
                 //Check which checkbox was clicked
                 switch (value) {
+                    case R.id.initial_checkbox_admit_patient:
+                        if (checked) {
+                            admitPatient = "1065";
+                        } else {
+                            admitPatient = "1065";
+                        }
                     case R.id.followup_continue:
                         if (checked) {
                             continueCare = "165132";
@@ -311,6 +319,7 @@ public class Initial_page_6 extends Fragment {
         //jsonArry.put(JSONFormBuilder.observations("1641", "", "valueDate", editTextDischargeDate.getText().toString().trim(), DateCalendar.date(), ""));
        // jsonArry.put(JSONFormBuilder.observations("1473", "", "valueText", editTextDischargeBy.getText().toString().trim(), DateCalendar.date(), ""));
 
+        jsonArry.put(JSONFormBuilder.observations("162477", "", "valueCoded", admitPatient, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("165122", "", "valueCoded", continueCare, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("5096", "", "valueDate", editTextReturnDate.getText().toString(), DateCalendar.date(), ""));
 

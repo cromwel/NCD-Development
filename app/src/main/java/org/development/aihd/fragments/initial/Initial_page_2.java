@@ -41,7 +41,7 @@ public class Initial_page_2 extends Fragment {
     private EditText editTextTemp, editTextPulseRate, editTextSystolicOne, editTextDiastolicOne, editTextSystolicTwo, editTextDiastolicTwo, editTextWaist,
             editTextHip, editTextHeight, editTextWeight, editTextMUAC, editTextRespiratoryRate, editTextExamOther, editTextVisual, editTextPulses, editTextJVP, editTextPallor, editTextHeartSounds, editTextPR, editTextAirEntry, editTextAbnormalSounds,
             editTextOrganomegally, editTextAscities, editTextMotor, editTextSensory, editTextAutonomic, editTextGumDisease, editTextOralFessions, editTextDepression, editTextSleepDisorders, editTextSubstanceAbuse, editTextRS, editTextPA,
-            editTextCNS, editTextExtremeties, editTextFootExamAB, editTextMonofilamentRF, editTextMonofilamentLF;
+            editTextCNS, editTextExtremeties, editTextFootExamAB, editTextMonofilamentRF, editTextMonofilamentLF, editTextFootRiskComments, editTextFootExamComments;
 
     private TextView_Roboto_Bold bmi, waist_hip_ratio;
 
@@ -113,6 +113,8 @@ public class Initial_page_2 extends Fragment {
         editTextMedicationOther = view.findViewById(R.id.medication_other);
         editTextAdhereSpecify = view.findViewById(R.id.adhere_specify);
         editTextAllergySpecify = view.findViewById(R.id.allergy_specify);
+        editTextFootRiskComments = view.findViewById(R.id.foot_risk_comments);
+        editTextFootExamComments = view.findViewById(R.id.foot_exam_comments);
 
         textWatcher(editTextMetformin, "");
         textWatcher(editTextGlibenclamide, "");
@@ -127,6 +129,8 @@ public class Initial_page_2 extends Fragment {
         textWatcher(editTextMedicationOther, "");
         textWatcher(editTextAdhereSpecify, "");
         textWatcher(editTextAllergySpecify, "");
+        textWatcher(editTextFootRiskComments, "");
+        textWatcher(editTextFootExamComments, "");
 
         RadioButton radioButtonAdhereMedicationYes = view.findViewById(R.id.radio_adhere_yes);
         RadioButton radioButtonAdhereMedicationNo = view.findViewById(R.id.radio_adhere_no);
@@ -1017,6 +1021,8 @@ public class Initial_page_2 extends Fragment {
         jsonArry.put(JSONFormBuilder.observations("165117", "", "valueText", editTextMonofilamentLF.getText().toString().trim(), DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("165116", "", "valueText", editTextMonofilamentRF.getText().toString().trim(), DateCalendar.date(), ""));
 
+        jsonArry.put(JSONFormBuilder.observations("165337", "", "valueText", editTextFootRiskComments.getText().toString().trim(), DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("165336", "", "valueText", editTextFootExamComments.getText().toString().trim(), DateCalendar.date(), ""));
 
         jsonArry.put(JSONFormBuilder.observations("165112", "", "valueCoded", ulcers, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("165112", "", "valueCoded", callouses, DateCalendar.date(), ""));
