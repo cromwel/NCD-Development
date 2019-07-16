@@ -16,6 +16,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import org.development.aihd.R;
 import org.development.aihd.common.Common;
@@ -43,9 +44,17 @@ public class Followup_page_3 extends Fragment {
             arthritis, foot, assesment_other, foot_amputation;
     private EditText editTextCardiovascularDisease, editTextHBP, editTextHighCholestrol, editTextVascularDisease, editTextPNeuropathy, editTextANeuropathy,
             editTextRetinopathy, editTextKidneyDisease, editTextAsthma, editTextArthritis, editTextFoot, editTextOther;
-    private EditText editTextFBS, editTextRBS, editTextHBA, editTextHDL, editTextLDL, editTextTriglycerides, editTextUECUrea, editTextUECElectrolytes, editTextUECChloride, editTextUECPotassium, editTextUECCreatinine, editTextUrinalysis;
+    private EditText editTextFBS, editTextRBS, editTextHBA, editTextHDL, editTextLDL, editTextTriglycerides, editTextUECUrea, editTextUECElectrolytes, editTextUECChloride, editTextUECPotassium, editTextUECCreatinine, editTextDeposits;
     private EditText editTextDateFBS, editTextDateRBS, editTextDateHBA, editTextDateHDL, editTextDateLDL, editTextDateTriglycerides, editTextDateUECUrea, editTextDateUECElectrolytes, editTextDateUECChloride, editTextDateUECPotassium, editTextDateUECCreatinine, editTextDateUrinalysis;
    // private TextView_Roboto_Bold textViewUreaFlag;
+
+    private RadioGroup radioGroupGlucose, radioGroupProtein, radioGroupKetone;
+
+    private RadioButton radioButtonGlucoseYes, radioButtonGlucoseNo, radioButtonGlucose1, radioButtonGlucose2, radioButtonGlucose3,
+            radioButtonProteinYes, radioButtonProteinNo, radioButtonProtein1, radioButtonProtein2, radioButtonProtein3,
+            radioButtonKetoneYes, radioButtonKetoneNo, radioButtonKetone1, radioButtonKetone2, radioButtonKetone3;
+
+    private String glucose, glucose_plus, protein, protein_plus, ketone, ketone_plus;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -86,6 +95,7 @@ public class Followup_page_3 extends Fragment {
         editTextUECChloride = view.findViewById(R.id.followup_uec_chloride);
         editTextUECPotassium = view.findViewById(R.id.followup_uec_potassium);
         editTextUECCreatinine = view.findViewById(R.id.followup_uec_creatinine);
+        editTextDeposits = view.findViewById(R.id.deposit_comment);
        // editTextUrinalysis = view.findViewById(R.id.followup_urinalysis);
 
         editTextDateFBS = view.findViewById(R.id.date_fbs);
@@ -99,7 +109,7 @@ public class Followup_page_3 extends Fragment {
         editTextDateUECChloride = view.findViewById(R.id.date_uec_chloride);
         editTextDateUECPotassium = view.findViewById(R.id.date_uec_potassium);
         editTextDateUECCreatinine = view.findViewById(R.id.date_uec_creatinine);
-      //  editTextDateUrinalysis = view.findViewById(R.id.date_urinalysis);
+       editTextDateUrinalysis = view.findViewById(R.id.datetime_urinalysis);
 
         DateCalendar.date(getActivity(), editTextDateFBS);
         DateCalendar.date(getActivity(), editTextDateRBS);
@@ -165,7 +175,8 @@ public class Followup_page_3 extends Fragment {
         textWatcher(editTextDateUECChloride, "");
         textWatcher(editTextDateUECPotassium, "");
         textWatcher(editTextDateUECCreatinine, "");
-       // textWatcher(editTextDateUrinalysis, "");
+        textWatcher(editTextDateUrinalysis, "");
+        textWatcher(editTextDeposits, "");
 
         DateCalendar.date(getActivity(), editTextDateFBS);
         DateCalendar.date(getActivity(), editTextDateRBS);
@@ -178,7 +189,7 @@ public class Followup_page_3 extends Fragment {
         DateCalendar.date(getActivity(), editTextDateUECChloride);
         DateCalendar.date(getActivity(), editTextDateUECPotassium);
         DateCalendar.date(getActivity(), editTextDateUECCreatinine);
-       // DateCalendar.date(getActivity(), editTextDateUrinalysis);
+       DateCalendar.date(getActivity(), editTextDateUrinalysis);
 
         editTextDateFBS.setText(DateCalendar.date());
         editTextDateRBS.setText(DateCalendar.date());
@@ -191,7 +202,7 @@ public class Followup_page_3 extends Fragment {
         editTextDateUECChloride.setText(DateCalendar.date());
         editTextDateUECPotassium.setText(DateCalendar.date());
         editTextDateUECCreatinine.setText(DateCalendar.date());
-        //editTextDateUrinalysis.setText(DateCalendar.date());
+        editTextDateUrinalysis.setText(DateCalendar.date());
 
         textViewBMI = view.findViewById(R.id.followup_bmi);
         textViewWaistHipRatio = view.findViewById(R.id.followup_hip_waist_ratio);
@@ -222,11 +233,47 @@ public class Followup_page_3 extends Fragment {
         //checkBox(checkBoxFoot);
         checkBox(checkBoxOther);
 
+        radioGroupGlucose = view.findViewById(R.id.radiogroup_glucose);
+        radioGroupProtein = view.findViewById(R.id.radiogroup_protein);
+        radioGroupKetone = view.findViewById(R.id.radiogroup_ketone);
+
+        radioButtonGlucoseYes = view.findViewById(R.id.radio_glucose_yes);
+        radioButtonGlucoseNo = view.findViewById(R.id.radio_glucose_no);
+        radioButtonGlucose1 = view.findViewById(R.id.radio_glucose_plus);
+        radioButtonGlucose2 = view.findViewById(R.id.radio_glucose_plus2);
+        radioButtonGlucose3 = view.findViewById(R.id.radio_glucose_plus3);
+        radioButtonProteinYes = view.findViewById(R.id.radio_protein_yes);
+        radioButtonProteinNo = view.findViewById(R.id.radio_protein_no);
+        radioButtonProtein1 = view.findViewById(R.id.radio_protein_plus);
+        radioButtonProtein2 = view.findViewById(R.id.radio_protein_plus2);
+        radioButtonProtein3 = view.findViewById(R.id.radio_protein_plus3);
+        radioButtonKetoneYes = view.findViewById(R.id.radio_ketone_yes);
+        radioButtonKetoneNo = view.findViewById(R.id.radio_ketone_no);
+        radioButtonKetone1 = view.findViewById(R.id.radio_ketone_plus);
+        radioButtonKetone2 = view.findViewById(R.id.radio_ketone_plus2);
+        radioButtonKetone3 = view.findViewById(R.id.radio_ketone_plus3);
+
+        radioButton(radioButtonGlucoseYes);
+        radioButton(radioButtonGlucoseNo);
+        radioButton(radioButtonGlucose1);
+        radioButton(radioButtonGlucose2);
+        radioButton(radioButtonGlucose3);
+        radioButton(radioButtonProteinYes);
+        radioButton(radioButtonProteinNo);
+        radioButton(radioButtonProtein1);
+        radioButton(radioButtonProtein2);
+        radioButton(radioButtonProtein3);
+        radioButton(radioButtonKetoneYes);
+        radioButton(radioButtonKetoneNo);
+        radioButton(radioButtonKetone1);
+        radioButton(radioButtonKetone2);
+        radioButton(radioButtonKetone3);
+
         RadioButton radioButtonFootAmputationYes = view.findViewById(R.id.radio_foot_amputations_yes);
         RadioButton radioButtonFootAmputationNo = view.findViewById(R.id.radio_foot_amputations_no);
 
-        radioButtonClicked(radioButtonFootAmputationYes);
-        radioButtonClicked(radioButtonFootAmputationNo);
+        radioButton(radioButtonFootAmputationYes);
+        radioButton(radioButtonFootAmputationNo);
 
         return view;
     }
@@ -276,33 +323,6 @@ public class Followup_page_3 extends Fragment {
             public void onTextChanged(CharSequence s, int start,
                                       int before, int count) {
                 /* Do nothing*/
-            }
-        });
-    }
-
-    public void radioButtonClicked(final RadioButton radioButton) {
-
-        radioButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                boolean checked = (buttonView).isChecked();
-                switch (radioButton.getId()) {
-                    case R.id.radio_foot_amputations_yes:
-                        if (checked) {
-                            foot_amputation = "1065";
-                        }
-                        break;
-                    case R.id.radio_foot_amputations_no:
-                        if (checked) {
-                            foot_amputation = "1066";
-                        }
-                        break;
-                    default:
-                        break;
-                }
-                updateValues();
             }
         });
     }
@@ -438,6 +458,128 @@ public class Followup_page_3 extends Fragment {
         });
     }
 
+    public void urinalysisGlucose(String status) {
+        if (status.matches("1066")) {
+            radioGroupGlucose.setVisibility(View.GONE);
+        } else {
+            radioGroupGlucose.setVisibility(View.VISIBLE);
+        }
+    }
+
+    public void urinalysisProtein(String status) {
+        if (status.matches("1066")) {
+            radioGroupProtein.setVisibility(View.GONE);
+        } else {
+            radioGroupProtein.setVisibility(View.VISIBLE);
+        }
+    }
+
+    public void urinalysisKetone(String status) {
+        if (status.matches("1066")) {
+            radioGroupKetone.setVisibility(View.GONE);
+        } else {
+            radioGroupKetone.setVisibility(View.VISIBLE);
+        }
+    }
+
+    public void radioButton(final RadioButton radioButton) {
+
+        radioButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                // Is the button now checked?
+                boolean checked = (buttonView).isChecked();
+
+                // Check which radio button was clicked
+                switch (radioButton.getId()) {
+                    case R.id.radio_glucose_yes:
+                        if (checked)
+                            glucose = "1065";
+                        urinalysisGlucose(glucose);
+                        break;
+                    case R.id.radio_glucose_no:
+                        if (checked)
+                            glucose = "1066";
+                        urinalysisGlucose(glucose);
+                        break;
+                    case R.id.radio_glucose_plus:
+                        if (checked)
+                            glucose_plus = "1362";
+                        break;
+                    case R.id.radio_glucose_plus2:
+                        if (checked)
+                            glucose_plus = "1363";
+                        break;
+                    case R.id.radio_glucose_plus3:
+                        if (checked)
+                            glucose_plus = "1364";
+                        break;
+                    case R.id.radio_protein_yes:
+                        if (checked)
+                            protein = "1065";
+                        urinalysisProtein(protein);
+                        break;
+                    case R.id.radio_protein_no:
+                        if (checked)
+                            protein = "1066";
+                        urinalysisProtein(protein);
+                        break;
+                    case R.id.radio_protein_plus:
+                        if (checked)
+                            protein_plus = "1362";
+                        break;
+                    case R.id.radio_protein_plus2:
+                        if (checked)
+                            protein_plus = "1363";
+                        break;
+                    case R.id.radio_protein_plus3:
+                        if (checked)
+                            protein_plus = "1364";
+                        break;
+                    case R.id.radio_ketone_yes:
+                        if (checked)
+                            ketone = "1065";
+                        urinalysisKetone(ketone);
+                        break;
+                    case R.id.radio_ketone_no:
+                        if (checked)
+                            ketone = "1066";
+                        urinalysisKetone(ketone);
+                        break;
+                    case R.id.radio_ketone_plus:
+                        if (checked)
+                            ketone_plus = "1362";
+                        break;
+                    case R.id.radio_ketone_plus2:
+                        if (checked)
+                            ketone_plus = "1363";
+                        break;
+                    case R.id.radio_ketone_plus3:
+                        if (checked)
+                            ketone_plus = "1364";
+                        break;
+                    case R.id.radio_foot_amputations_yes:
+                        if (checked) {
+                            foot_amputation = "1065";
+                        }
+                        break;
+                    case R.id.radio_foot_amputations_no:
+                        if (checked) {
+                            foot_amputation = "1066";
+                        }
+                        break;
+                    default:
+                        break;
+                }
+
+                updateValues();
+            }
+        });
+
+    }
+
+
     public void updateValues() {
 
         JSONArray jsonArry = new JSONArray();
@@ -485,7 +627,16 @@ public class Followup_page_3 extends Fragment {
         jsonArry.put(JSONFormBuilder.observations("164364", "", "valueNumeric", editTextUECChloride.getText().toString().trim(), editTextDateUECChloride.getText().toString().trim(), ""));
         jsonArry.put(JSONFormBuilder.observations("164364", "", "valueNumeric", editTextUECPotassium.getText().toString().trim(), editTextDateUECPotassium.getText().toString().trim(), ""));
         jsonArry.put(JSONFormBuilder.observations("164364", "", "valueNumeric", editTextUECCreatinine.getText().toString().trim(), editTextDateUECCreatinine.getText().toString().trim(), ""));
-      //  jsonArry.put(JSONFormBuilder.observations("160987", "", "valueText", editTextUrinalysis.getText().toString().trim(), editTextDateUrinalysis.getText().toString().trim(), ""));
+
+        jsonArry.put(JSONFormBuilder.observations("160987", "", "valueText", editTextDateUrinalysis.getText().toString().trim(), editTextDateUrinalysis.getText().toString().trim(), ""));
+        jsonArry.put(JSONFormBuilder.observations("159733", "", "valueCoded", glucose, DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("159733", "", "valueCoded", glucose_plus, DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("128340", "", "valueCoded", protein, DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("128340", "", "valueCoded", protein_plus, DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("161442", "", "valueCoded", ketone,DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("161442", "", "valueCoded", ketone_plus, DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("165301", "", "valueText", editTextDeposits.getText().toString().trim(), DateCalendar.date(), ""));
+
 
         try {
             jsonArry = JSONFormBuilder.concatArray(jsonArry);

@@ -3,4 +3,5 @@
     <item name="checkBoxDeceased" type="id" />
     <item name="editTextDeath" type="id" />
     <item name="privacy_policy_link" type="id"/>
+    <item name="pdf_file1" type="id" />
 </resources>

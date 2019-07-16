@@ -36,7 +36,7 @@ public class Followup_page_1 extends Fragment {
     private EditText dmDiagnosisDateEditText, dmClinicDateEditText;
     private EditText htnDiagnosisDateEditText, htnClinicDateEditText;
     private EditText editTextTBDate, editTextTBComment;
-    private String dm_diagnosis, hypertension, nhif, diabetes_type, hypertension_type, tb_screen, tb_status, hiv_status;
+    private String visit_type, dm_diagnosis, hypertension, nhif, diabetes_type, hypertension_type, tb_screen, tb_status, hiv_status;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -53,9 +53,7 @@ public class Followup_page_1 extends Fragment {
         DateCalendar.fulldate(getActivity(), dm_followup_date);
 
         dmDiagnosisDateEditText = view.findViewById(R.id.dm_diagnosis_date);
-
         htnDiagnosisDateEditText = view.findViewById(R.id.htn_diagnosis_date);
-
         editTextTBDate = view.findViewById(R.id.tb_treatment_start);
         editTextTBComment = view.findViewById(R.id.tb_comment);
 
@@ -72,6 +70,10 @@ public class Followup_page_1 extends Fragment {
         textWatcher(editTextTBDate);
         textWatcher(editTextTBComment);
 
+        RadioButton radioButtonVisitTypeSick = view.findViewById(R.id.radio_visit_type_sick);
+        RadioButton radioButtonVisitTypeReferred = view.findViewById(R.id.radio_visit_type_referred);
+        RadioButton radioButtonVisitTypeScheduled = view.findViewById(R.id.radio_visit_type_scheduled);
+        RadioButton radioButtonVisitTypeUnscheduled = view.findViewById(R.id.radio_visit_type_unscheduled);
         RadioButton radioButtonDMNew = view.findViewById(R.id.radio_diabetes_new);
         RadioButton radioButtonDMKnown = view.findViewById(R.id.radio_diabetes_known);
         RadioButton radioButtonDMNA = view.findViewById(R.id.radio_diabetes_na);
@@ -98,6 +100,10 @@ public class Followup_page_1 extends Fragment {
         RadioButton radioButtonTBPositive = view.findViewById(R.id.radio_tb_status_positive);
         RadioButton radioButtonTBTreatment = view.findViewById(R.id.radio_tb_status_treatment);
 
+        radioButtonClicked(radioButtonVisitTypeSick);
+        radioButtonClicked(radioButtonVisitTypeReferred);
+        radioButtonClicked(radioButtonVisitTypeScheduled);
+        radioButtonClicked(radioButtonVisitTypeUnscheduled);
         radioButtonClicked(radioButtonDMNew);
         radioButtonClicked(radioButtonDMKnown);
         radioButtonClicked(radioButtonDMNA);
@@ -227,6 +233,22 @@ public class Followup_page_1 extends Fragment {
                 boolean checked = (buttonView).isChecked();
                 int value = radioButton.getId();
                 switch (value) {
+                    case R.id.radio_visit_type_sick:
+                        if (checked)
+                            visit_type = "163293";
+                        break;
+                    case R.id.radio_visit_type_referred:
+                        if (checked)
+                            visit_type = "160563";
+                        break;
+                    case R.id.radio_visit_type_scheduled:
+                        if (checked)
+                            visit_type = "1246";
+                        break;
+                    case R.id.radio_visit_type_unscheduled:
+                        if (checked)
+                            visit_type = "160101";
+                        break;
                     case R.id.radio_diabetes_new:
                         if (checked)
                             dm_diagnosis = "165087";
@@ -364,6 +386,7 @@ public class Followup_page_1 extends Fragment {
         jsonArry.put(JSONFormBuilder.observations("160642", "", "valueText", supporter_phoneEditText.getText().toString().trim(), DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("165209", "", "valueText", supporter_phone_otherEditText.getText().toString().trim(), DateCalendar.date(), ""));
 
+        jsonArry.put(JSONFormBuilder.observations("164181", "", "valueCoded", visit_type, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("165086", "", "valueCoded", dm_diagnosis, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("165094", "", "valueCoded", diabetes_type, DateCalendar.date(), ""));
 

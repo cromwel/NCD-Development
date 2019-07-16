@@ -32,7 +32,7 @@ import java.util.ArrayList;
 
 public class Initial_page_6 extends Fragment {
 
-    private EditText editTextReturnDate, editTextFacility, editTextDateReffered, editTextHealthFacility, editTextDateOut, editTextReffered, editTextRefferalReason, editTextSupportGroup,
+    private EditText editTextReturnDate, editTextFacility, editTextDateReffered, editTextHealthFacility, editTextDateOut, editTextReffered, editTextOtherRefferalReason, editTextSupportGroup,
             editTextProvider;
 
     private CheckBox checkBoxAdmitPatient, checkBoxContinueCare, checkBoxReferFacility, checkBoxTransferFacility, checkBoxManagementDM, checkBoxManagementHTN, checkBoxEyeReview, checkBoxSurgicalReview, checkBoxRenalReview,
@@ -104,7 +104,7 @@ public class Initial_page_6 extends Fragment {
         editTextHealthFacility = view.findViewById(R.id.health_center);
         editTextDateOut = view.findViewById(R.id.date_transfer);
         editTextReffered = view.findViewById(R.id.reason_reffered);
-        editTextRefferalReason = view.findViewById(R.id.followup_other_reason);
+        editTextOtherRefferalReason = view.findViewById(R.id.followup_other_referral_reason);
         editTextSupportGroup = view.findViewById(R.id.support_group);
         editTextProvider = view.findViewById(R.id.provider_name);
         editTextProvider.setText(AppController.getInstance().getSessionManager().getUserDetails().get("name"));
@@ -120,7 +120,7 @@ public class Initial_page_6 extends Fragment {
         textWatcher(editTextHealthFacility);
         textWatcher(editTextDateOut);
         textWatcher(editTextReffered);
-        textWatcher(editTextRefferalReason);
+        textWatcher(editTextOtherRefferalReason);
         textWatcher(editTextSupportGroup);
         textWatcher(editTextProvider);
 
@@ -315,22 +315,18 @@ public class Initial_page_6 extends Fragment {
 
         JSONArray jsonArry = new JSONArray();
 
-        jsonArry.put(JSONFormBuilder.observations("1655", "", "valueCoded", reason, DateCalendar.date(), ""));
+        //jsonArry.put(JSONFormBuilder.observations("1655", "", "valueCoded", reason, DateCalendar.date(), ""));
         //jsonArry.put(JSONFormBuilder.observations("1641", "", "valueDate", editTextDischargeDate.getText().toString().trim(), DateCalendar.date(), ""));
        // jsonArry.put(JSONFormBuilder.observations("1473", "", "valueText", editTextDischargeBy.getText().toString().trim(), DateCalendar.date(), ""));
 
-        jsonArry.put(JSONFormBuilder.observations("162477", "", "valueCoded", admitPatient, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("165122", "", "valueCoded", continueCare, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("5096", "", "valueDate", editTextReturnDate.getText().toString(), DateCalendar.date(), ""));
-
-        jsonArry.put(JSONFormBuilder.observations("165122", "", "valueCoded", referFacility, DateCalendar.date(), ""));
-        jsonArry.put(JSONFormBuilder.observations("", "", "valueText", editTextDateReffered.getText().toString(), DateCalendar.date(), ""));
-        jsonArry.put(JSONFormBuilder.observations("165167", "", "valueText", editTextFacility.getText().toString(), DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("162477", "", "valueCoded", admitPatient, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("162879", "", "valueText", editTextAdmissionReason.getText().toString(), DateCalendar.date(), ""));
 
-        jsonArry.put(JSONFormBuilder.observations("165122", "", "valueCoded", transferFacility, DateCalendar.date(), ""));
-        jsonArry.put(JSONFormBuilder.observations("159495", "", "valueText", editTextHealthFacility.getText().toString(), DateCalendar.date(), ""));
-        jsonArry.put(JSONFormBuilder.observations("160649", "", "valueDate", editTextDateOut.getText().toString(), DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("165122", "", "valueCoded", referFacility, DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("165167", "", "valueText", editTextFacility.getText().toString(), DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("", "", "valueText", editTextDateReffered.getText().toString(), DateCalendar.date(), ""));
 
         jsonArry.put(JSONFormBuilder.observations("165168", "", "valueText", editTextReffered.getText().toString(), DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("1887", "", "valueCoded", managementDM, DateCalendar.date(), ""));
@@ -342,11 +338,13 @@ public class Initial_page_6 extends Fragment {
         jsonArry.put(JSONFormBuilder.observations("1887", "", "valueCoded", nutrition, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("1887", "", "valueCoded", physiotherapy, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("1887", "", "valueCoded", followUpOther, DateCalendar.date(), ""));
-        jsonArry.put(JSONFormBuilder.observations("165139", "", "valueText", editTextRefferalReason.getText().toString(), DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("165139", "", "valueText", editTextOtherRefferalReason.getText().toString(), DateCalendar.date(), ""));
 
+        jsonArry.put(JSONFormBuilder.observations("165122", "", "valueCoded", transferFacility, DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("159495", "", "valueText", editTextHealthFacility.getText().toString(), DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("160649", "", "valueDate", editTextDateOut.getText().toString(), DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("163766", "", "valueCoded", supportGroup, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("165169", "", "valueText", editTextSupportGroup.getText().toString(), DateCalendar.date(), ""));
-
         jsonArry.put(JSONFormBuilder.observations("1473", "", "valueText", editTextProvider.getText().toString(), DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("163556", "", "valueCoded", designation, DateCalendar.date(), ""));
 

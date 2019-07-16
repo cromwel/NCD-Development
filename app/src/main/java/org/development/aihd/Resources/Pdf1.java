@@ -9,7 +9,8 @@ import org.development.aihd.R;
 
 public class Pdf1 extends AppCompatActivity {
 
-    PDFView pdf1;
+
+   /* PDFView pdf1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,5 +20,5 @@ public class Pdf1 extends AppCompatActivity {
         pdf1=(PDFView)findViewById(R.id.pdf_file1);
         pdf1.fromAsset("AIHD SOPs & Job Aids.pdf").load();
 
-    }
+    }*/
 }

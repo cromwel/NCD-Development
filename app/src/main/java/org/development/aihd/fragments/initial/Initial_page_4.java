@@ -500,10 +500,11 @@ public class Initial_page_4 extends Fragment {
         jsonArry11.put(JSONFormBuilder.observations("6042", "165124", "valueCoded", other, DateCalendar.date(), ""));
         jsonArry11.put(JSONFormBuilder.observations("159948", "165124", "valueDate", editTextOtherComplicationDate.getText().toString().trim(), DateCalendar.date(), ""));
         jsonArry11.put(JSONFormBuilder.observations("165127", "165124", "valueCoded", diagnosis_other, DateCalendar.date(), editTextOtherComplication.getText().toString().trim()));
-        jsonArry.put(JSONFormBuilder.observations("1379", "", "valueCoded", nutrition, DateCalendar.date(), ""));
+
+      /*  jsonArry.put(JSONFormBuilder.observations("1379", "", "valueCoded", nutrition, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("1379", "", "valueCoded", activity, DateCalendar.date(), ""));
         jsonArry.put(JSONFormBuilder.observations("1379", "", "valueCoded", psychosocial, DateCalendar.date(), ""));
-        jsonArry.put(JSONFormBuilder.observations("1379", "", "valueCoded", other_counselling, DateCalendar.date(), ""));
+        jsonArry.put(JSONFormBuilder.observations("1379", "", "valueCoded", other_counselling, DateCalendar.date(), ""));*/
 
         //jsonArry.put(JSONFormBuilder.observations("165176", "", "valueText", editTextOtherProvision.getText().toString().trim(), DateCalendar.date(), ""));
 

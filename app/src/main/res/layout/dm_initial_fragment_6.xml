@@ -271,7 +271,7 @@
                                     android:text="Other" />
 
                                 <customfonts.EditText_Roboto_Regular
-                                    android:id="@+id/followup_other_reason"
+                                    android:id="@+id/followup_other_referral_reason"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:hint="Other Referral Reasons"
