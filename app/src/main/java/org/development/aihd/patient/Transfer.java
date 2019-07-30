@@ -1,5 +1,6 @@
 package org.development.aihd.patient;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -18,6 +20,7 @@ import org.development.aihd.R;
 import org.development.aihd.Home;
 import org.development.aihd.app.AppController;
 import org.development.aihd.common.Alerts;
+import org.development.aihd.common.Common;
 import org.development.aihd.common.DateCalendar;
 import org.development.aihd.common.File_Upload;
 import org.development.aihd.common.JSONFormBuilder;
@@ -26,6 +29,7 @@ import org.development.aihd.common.Validation;
 import org.development.aihd.model.Forms;
 import org.development.aihd.model.KeyValue;
 import org.development.aihd.model.Location;
+import org.development.aihd.model.PatientProfile;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -42,7 +46,7 @@ import static org.development.aihd.common.Alerts.hideDialog;
 public class Transfer extends AppCompatActivity {
 
     private String location_id, reason;
-    private String fileName, formId, patientId;
+    private String encounter_date, file_name, form_id, patient_id;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -57,33 +61,39 @@ public class Transfer extends AppCompatActivity {
         navigate.createDrawer(toolbar);
 
         Intent intent = getIntent();
-        patientId = intent.getStringExtra("patient_id");
-        Log.d("PatientID", patientId);
+        patient_id = intent.getStringExtra("patient_id");
+        Log.d("PatientID", patient_id);
 
-        fileName = "ADMISSION_" + System.currentTimeMillis() + ".json";
-        formId = System.currentTimeMillis() + "_" + patientId;
+        file_name = "ADMISSION_" + System.currentTimeMillis() + ".json";
+        form_id = System.currentTimeMillis() + "_" + patient_id;
 
         EditText editTextTransferredDate = findViewById(R.id.transferred_out_date);
         DateCalendar.date(this, editTextTransferredDate);
 
         Spinner spinnerReason = findViewById(R.id.spinnerReason);
         Spinner spinnerLocation = findViewById(R.id.spinnerLocation);
-        spinnerData(spinnerReason, "reason");
-        spinnerData(spinnerLocation, "location");
+        spinnerData(this, spinnerReason, "reason");
+        spinnerData(this, spinnerLocation, "location");
+
+        final Button button = findViewById(R.id.submit_transfer);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                validateTransfer();
+            }
+        });
     }
 
-    public void spinnerData(final Spinner spinner, final String data) {
+    public void spinnerData(Context context, final Spinner spinner, final String data) {
         ArrayList<KeyValue> keyvalue = new ArrayList<>();
 
         // adding each child node to HashMap key => value
         if (data.matches("reason")) {
             keyvalue.add(new KeyValue("", "Select Reason"));
-            keyvalue.add(new KeyValue("", "Transferred Out"));
-            keyvalue.add(new KeyValue("", "Unknown"));
+            keyvalue.add(new KeyValue("1655", "Transferred Out"));
+            keyvalue.add(new KeyValue("1655", "Unknown"));
         } else if (data.matches("location")) {
             //Add locations
             keyvalue.add(new KeyValue("", "Select Location"));
-
             List<Location> locations = Location.findWithQuery(Location.class, "SELECT * from LOCATION ORDER BY _name ASC ");
             for (Location ln : locations) {
                 // adding each child node to HashMap key => value
@@ -92,7 +102,7 @@ public class Transfer extends AppCompatActivity {
         }
 
         //fill data in spinner
-        ArrayAdapter<KeyValue> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, keyvalue);
+        ArrayAdapter<KeyValue> adapter = new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, keyvalue);
         spinner.setAdapter(adapter);
         adapter.notifyDataSetChanged();
 
@@ -108,7 +118,8 @@ public class Transfer extends AppCompatActivity {
                     switch (spinner.getId()) {
                         case R.id.spinnerDesignation:
                             if (data.matches("reason")) {
-                                reason = value.getId();
+                                reason = "1655";
+                                Log.d("value", value.getId());
                             }
                             break;
                         case R.id.spinnerLocation:
@@ -119,9 +130,8 @@ public class Transfer extends AppCompatActivity {
                         default:
                             break;
                     }
-
+                    update();
                 }
-
             }
 
             @Override
@@ -132,31 +142,32 @@ public class Transfer extends AppCompatActivity {
     }
 
     public JSONArray update() {
-        JSONArray jsonArry = new JSONArray();
+        JSONArray jsonArray = new JSONArray();
+
+        jsonArray.put(JSONFormBuilder.observations("1655", "", "valueCoded", reason, DateCalendar.date(), ""));
+       // jsonArray.put(JSONFormBuilder.observations("", "", "valueCoded", location_id, DateCalendar.date(), ""));
+
+
         try {
-
-            jsonArry.put(JSONFormBuilder.observations("1655", "", "valueCoded", reason, DateCalendar.date(), ""));
-
-            jsonArry = JSONFormBuilder.concatArray(jsonArry);
+            Log.d("JSON Array1", jsonArray.toString() + " ");
+            jsonArray = JSONFormBuilder.concatArray(jsonArray);
+            Log.d("JSON Array", jsonArray.toString() + " ");
 
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        return jsonArry;
+        return jsonArray;
+
     }
 
-    public void validate(View view) {
-
-        Alerts.progressDialog(this, "Uploading DM Initial Form ...");
-
-
+    public void validateTransfer() {
+        Alerts.progressDialog(this, "Uploading DM Admission Form ...");
         File dir = new File(Environment.getExternalStorageDirectory() + "/aihd/admission");
-
         if (!dir.mkdirs()) {
             Log.e("Directory Message", "Directory not created");
         }
 
-        File file = new File(dir, fileName);
+        File file = new File(dir, file_name);
 
         try {
 
@@ -173,7 +184,6 @@ public class Transfer extends AppCompatActivity {
             if (error.length() == 0 && jsonArray.length() > 0) {
                 String creator = AppController.getInstance().getSessionManager().getUserDetails().get("user_id");
 
-                jsonForm.put("formName", "Admit Patient");
                 jsonForm.put("formDescription", "Admit patient into this facility");
                 jsonForm.put("formEncounterType", "e22e39fd-7db2-45e7-80f1-60fa0d5a4378");
                 jsonForm.put("formUuid", "d2c7532c-fb01-11e2-8ff2-fd54ab5fdb2a");
@@ -182,32 +192,34 @@ public class Transfer extends AppCompatActivity {
                 jsonForm.put("formOrder", "3");
                 jsonForm.put("encounterDate", DateCalendar.date());
                 jsonForm.put("encounterProvider", creator);
-                jsonForm.put("location_id", AppController.getInstance().getSessionManager().getUserDetails().get("location_id"));
-                jsonForm.put("patient_id", patientId);
+                jsonForm.put("location_id", Common.locationId());
+                jsonForm.put("patient_id", patient_id);
                 jsonForm.put("obs", jsonArray);
 
                 FileOutputStream f = new FileOutputStream(file);
-
                 PrintWriter pw = new PrintWriter(f);
-
                 pw.println(jsonForm.toString());
-
                 pw.flush();
                 pw.close();
                 f.close();
 
-                Forms forms = new Forms(formId, fileName, creator, patientId, "admission", DateCalendar.date(), "0");
+                Forms forms = new Forms(form_id, file_name, creator, patient_id, "admission", DateCalendar.date(), "0");
                 long id = forms.save();
+
+                if ((int) PatientProfile.count(PatientProfile.class, "patient_id = ?", new String[]{patient_id}) == 0) {
+                    PatientProfile patientProfile = new PatientProfile(patient_id, jsonForm.toString());
+                    patientProfile.save();
+                }
 
                 Toast.makeText(getBaseContext(), "Transfer Encounter file saved", Toast.LENGTH_SHORT).show();
 
-
                 boolean isConnected = File_Upload.connectivity(getApplicationContext());
+                Log.d("file to upload", String.valueOf(isConnected));
 
                 if (isConnected) {
-                    File_Upload.upload(this, Environment.getExternalStorageDirectory() + "/aihd/transfer/" + fileName, id, null);
+                    File_Upload.upload(this, Environment.getExternalStorageDirectory() + "/aihd/transfer/" + file_name, id, null);
                 } else {
-                    Alerts.errorMessage(view, "No Internet Connection,Unable to upload file");
+                   // Alerts.errorMessage(view, "No Internet Connection,Unable to upload file");
                 }
 
                 // Launch login activity

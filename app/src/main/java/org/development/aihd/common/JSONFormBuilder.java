@@ -61,7 +61,7 @@ public class JSONFormBuilder {
 
             }
         }
-
+        Log.d("res", result.toString());
         return result;
     }
 

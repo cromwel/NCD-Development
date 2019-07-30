@@ -58,7 +58,7 @@
                             <customfonts.TextView_Roboto_Bold
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Reason for Discontinuation" />
+                                android:text="Reason for Discontinuation *" />
 
                             <Spinner
                                 android:id="@+id/spinnerReason"
@@ -107,8 +107,24 @@
                                 android:padding="15dp"
                                 android:textSize="13sp" />
 
+                            <Button
+                                android:id="@+id/submit_transfer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="30dp"
+                                android:gravity="center"
+                                android:padding="15dp"
+                                android:text="Submit"
+                                android:textAllCaps="false"
+                                android:textColor="#ffffff"
+                                android:background="@color/blue"/>
 
-                            <customfonts.TextView_Roboto_Medium
+
+                          <!--  <customfonts.TextView_Roboto_Medium
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -118,11 +134,11 @@
                                 android:layout_marginTop="30dp"
                                 android:background="@drawable/rounded_button"
                                 android:gravity="center"
-                                android:onClick="Submit"
+                                android:onClick="validateTransfer"
                                 android:padding="15dp"
                                 android:text="Submit"
                                 android:textAllCaps="false"
-                                android:textColor="#ffffff" />
+                                android:textColor="#ffffff" />-->
 
                         </LinearLayout>
 

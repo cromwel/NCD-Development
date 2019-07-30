@@ -114,6 +114,14 @@ public class Common {
 
     }
 
+    public static void checkRespRate(View view, String respRate) {
+        if (respRate.length() != 0) {
+            if (Double.parseDouble(respRate) < 20 || Double.parseDouble(respRate) > 20) {
+                Alerts.errorMessage(view, "Kindly confirm if the Respiratory Rate entered is correct.");
+            }
+        }
+    }
+
     public static void checkTemp(View view, String temp) {
         if (temp.length() != 0) {
             if (Double.parseDouble(temp) < 35 || Double.parseDouble(temp) > 40) {

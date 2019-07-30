@@ -428,7 +428,7 @@
                                 android:layout_marginBottom="20dp"
                                 android:background="@drawable/rounded_button"
                                 android:gravity="center"
-                                android:onClick="validate"
+                                android:onClick="validateInitial"
                                 android:padding="15dp"
                                 android:text="Submit"
                                 android:textAllCaps="false"

@@ -4,4 +4,6 @@
     <item name="editTextDeath" type="id" />
     <item name="privacy_policy_link" type="id"/>
     <item name="pdf_file1" type="id" />
+    <item name="dod_date" type="id"/>
+    <item name="cause_of_death" type="id" />
 </resources>

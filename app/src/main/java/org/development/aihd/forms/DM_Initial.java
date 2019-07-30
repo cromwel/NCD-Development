@@ -139,12 +139,9 @@ public class DM_Initial extends AppCompatActivity implements FragmentModelInitia
         jsonArry6 = params;
     }
 
-    public void validate(View view) {
-
+    public void validateInitial(View view) {
         Alerts.progressDialog(this, "Uploading DM Initial Form ...");
-
         File dir = new File(Environment.getExternalStorageDirectory() + "/aihd/initial");
-
         if (!dir.mkdirs()) {
             Log.e("Directory Message", "Directory not created");
         }
@@ -180,11 +177,8 @@ public class DM_Initial extends AppCompatActivity implements FragmentModelInitia
                 jsonForm.put("obs", jsonArray);
 
                 FileOutputStream f = new FileOutputStream(file);
-
                 PrintWriter pw = new PrintWriter(f);
-
                 pw.println(jsonForm.toString());
-
                 pw.flush();
                 pw.close();
                 f.close();

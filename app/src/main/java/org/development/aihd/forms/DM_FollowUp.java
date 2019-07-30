@@ -120,7 +120,6 @@ public class DM_FollowUp extends AppCompatActivity implements FragmentModelFollo
 
 
     public void validate(View view) {
-
         File dir = new File(Environment.getExternalStorageDirectory() + "/aihd/followup");
         if (!dir.mkdirs()) {
             Log.e("Directory Message", "Directory not created");

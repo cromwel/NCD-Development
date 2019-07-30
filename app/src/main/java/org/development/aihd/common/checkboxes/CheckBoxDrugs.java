@@ -334,6 +334,13 @@ public class CheckBoxDrugs {
                             drugsDose.ecg = "";
                         }
                         break;
+                    case R.id.treatment_fasting_lipid_profile:
+                        if (checked) {
+                            drugsDose.fasting_lipid_profile = "1013";
+                        } else {
+                            drugsDose.fasting_lipid_profile = "";
+                        }
+                        break;
                     case R.id.followup_continue:
                         if (checked) {
                             drugsDose.continueCare = "165132";

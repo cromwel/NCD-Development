@@ -434,7 +434,7 @@ public class Initial_page_3 extends Fragment {
         jsonArry.put(JSONFormBuilder.observations("165299", "", "valueNumeric", editTextChloride.getText().toString().trim(), editTextChlorideDate.getText().toString().trim(), ""));
         jsonArry.put(JSONFormBuilder.observations("165300", "", "valueNumeric", editTextPotassium.getText().toString().trim(), editTextPotassiumDate.getText().toString().trim(), ""));
         jsonArry.put(JSONFormBuilder.observations("164364", "", "valueNumeric", editTextCreatinine.getText().toString().trim(), editTextCreatinineDate.getText().toString().trim(), ""));
-        jsonArry.put(JSONFormBuilder.observations("", "", "valueNumeric", editTextSerumUricAcid.getText().toString().trim(), editTextSerumUricAcidDate.getText().toString().trim(), ""));
+        jsonArry.put(JSONFormBuilder.observations("159825", "", "valueNumeric", editTextSerumUricAcid.getText().toString().trim(), editTextSerumUricAcidDate.getText().toString().trim(), ""));
 
         jsonArry.put(JSONFormBuilder.observations("1007", "", "valueNumeric", editTextHDL.getText().toString().trim(), editTextHDLDate.getText().toString().trim(), ""));
         jsonArry.put(JSONFormBuilder.observations("1008", "", "valueNumeric", editTextLDL.getText().toString().trim(), editTextLDLDate.getText().toString().trim(), ""));

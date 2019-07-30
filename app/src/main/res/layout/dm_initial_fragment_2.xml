@@ -445,6 +445,37 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:padding="10dp"
+                                    android:text="Resp Rate(B/m)" />
+
+                                <customfonts.EditText_Roboto_Regular
+                                    android:id="@+id/respiratory_rate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Resp Rate(B/m)"
+                                    android:inputType="numberDecimal"
+                                    android:padding="15dp"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:baselineAligned="false"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <customfonts.TextView_Roboto_Bold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
                                     android:text="Temp(C)" />
 
                                 <customfonts.EditText_Roboto_Regular
@@ -2317,25 +2348,25 @@
                                         android:text="Past conditions:" />
 
                                     <CheckBox
-                                        android:id="@+id/checkbox_peripheral_neuropathy"
+                                        android:id="@+id/checkbox_pc_peripheral_neuropathy"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Peripheral neuropathy" />
 
                                     <CheckBox
-                                        android:id="@+id/checkbox_ulcers"
+                                        android:id="@+id/checkbox_pc_ulcers"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Ulcers" />
 
                                     <CheckBox
-                                        android:id="@+id/checkbox_amputation"
+                                        android:id="@+id/checkbox_pc_amputation"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Amputation" />
 
                                     <CheckBox
-                                        android:id="@+id/checkbox_acute_joint"
+                                        android:id="@+id/checkbox_pc_acute_joint"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Acute Joint" />
@@ -2356,31 +2387,31 @@
                                         android:text="Foot risk assessment" />
 
                                     <CheckBox
-                                        android:id="@+id/checkbox_low_risk"
+                                        android:id="@+id/checkbox_fra_low_risk"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Low current risk" />
 
                                     <CheckBox
-                                        android:id="@+id/checkbox_at_risk"
+                                        android:id="@+id/checkbox_fra_at_risk"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="At Risk" />
 
                                     <CheckBox
-                                        android:id="@+id/checkbox_high_risk"
+                                        android:id="@+id/checkbox_fra_high_risk"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="High Risk" />
 
                                     <CheckBox
-                                        android:id="@+id/checkbox_ulcerated_foor"
+                                        android:id="@+id/checkbox_fra_ulcerated_foot"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Ulcerated Foot" />
 
                                     <CheckBox
-                                        android:id="@+id/checkbox_foot_emergency"
+                                        android:id="@+id/checkbox_fra_foot_emergency"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Foot emergency" />
@@ -2402,7 +2433,6 @@
 
                                 </LinearLayout>
 
-                               <!-- &lt;!&ndash;pedal pulse&ndash;&gt;
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -2446,7 +2476,7 @@
 
                                     </RadioGroup>
                                 </LinearLayout>
--->
+
                                 <!--peripheral neuropathy-->
                                 <LinearLayout
                                     android:layout_width="match_parent"

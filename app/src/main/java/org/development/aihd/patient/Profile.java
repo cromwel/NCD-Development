@@ -14,11 +14,17 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,11 +35,15 @@ import org.development.aihd.common.DateCalendar;
 import org.development.aihd.common.NavigationDrawerShare;
 import org.development.aihd.forms.DM_FollowUp;
 import org.development.aihd.forms.DM_Initial;
+import org.development.aihd.model.KeyValue;
 import org.development.aihd.model.PatientProfile;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import static java.security.AccessController.getContext;
 
 public class Profile extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
 
@@ -41,6 +51,7 @@ public class Profile extends AppCompatActivity implements CompoundButton.OnCheck
     private String gender;
     private String records;
     private String isDeceased = null;
+    private String cause_of_death;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -273,14 +284,23 @@ public class Profile extends AppCompatActivity implements CompoundButton.OnCheck
         checkBox.setId(R.id.checkBoxDeceased);
         checkBox.setText(R.string.deceased);
 
+        Spinner spinnerCOD = view.findViewById(R.id.spinnerCOD);
+        spinnerData(this, spinnerCOD, "cause_of_death");
+
+
         EditText editText = new EditText(this);
         editText.setId(R.id.editTextDeath);
         editText.setInputType(InputType.TYPE_CLASS_TEXT);
         editText.setHint("Cause of death?");
 
+        EditText editTextDOD = new EditText(this);
+        editTextDOD.setId(R.id.dod_date);
+        editTextDOD.setText(DateCalendar.date());
+
         lp.addView(checkBox);
         lp.addView(editText);
-        lp.setPadding(50, 40, 50, 10);
+        lp.addView(editTextDOD);
+        lp.setPadding(30, 60, 30, 60);
 
         alertDialog.setView(lp);
 
@@ -298,12 +318,46 @@ public class Profile extends AppCompatActivity implements CompoundButton.OnCheck
 
     }
 
-/*    public void attachment(View view) {
+    public void spinnerData(Context context, final Spinner spinner, final String data) {
+        ArrayList<KeyValue> keyvalue = new ArrayList<>();
+
+        if (data.matches("cause_of_death")) {
+            // adding each child node to HashMap key => value
+            keyvalue.add(new KeyValue("", "Select Cause of Death"));
+            keyvalue.add(new KeyValue("", "HTN Complications"));
+            keyvalue.add(new KeyValue("", "DM Complications"));
+            keyvalue.add(new KeyValue("", "Other"));
+        }
+
+        ArrayAdapter<KeyValue> adapter = new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, keyvalue);
+        spinner.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                KeyValue value = (KeyValue) parent.getSelectedItem();
+                switch (spinner.getId()) {
+                    case R.id.spinnerCOD:
+                        if (data.matches("cause_of_death")) {
+                            cause_of_death = value.getId();
+                        }
+                        break;
+                }
+            }
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+                    }
+                });
+    }
+
+   public void attachment(View view) {
         Intent attachment = new Intent(getApplicationContext(), AttachmentActivity.class);
         attachment.putExtra("patient_id", patient_id);
         startActivity(attachment);
         finish();
-    }*/
+    }
 
     @Override
     public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
