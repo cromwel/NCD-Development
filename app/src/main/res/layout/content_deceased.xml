@@ -46,20 +46,21 @@
                             android:layout_height="wrap_content"
                             android:background="@color/background_inner"
                             android:padding="15dp"
-                            android:text="Retire Patient"
+                            android:text="Mark Patient Deceased"
                             android:textAllCaps="false" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="18dp"
                             android:orientation="vertical">
 
                             <customfonts.TextView_Roboto_Bold
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
-                                android:layout_margin="5dp"
                                 android:text="Patient status"
                                 android:textSize="13sp" />
 
@@ -68,30 +69,28 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
-                                android:layout_margin="5dp"
-                                android:text="I confirm patient is retired/Deceased"
+                                android:text="Confirm patient is deceased"
                                 android:textSize="13sp" />
 
                             <customfonts.TextView_Roboto_Bold
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
-                                android:layout_margin="5dp"
+                                android:layout_marginTop="10dp"
                                 android:text="Cause of Death *"
                                 android:textSize="13sp" />
 
                             <Spinner
                                 android:id="@+id/spinner_cause_of_death"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:textSize="13sp" />
+                                android:layout_height="40dp"
+                                android:background="@drawable/round_border"  />
 
                             <customfonts.EditText_Roboto_Light
                                 android:id="@+id/other_cause_of_death"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:padding="10dp"
-                                android:layout_margin="5dp"
                                 android:hint="Specify other"
                                 android:textSize="13sp" />
 
@@ -99,7 +98,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
-                                android:layout_margin="5dp"
+                                android:layout_marginTop="10dp"
                                 android:text="Date of Death"
                                 android:textSize="13sp" />
 
@@ -108,7 +107,6 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:padding="10dp"
-                                android:layout_margin="5dp"
                                 android:focusable="false"
                                 android:hint="yyyy-mm-dd"
                                 android:inputType="date"
@@ -116,40 +114,21 @@
 
                             <Button
                                 android:id="@+id/submit_deceased"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:gravity="center"
-                                android:padding="5dp"
-                                android:layout_margin="5dp"
+                                android:padding="15dp"
+                                android:layout_margin="20dp"
                                 android:text="Submit"
                                 android:textAllCaps="false"
-                                android:textColor="#ffffff"
-                                android:background="@color/blue"/>
+                                android:textColor="@color/white"
+                                android:background="@drawable/rounded_button"/>
 
-
-                            <!--  <customfonts.TextView_Roboto_Medium
-                                  android:layout_width="match_parent"
-                                  android:layout_height="wrap_content"
-                                  android:layout_gravity="center"
-                                  android:layout_marginBottom="20dp"
-                                  android:layout_marginLeft="20dp"
-                                  android:layout_marginRight="20dp"
-                                  android:layout_marginTop="30dp"
-                                  android:background="@drawable/rounded_button"
-                                  android:gravity="center"
-                                  android:onClick="validateTransfer"
-                                  android:padding="15dp"
-                                  android:text="Submit"
-                                  android:textAllCaps="false"
-                                  android:textColor="#ffffff" />-->
 
                         </LinearLayout>
-
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
-
-
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
