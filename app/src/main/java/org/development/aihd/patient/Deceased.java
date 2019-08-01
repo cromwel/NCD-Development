@@ -4,20 +4,27 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import org.development.aihd.R;
 import org.development.aihd.Home;
+import org.development.aihd.R;
 import org.development.aihd.app.AppController;
 import org.development.aihd.common.Alerts;
 import org.development.aihd.common.Common;
@@ -28,7 +35,6 @@ import org.development.aihd.common.NavigationDrawerShare;
 import org.development.aihd.common.Validation;
 import org.development.aihd.model.Forms;
 import org.development.aihd.model.KeyValue;
-import org.development.aihd.model.Location;
 import org.development.aihd.model.PatientProfile;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -39,21 +45,20 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.List;
 
 import static org.development.aihd.common.Alerts.hideDialog;
 
-public class Transfer extends AppCompatActivity {
+public class Deceased extends AppCompatActivity {
 
-    private String location_id, reason;
-    private String encounter_date, file_name, form_id, patient_id;
+    private String patient_id, cause_of_death, file_name, form_id, deceased;
+    private EditText editTextOtherCauseOfDeath, editTextDeathDate;
 
-    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //View view = inflater.inflate(R.layout.activity_deceased, container, false);
 
         requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
-        setContentView(R.layout.activity_discontinue);
+        setContentView(R.layout.activity_deceased);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -64,18 +69,23 @@ public class Transfer extends AppCompatActivity {
         patient_id = intent.getStringExtra("patient_id");
         Log.d("PatientID", patient_id);
 
-        file_name = "ADMISSION_" + System.currentTimeMillis() + ".json";
+        file_name = "DECEASED" + System.currentTimeMillis() + ".json";
         form_id = System.currentTimeMillis() + "_" + patient_id;
 
-        EditText editTextTransferredDate = findViewById(R.id.transferred_out_date);
-        DateCalendar.date(this, editTextTransferredDate);
+        EditText editTextDeathDate = findViewById(R.id.death_date);
+        DateCalendar.fulldate(this, editTextDeathDate);
 
-        Spinner spinnerReason = findViewById(R.id.spinnerReason);
-        Spinner spinnerLocation = findViewById(R.id.spinnerLocation);
-        spinnerData(this, spinnerReason, "reason");
-        spinnerData(this, spinnerLocation, "location");
+        editTextOtherCauseOfDeath = findViewById(R.id.other_cause_of_death);
+        textWatcher(editTextOtherCauseOfDeath);
 
-        final Button button = findViewById(R.id.submit_transfer);
+        Spinner spinnerCauseOfDeath = findViewById(R.id.spinner_cause_of_death);
+        spinnerData(this, spinnerCauseOfDeath, "cause_of_death");
+
+        CheckBox checkBoxDeceased = findViewById(R.id.checkbox_deceased);
+        checkBox(checkBoxDeceased);
+
+
+        final Button button = findViewById(R.id.submit_deceased);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 validateTransfer();
@@ -86,22 +96,14 @@ public class Transfer extends AppCompatActivity {
     public void spinnerData(Context context, final Spinner spinner, final String data) {
         ArrayList<KeyValue> keyvalue = new ArrayList<>();
 
-        // adding each child node to HashMap key => value
-        if (data.matches("reason")) {
-            keyvalue.add(new KeyValue("", "Select Reason"));
-            keyvalue.add(new KeyValue("1655", "Transferred Out"));
-            keyvalue.add(new KeyValue("1655", "Unknown"));
-        } else if (data.matches("location")) {
-            //Add locations
-            keyvalue.add(new KeyValue("", "Select Location"));
-            List<Location> locations = Location.findWithQuery(Location.class, "SELECT * from LOCATION ORDER BY _name ASC ");
-            for (Location ln : locations) {
-                // adding each child node to HashMap key => value
-                keyvalue.add(new KeyValue(ln.getID(), ln.getName()));
-            }
+        if (data.matches("cause_of_death")) {
+            // adding each child node to HashMap key => value
+            keyvalue.add(new KeyValue("0", "Select Cause of Death"));
+            keyvalue.add(new KeyValue("1", "HTN Complications"));
+            keyvalue.add(new KeyValue("2", "DM Complications"));
+            keyvalue.add(new KeyValue("3", "Other"));
         }
 
-        //fill data in spinner
         ArrayAdapter<KeyValue> adapter = new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, keyvalue);
         spinner.setAdapter(adapter);
         adapter.notifyDataSetChanged();
@@ -109,34 +111,72 @@ public class Transfer extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
                 KeyValue keyValue = (KeyValue) parent.getSelectedItem();
 
                 if (!keyValue.getId().isEmpty()) {
 
                     KeyValue value = (KeyValue) parent.getSelectedItem();
-                    switch (spinner.getId()) {
-                        case R.id.spinnerDesignation:
-                            if (data.matches("reason")) {
-                                reason = "1655";
-                                Log.d("value", value.getId());
-                            }
-                            break;
-                        case R.id.spinnerLocation:
-                            if (data.matches("location")) {
-                                location_id = value.getId();
-                            }
-                            break;
-                        default:
-                            break;
-                    }
-                    update();
+
+                switch (spinner.getId()) {
+                    case R.id.spinner_cause_of_death:
+                        if (data.matches("cause_of_death")) {
+                            cause_of_death = value.getId();
+                        }
+                        break;
                 }
+                update();
             }
+        }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                //Nothing selected
+            }
+        });
+    }
+
+    public void textWatcher(EditText editText) {
+
+        editText.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void afterTextChanged(final Editable editable) {
+                update();
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start,
+                                          int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start,
+                                      int before, int count) {
+
+            }
+        });
+    }
+
+    public void checkBox(final CheckBox checkBox) {
+
+        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                boolean checked = (buttonView).isChecked();
+
+                //Check which checkbox was clicked
+                switch (checkBox.getId()) {
+                    case R.id.checkbox_tb_status:
+                        if (checked) {
+                            deceased = "1";
+                        } else {
+                            deceased = "0";
+                        }
+                        break;
+                }
+
+                update();
             }
         });
     }
@@ -144,8 +184,9 @@ public class Transfer extends AppCompatActivity {
     public JSONArray update() {
         JSONArray jsonArray = new JSONArray();
 
-        jsonArray.put(JSONFormBuilder.observations("1655", "", "valueCoded", reason, DateCalendar.date(), ""));
-       // jsonArray.put(JSONFormBuilder.observations("", "", "valueCoded", location_id, DateCalendar.date(), ""));
+        jsonArray.put(JSONFormBuilder.observations("", "", "valueCoded", cause_of_death, DateCalendar.date(), ""));
+        jsonArray.put(JSONFormBuilder.observations("", "", "valueCoded", deceased, DateCalendar.date(), ""));
+        jsonArray.put(JSONFormBuilder.observations("", "", "valueText", editTextOtherCauseOfDeath.getText().toString().trim(), DateCalendar.date(), ""));
 
         try {
             Log.d("JSON Array1", jsonArray.toString() + " ");
@@ -160,8 +201,8 @@ public class Transfer extends AppCompatActivity {
     }
 
     public void validateTransfer() {
-        Alerts.progressDialog(this, "Uploading DM Admission Form ...");
-        File dir = new File(Environment.getExternalStorageDirectory() + "/aihd/admission");
+        Alerts.progressDialog(this, "Uploading Deceased Form ...");
+        File dir = new File(Environment.getExternalStorageDirectory() + "/aihd/deceased");
         if (!dir.mkdirs()) {
             Log.e("Directory Message", "Directory not created");
         }
@@ -172,20 +213,20 @@ public class Transfer extends AppCompatActivity {
 
             JSONArray jsonArray = update();
             JSONObject jsonForm = new JSONObject();
-            Log.d("JSON Admission", jsonArray.toString() + " ");
+            Log.d("JSON Deceased", jsonArray.toString() + " ");
 
             String error = Validation.admissionValidation(jsonArray);
 
-            if (jsonArray.length() == 0) {
+            if (jsonArray.length() < 0) {
                 error = "Please fill in required fields(*)";
             }
 
-            if (error.length() == 0 && jsonArray.length() > 0) {
+            if (jsonArray.length() > 0) {
                 String creator = AppController.getInstance().getSessionManager().getUserDetails().get("user_id");
 
-                jsonForm.put("formDescription", "Admit patient into this facility");
-                jsonForm.put("formEncounterType", "e22e39fd-7db2-45e7-80f1-60fa0d5a4378");
-                jsonForm.put("formUuid", "d2c7532c-fb01-11e2-8ff2-fd54ab5fdb2a");
+                jsonForm.put("formDescription", "Retire patient");
+                jsonForm.put("formEncounterType", "");
+                jsonForm.put("formUuid", "");
                 jsonForm.put("formVersion", "1.0");
                 jsonForm.put("formUILocation", "patientDashboard.overallActions");
                 jsonForm.put("formOrder", "3");
@@ -202,7 +243,7 @@ public class Transfer extends AppCompatActivity {
                 pw.close();
                 f.close();
 
-                Forms forms = new Forms(form_id, file_name, creator, patient_id, "admission", DateCalendar.date(), "0");
+                Forms forms = new Forms(form_id, file_name, creator, patient_id, "deceased", DateCalendar.date(), "0");
                 long id = forms.save();
 
                 if ((int) PatientProfile.count(PatientProfile.class, "patient_id = ?", new String[]{patient_id}) == 0) {
@@ -210,15 +251,15 @@ public class Transfer extends AppCompatActivity {
                     patientProfile.save();
                 }
 
-                Toast.makeText(getBaseContext(), "Transfer Encounter file saved", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getBaseContext(), "Retire patient file saved", Toast.LENGTH_SHORT).show();
 
                 boolean isConnected = File_Upload.connectivity(getApplicationContext());
                 Log.d("file to upload", String.valueOf(isConnected));
 
                 if (isConnected) {
-                    File_Upload.upload(this, Environment.getExternalStorageDirectory() + "/aihd/transfer/" + file_name, id, null);
+                    File_Upload.upload(this, Environment.getExternalStorageDirectory() + "/aihd/deceased/" + file_name, id, null);
                 } else {
-                   // Alerts.errorMessage(view, "No Internet Connection,Unable to upload file");
+                    // Alerts.errorMessage(view, "No Internet Connection,Unable to upload file");
                 }
 
                 // Launch login activity
@@ -241,5 +282,4 @@ public class Transfer extends AppCompatActivity {
         hideDialog();
 
     }
-
 }

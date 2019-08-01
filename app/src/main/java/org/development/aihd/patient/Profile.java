@@ -45,7 +45,7 @@ import java.util.List;
 
 import static java.security.AccessController.getContext;
 
-public class Profile extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
+public class Profile extends AppCompatActivity{
 
     private String patient_id;
     private String gender;
@@ -92,7 +92,6 @@ public class Profile extends AppCompatActivity implements CompoundButton.OnCheck
         }*/
 
     }
-
 
     public void summary(View view) {
 
@@ -269,101 +268,19 @@ public class Profile extends AppCompatActivity implements CompoundButton.OnCheck
     }
 
     public void deceased(View view) {
-        AlertDialog alertDialog = new AlertDialog.Builder(this).create();
 
-        // Set Dialog Title
-        alertDialog.setTitle("Patient Deceased");
-
-        // Set Dialog Message
-        alertDialog.setMessage("Patient Status?");
-        LinearLayout lp = new LinearLayout(this);
-        lp.setOrientation(LinearLayout.VERTICAL);
-
-        CheckBox checkBox = new CheckBox(this);
-        checkBox.setOnCheckedChangeListener(this);
-        checkBox.setId(R.id.checkBoxDeceased);
-        checkBox.setText(R.string.deceased);
-
-        Spinner spinnerCOD = view.findViewById(R.id.spinnerCOD);
-        spinnerData(this, spinnerCOD, "cause_of_death");
-
-
-        EditText editText = new EditText(this);
-        editText.setId(R.id.editTextDeath);
-        editText.setInputType(InputType.TYPE_CLASS_TEXT);
-        editText.setHint("Cause of death?");
-
-        EditText editTextDOD = new EditText(this);
-        editTextDOD.setId(R.id.dod_date);
-        editTextDOD.setText(DateCalendar.date());
-
-        lp.addView(checkBox);
-        lp.addView(editText);
-        lp.addView(editTextDOD);
-        lp.setPadding(30, 60, 30, 60);
-
-        alertDialog.setView(lp);
-
-        // Set OK Button
-        alertDialog.setButton("SUBMIT", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                if (isDeceased.length() > 0) {
-                    Toast.makeText(getApplicationContext(), "Status Updated", Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-
-        // Show Alert Message
-        alertDialog.show();
-
+        Intent retire = new Intent(getApplicationContext(), Deceased.class);
+        retire.putExtra("patient_id", patient_id);
+        startActivity(retire);
+        finish();
     }
 
-    public void spinnerData(Context context, final Spinner spinner, final String data) {
-        ArrayList<KeyValue> keyvalue = new ArrayList<>();
-
-        if (data.matches("cause_of_death")) {
-            // adding each child node to HashMap key => value
-            keyvalue.add(new KeyValue("", "Select Cause of Death"));
-            keyvalue.add(new KeyValue("", "HTN Complications"));
-            keyvalue.add(new KeyValue("", "DM Complications"));
-            keyvalue.add(new KeyValue("", "Other"));
-        }
-
-        ArrayAdapter<KeyValue> adapter = new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, keyvalue);
-        spinner.setAdapter(adapter);
-        adapter.notifyDataSetChanged();
-
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-                KeyValue value = (KeyValue) parent.getSelectedItem();
-                switch (spinner.getId()) {
-                    case R.id.spinnerCOD:
-                        if (data.matches("cause_of_death")) {
-                            cause_of_death = value.getId();
-                        }
-                        break;
-                }
-            }
-                    @Override
-                    public void onNothingSelected(AdapterView<?> parent) {
-                    }
-                });
-    }
-
-   public void attachment(View view) {
+    public void attachment(View view) {
         Intent attachment = new Intent(getApplicationContext(), AttachmentActivity.class);
         attachment.putExtra("patient_id", patient_id);
         startActivity(attachment);
         finish();
     }
 
-    @Override
-    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-        if (b) {
-            isDeceased = "1";
-        }
-    }
 
 }

@@ -324,7 +324,6 @@ public class Initial_page_1 extends Fragment {
 
     }
 
-
     public void diabetes(String status) {
 
         if (status.matches("165088")) {
@@ -401,7 +400,6 @@ public class Initial_page_1 extends Fragment {
             editTextTBDate.setVisibility(View.GONE);
         }
     }
-
 
     public void textWatcher(EditText editText) {
 

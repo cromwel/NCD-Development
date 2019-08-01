@@ -156,7 +156,7 @@ public class Initial_page_2 extends Fragment {
         editTextExamOther = view.findViewById(R.id.other_general_exam);
 
         editTextVisual = view.findViewById(R.id.describe_visual_impairment);
-        editTextPulses = view.findViewById(R.id.describe_pulses);
+       /* editTextPulses = view.findViewById(R.id.describe_pulses);
         editTextJVP = view.findViewById(R.id.describe_jvp);
         editTextPallor = view.findViewById(R.id.describe_pallor);
         editTextHeartSounds = view.findViewById(R.id.describe_heart_sounds);
@@ -172,7 +172,7 @@ public class Initial_page_2 extends Fragment {
         editTextOralFessions = view.findViewById(R.id.describe_oral_fessions);
         editTextDepression = view.findViewById(R.id.describe_depression);
         editTextSleepDisorders = view.findViewById(R.id.describe_sleep_disorders);
-        editTextSubstanceAbuse = view.findViewById(R.id.describe_substance_abuse);
+        editTextSubstanceAbuse = view.findViewById(R.id.describe_substance_abuse);*/
         editTextFootExamAB = view.findViewById(R.id.foot_exam_ab);
         editTextMonofilamentRF = view.findViewById(R.id.monofilament_rf);
         editTextMonofilamentLF = view.findViewById(R.id.monofilament_lf);
@@ -891,7 +891,7 @@ public class Initial_page_2 extends Fragment {
                         if (checked)
                             visual_impairment = "1066";
                         break;
-                    case R.id.radio_pulses_normal:
+                   /* case R.id.radio_pulses_normal:
                         if (checked)
                             pulses = "1115";
                         break;
@@ -978,7 +978,7 @@ public class Initial_page_2 extends Fragment {
                     case R.id.radio_autonomic_abnormal:
                         if (checked)
                             autonomic = "1116";
-                        break;
+                        break;*/
 
                     case R.id.radio_foot_exam_treatment_pedal_pulse:
                         if (checked)

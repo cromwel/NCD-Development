@@ -345,13 +345,13 @@ public class Followup_page_3 extends Fragment {
                             foot_exam = "";
                         }
                         break;*/
-                    case R.id.checkbox_eye_exam:
+                   /* case R.id.checkbox_eye_exam:
                         if (checked) {
                             eye_exam = "165100";
                         } else {
                             eye_exam = "";
                         }
-                        break;
+                        break;*/
                     case R.id.checkbox_dental_exam:
                         if (checked) {
                             dental_exam = "165101";

@@ -127,6 +127,11 @@
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
+            android:name=".patient.Deceased"
+            android:label="Deceased"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
             android:name=".patient.FootClinic"
             android:label="Foot Clinic"
             android:theme="@style/AppTheme.NoActionBar"
