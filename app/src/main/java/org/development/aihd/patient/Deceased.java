@@ -46,6 +46,7 @@ import java.io.FileOutputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
+import static org.development.aihd.common.Alerts.alert_msg;
 import static org.development.aihd.common.Alerts.hideDialog;
 
 public class Deceased extends AppCompatActivity {
@@ -215,13 +216,7 @@ public class Deceased extends AppCompatActivity {
             JSONObject jsonForm = new JSONObject();
             Log.d("JSON Deceased", jsonArray.toString() + " ");
 
-            String error = Validation.admissionValidation(jsonArray);
-
-            if (jsonArray.length() < 0) {
-                error = "Please fill in required fields(*)";
-            }
-
-            if (jsonArray.length() > 0) {
+            if (jsonArray.length() >= 0) {
                 String creator = AppController.getInstance().getSessionManager().getUserDetails().get("user_id");
 
                 jsonForm.put("formDescription", "Retire patient");
@@ -269,7 +264,7 @@ public class Deceased extends AppCompatActivity {
                 finish();
 
             } else {
-                Alerts.alert_msg(this, "Validation Error", error);
+                Toast.makeText(getBaseContext(), "Failed to Upload", Toast.LENGTH_SHORT).show();
             }
 
         } catch (FileNotFoundException e) {

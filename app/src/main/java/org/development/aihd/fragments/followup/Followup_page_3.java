@@ -44,8 +44,8 @@ public class Followup_page_3 extends Fragment {
             arthritis, foot, assesment_other, foot_amputation;
     private EditText editTextCardiovascularDisease, editTextHBP, editTextHighCholestrol, editTextVascularDisease, editTextPNeuropathy, editTextANeuropathy,
             editTextRetinopathy, editTextKidneyDisease, editTextAsthma, editTextArthritis, editTextFoot, editTextOther;
-    private EditText editTextFBS, editTextRBS, editTextHBA, editTextHDL, editTextLDL, editTextTriglycerides, editTextUECUrea, editTextUECElectrolytes, editTextUECChloride, editTextUECPotassium, editTextUECCreatinine, editTextDeposits;
-    private EditText editTextDateFBS, editTextDateRBS, editTextDateHBA, editTextDateHDL, editTextDateLDL, editTextDateTriglycerides, editTextDateUECUrea, editTextDateUECElectrolytes, editTextDateUECChloride, editTextDateUECPotassium, editTextDateUECCreatinine, editTextDateUrinalysis;
+    private EditText editTextFBS, editTextRBS, editTextHBA, editTextHDL, editTextLDL, editTextTriglycerides, editTextUECUrea, editTextUECElectrolytes, editTextUECChloride, editTextUECPotassium, editTextUECCreatinine, editTextUECSerum, editTextDeposits;
+    private EditText editTextDateFBS, editTextDateRBS, editTextDateHBA, editTextDateHDL, editTextDateLDL, editTextDateTriglycerides, editTextDateUECUrea, editTextDateUECElectrolytes, editTextDateUECChloride, editTextDateUECPotassium, editTextDateUECCreatinine, editTextDateUECSerum, editTextDateUrinalysis;
    // private TextView_Roboto_Bold textViewUreaFlag;
 
     private RadioGroup radioGroupGlucose, radioGroupProtein, radioGroupKetone;
@@ -95,6 +95,7 @@ public class Followup_page_3 extends Fragment {
         editTextUECChloride = view.findViewById(R.id.followup_uec_chloride);
         editTextUECPotassium = view.findViewById(R.id.followup_uec_potassium);
         editTextUECCreatinine = view.findViewById(R.id.followup_uec_creatinine);
+        editTextUECSerum = view.findViewById(R.id.followup_uec_serum);
         editTextDeposits = view.findViewById(R.id.deposit_comment);
        // editTextUrinalysis = view.findViewById(R.id.followup_urinalysis);
 
@@ -109,6 +110,7 @@ public class Followup_page_3 extends Fragment {
         editTextDateUECChloride = view.findViewById(R.id.date_uec_chloride);
         editTextDateUECPotassium = view.findViewById(R.id.date_uec_potassium);
         editTextDateUECCreatinine = view.findViewById(R.id.date_uec_creatinine);
+        editTextDateUECSerum = view.findViewById(R.id.date_uec_serum);
        editTextDateUrinalysis = view.findViewById(R.id.datetime_urinalysis);
 
         DateCalendar.date(getActivity(), editTextDateFBS);
@@ -122,6 +124,7 @@ public class Followup_page_3 extends Fragment {
         DateCalendar.date(getActivity(), editTextDateUECChloride);
         DateCalendar.date(getActivity(), editTextDateUECPotassium);
         DateCalendar.date(getActivity(), editTextDateUECCreatinine);
+        DateCalendar.date(getActivity(), editTextDateUECSerum);
       //  DateCalendar.date(getActivity(), editTextDateUrinalysis);
 
         textWatcher(editTextSystolic, "blood_pressure");
@@ -162,6 +165,7 @@ public class Followup_page_3 extends Fragment {
         textWatcher(editTextUECChloride, "");
         textWatcher(editTextUECPotassium, "");
         textWatcher(editTextUECCreatinine, "");
+        textWatcher(editTextUECSerum, "");
        // textWatcher(editTextUrinalysis, "");
 
         textWatcher(editTextDateFBS, "");
@@ -175,6 +179,7 @@ public class Followup_page_3 extends Fragment {
         textWatcher(editTextDateUECChloride, "");
         textWatcher(editTextDateUECPotassium, "");
         textWatcher(editTextDateUECCreatinine, "");
+        textWatcher(editTextDateUECSerum, "");
         textWatcher(editTextDateUrinalysis, "");
         textWatcher(editTextDeposits, "");
 
@@ -189,6 +194,7 @@ public class Followup_page_3 extends Fragment {
         DateCalendar.date(getActivity(), editTextDateUECChloride);
         DateCalendar.date(getActivity(), editTextDateUECPotassium);
         DateCalendar.date(getActivity(), editTextDateUECCreatinine);
+        DateCalendar.date(getActivity(), editTextDateUECSerum);
        DateCalendar.date(getActivity(), editTextDateUrinalysis);
 
         editTextDateFBS.setText(DateCalendar.date());
@@ -202,6 +208,7 @@ public class Followup_page_3 extends Fragment {
         editTextDateUECChloride.setText(DateCalendar.date());
         editTextDateUECPotassium.setText(DateCalendar.date());
         editTextDateUECCreatinine.setText(DateCalendar.date());
+        editTextDateUECSerum.setText(DateCalendar.date());
         editTextDateUrinalysis.setText(DateCalendar.date());
 
         textViewBMI = view.findViewById(R.id.followup_bmi);
@@ -627,6 +634,7 @@ public class Followup_page_3 extends Fragment {
         jsonArry.put(JSONFormBuilder.observations("164364", "", "valueNumeric", editTextUECChloride.getText().toString().trim(), editTextDateUECChloride.getText().toString().trim(), ""));
         jsonArry.put(JSONFormBuilder.observations("164364", "", "valueNumeric", editTextUECPotassium.getText().toString().trim(), editTextDateUECPotassium.getText().toString().trim(), ""));
         jsonArry.put(JSONFormBuilder.observations("164364", "", "valueNumeric", editTextUECCreatinine.getText().toString().trim(), editTextDateUECCreatinine.getText().toString().trim(), ""));
+        jsonArry.put(JSONFormBuilder.observations("164364", "", "valueNumeric", editTextUECSerum.getText().toString().trim(), editTextDateUECSerum.getText().toString().trim(), ""));
 
         jsonArry.put(JSONFormBuilder.observations("160987", "", "valueText", editTextDateUrinalysis.getText().toString().trim(), editTextDateUrinalysis.getText().toString().trim(), ""));
         jsonArry.put(JSONFormBuilder.observations("159733", "", "valueCoded", glucose, DateCalendar.date(), ""));

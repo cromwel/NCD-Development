@@ -69,6 +69,7 @@ public class Validation {
         return error.toString();
     }
 
+/*
 
     public static String admissionValidation(JSONArray jsonArray) {
 
@@ -89,6 +90,7 @@ public class Validation {
         return error.toString();
     }
 
+*/
 
     private static void validate(String obs, String response, String concept_id) {
 

@@ -58,7 +58,7 @@
                             <customfonts.TextView_Roboto_Bold
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Reason for Discontinuation *" />
+                                android:text="Reason for Discontinuation" />
 
                             <Spinner
                                 android:id="@+id/spinnerReason"

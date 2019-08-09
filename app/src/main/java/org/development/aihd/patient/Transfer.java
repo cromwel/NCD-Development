@@ -174,13 +174,13 @@ public class Transfer extends AppCompatActivity {
             JSONObject jsonForm = new JSONObject();
             Log.d("JSON Admission", jsonArray.toString() + " ");
 
-            String error = Validation.admissionValidation(jsonArray);
+           /* String error = Validation.admissionValidation(jsonArray);
 
             if (jsonArray.length() == 0) {
                 error = "Please fill in required fields(*)";
-            }
+            }*/
 
-            if (error.length() == 0 && jsonArray.length() > 0) {
+            if ( jsonArray.length() >= 0) {
                 String creator = AppController.getInstance().getSessionManager().getUserDetails().get("user_id");
 
                 jsonForm.put("formDescription", "Admit patient into this facility");
@@ -228,7 +228,7 @@ public class Transfer extends AppCompatActivity {
                 finish();
 
             } else {
-                Alerts.alert_msg(this, "Validation Error", error);
+                Toast.makeText(getBaseContext(), "Failed to Upload", Toast.LENGTH_SHORT).show();
             }
 
         } catch (FileNotFoundException e) {
